@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Published Books - Prof. John Doe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'mora-primary': '#2A2A2A',
+                        'mora-secondary': '#6B6B6B',
+                        'mora-accent': '#E54B4B',
+                        'mora-light': '#F9F9F9',
+                        'mora-dark': '#1A1A1A'
+                    },
+                    fontFamily: {
+                        'sans': ['Poppins', 'sans-serif'],
+                        'serif': ['Libre Baskerville', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hover-scale {
+            @apply transition-transform duration-300 ease-in-out hover:scale-[1.02];
+        }
+        .section-title {
+            @apply font-serif text-4xl font-bold text-mora-dark mb-12 relative 
+                   before:absolute before:bottom-[-8px] before:left-0 before:w-12 
+                   before:h-1 before:bg-mora-accent;
+        }
+        .book-card {
+            @apply bg-white p-6 rounded-xl shadow-sm hover-scale;
+        }
+    </style>
+</head>
+<body class="bg-mora-light font-sans text-mora-secondary leading-relaxed">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-md z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-5">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <a href="index.html" class="text-2xl font-serif font-bold text-mora-dark">S.N.Mohanty</a>
+    
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Home</a>
+                    <a href="honors-awards.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Honors</a>
+                    <a href="membership.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Memberships</a>
+                    
+                    <!-- Publications Dropdown -->
+                    <div class="relative group">
+                        <button class="text-mora-secondary hover:text-mora-accent transition-colors">
+                            Publications ▾
+                        </button>
+                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 py-2 w-48">
+                            <a href="referred-journal.html" class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Referred Journals</a>
+                            <a href="conference-journal.html" class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Conference Papers</a>
+                        </div>
+                    </div>
+    
+                    <a href="books.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Books</a>
+                    <a href="sponsored-projects.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Projects</a>
+                    <a href="contact.html" class="px-4 py-2 bg-mora-accent text-white rounded-full hover:bg-mora-dark transition-colors">Contact</a>
+                </div>
+    
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-mora-dark">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden absolute w-full bg-white shadow-lg">
+            <div class="px-6 py-4 space-y-4">
+                <a href="index.html" class="block text-mora-secondary hover:text-mora-accent">Home</a>
+                <a href="honors-awards.html" class="block text-mora-secondary hover:text-mora-accent">Honors</a>
+                <a href="membership.html" class="block text-mora-secondary hover:text-mora-accent">Memberships</a>
+                
+                <!-- Publications Submenu -->
+                <div class="pl-4">
+                    <details>
+                        <summary class="text-mora-secondary hover:text-mora-accent cursor-pointer">Publications</summary>
+                        <div class="mt-2 space-y-2">
+                            <a href="referred-journal.html" class="block pl-4 text-mora-secondary hover:text-mora-accent">Referred Journals</a>
+                            <a href="conference-journal.html" class="block pl-4 text-mora-secondary hover:text-mora-accent">Conference Papers</a>
+                        </div>
+                    </details>
+                </div>
+    
+                <a href="books.html" class="block text-mora-secondary hover:text-mora-accent">Books</a>
+                <a href="sponsored-projects.html" class="block text-mora-secondary hover:text-mora-accent">Projects</a>
+                <a href="contact.html" class="block px-4 py-2 bg-mora-accent text-white rounded-full hover:bg-mora-dark">Contact</a>
+            </div>
+        </div>
+    </nav>
+    
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isHidden = mobileMenu.classList.contains('hidden');
+            mobileMenu.classList.toggle('hidden', !isHidden);
+            
+            // Change menu icon
+            mobileMenuButton.innerHTML = isHidden ? 
+                `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>` :
+                `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>`;
+        });
+    
+        // Close menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target)) {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.innerHTML = `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>`;
+            }
+        });
+    
+        // Handle mobile submenus
+        document.querySelectorAll('details').forEach(details => {
+            details.addEventListener('click', (e) => {
+                if (window.innerWidth < 768) { // Only on mobile
+                    e.preventDefault();
+                    document.querySelectorAll('details').forEach(other => {
+                        if (other !== details) other.removeAttribute('open');
+                    });
+                    details.toggleAttribute('open');
+                }
+            });
+        });
+    </script>
+
+    <!-- Books Content -->
+    <main class="min-h-screen pt-32 pb-20 px-6">
+        <div class="container mx-auto max-w-6xl">
+            <!-- Page Header -->
+            <div class="text-center mb-20" data-aos="fade-up">
+                <h1 class="text-4xl md:text-5xl font-serif font-bold text-mora-dark mb-4">
+                    Published Works
+                </h1>
+                <p class="text-xl text-mora-secondary max-w-2xl mx-auto">
+                    Authored and co-authored books contributing to academic literature and professional practice
+                </p>
+            </div>
+
+            <!-- Books Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" data-aos="slide-up">
+                <!-- Book Card 1 -->
+                <div class="book-card">
+                    <div class="border-l-4 border-mora-accent pl-4">
+                        <div class="aspect-[3/4] bg-mora-light rounded-lg mb-4 overflow-hidden">
+                            <img src="https://via.placeholder.com/300x400" alt="Book Cover" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-semibold text-mora-dark mb-2">Advanced Machine Learning Principles</h3>
+                        <p class="text-sm text-mora-secondary mb-4">A comprehensive guide to modern machine learning techniques and their mathematical foundations</p>
+                        <div class="text-sm text-mora-accent mb-4">
+                            <p>Springer Publishing • 2022</p>
+                            <p>ISBN: 978-3-658-39876-4</p>
+                        </div>
+                        <a href="https://www.amazon.com/dp/B0B1ABC123" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-2 bg-mora-accent text-white rounded-full hover:bg-mora-dark transition-colors">
+                            Purchase on Amazon
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Book Card 2 -->
+                <div class="book-card">
+                    <div class="border-l-4 border-mora-accent pl-4">
+                        <div class="aspect-[3/4] bg-mora-light rounded-lg mb-4 overflow-hidden">
+                            <img src="https://via.placeholder.com/300x400" alt="Book Cover" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-semibold text-mora-dark mb-2">Ethical AI: A Practitioner's Guide</h3>
+                        <p class="text-sm text-mora-secondary mb-4">Examining the moral implications of artificial intelligence systems</p>
+                        <div class="text-sm text-mora-accent mb-4">
+                            <p>MIT Press • 2020</p>
+                            <p>ISBN: 978-0-262-54321-9</p>
+                        </div>
+                        <a href="https://www.amazon.com/dp/B0B2XYZ456" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-2 bg-mora-accent text-white rounded-full hover:bg-mora-dark transition-colors">
+                            Purchase on Amazon
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Book Card 3 -->
+                <div class="book-card">
+                    <div class="border-l-4 border-mora-accent pl-4">
+                        <div class="aspect-[3/4] bg-mora-light rounded-lg mb-4 overflow-hidden">
+                            <img src="https://via.placeholder.com/300x400" alt="Book Cover" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-semibold text-mora-dark mb-2">Neural Networks Demystified</h3>
+                        <p class="text-sm text-mora-secondary mb-4">From biological models to deep learning architectures</p>
+                        <div class="text-sm text-mora-accent mb-4">
+                            <p>Cambridge University Press • 2018</p>
+                            <p>ISBN: 978-1-108-47365-2</p>
+                        </div>
+                        <a href="https://www.amazon.com/dp/B0B3KLM789" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-2 bg-mora-accent text-white rounded-full hover:bg-mora-dark transition-colors">
+                            Purchase on Amazon
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Add more book cards following the same structure -->
+            </div>
+
+            <!-- Publication Stats -->
+            <div class="grid md:grid-cols-3 gap-8 mt-20" data-aos="fade-up">
+                <div class="book-card text-center">
+                    <div class="text-4xl font-serif font-bold text-mora-accent mb-2">12+</div>
+                    <div class="text-mora-secondary">Published Titles</div>
+                </div>
+                <div class="book-card text-center">
+                    <div class="text-4xl font-serif font-bold text-mora-accent mb-2">50k+</div>
+                    <div class="text-mora-secondary">Copies Sold</div>
+                </div>
+                <div class="book-card text-center">
+                    <div class="text-4xl font-serif font-bold text-mora-accent mb-2">4</div>
+                    <div class="text-mora-secondary">Award-winning Publications</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            easing: 'ease-out-quad'
+        });
+    </script>
+</body>
+</html>

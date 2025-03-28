@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referred Journals - Prof. Sachi Nandan Mohanty</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'mora-primary': '#2A2A2A',
+                        'mora-secondary': '#6B6B6B',
+                        'mora-accent': '#E54B4B',
+                        'mora-light': '#F9F9F9',
+                        'mora-dark': '#1A1A1A'
+                    },
+                    fontFamily: {
+                        'sans': ['Poppins', 'sans-serif'],
+                        'serif': ['Libre Baskerville', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hover-scale {
+            @apply transition-transform duration-300 ease-in-out hover:scale-[1.02];
+        }
+        .section-title {
+            @apply font-serif text-4xl font-bold text-mora-dark mb-12 relative 
+                   before:absolute before:bottom-[-8px] before:left-0 before:w-12 
+                   before:h-1 before:bg-mora-accent;
+        }
+        .publication-card {
+            @apply bg-white p-6 rounded-xl shadow-sm hover-scale;
+        }
+    </style>
+</head>
+<body class="bg-mora-light font-sans text-mora-secondary leading-relaxed">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-md z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-5">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <a href="index.html" class="text-2xl font-serif font-bold text-mora-dark">S.N.Mohanty</a>
+    
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Home</a>
+                    <a href="honors-awards.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Honors</a>
+                    <a href="membership.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Memberships</a>
+                    
+                    <!-- Publications Dropdown -->
+                    <div class="relative group">
+                        <button class="text-mora-secondary hover:text-mora-accent transition-colors">
+                            Publications ▾
+                        </button>
+                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 py-2 w-48">
+                            <a href="referred-journal.html" class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Referred Journals</a>
+                            <a href="conference-journal.html" class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Conference Papers</a>
+                        </div>
+                    </div>
+    
+                    <a href="books.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Books</a>
+                    <a href="sponsored-projects.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Projects</a>
+                    <a href="contact.html" class="px-4 py-2 bg-mora-accent text-white rounded-full hover:bg-mora-dark transition-colors">Contact</a>
+                </div>
+    
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-mora-dark">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden absolute w-full bg-white shadow-lg">
+            <div class="px-6 py-4 space-y-4">
+                <a href="index.html" class="block text-mora-secondary hover:text-mora-accent">Home</a>
+                <a href="honors-awards.html" class="block text-mora-secondary hover:text-mora-accent">Honors</a>
+                <a href="membership.html" class="block text-mora-secondary hover:text-mora-accent">Memberships</a>
+                
+                <!-- Publications Submenu -->
+                <div class="pl-4">
+                    <details>
+                        <summary class="text-mora-secondary hover:text-mora-accent cursor-pointer">Publications</summary>
+                        <div class="mt-2 space-y-2">
+                            <a href="referred-journal.html" class="block pl-4 text-mora-secondary hover:text-mora-accent">Referred Journals</a>
+                            <a href="conference-journal.html" class="block pl-4 text-mora-secondary hover:text-mora-accent">Conference Papers</a>
+                        </div>
+                    </details>
+                </div>
+    
+                <a href="books.html" class="block text-mora-secondary hover:text-mora-accent">Books</a>
+                <a href="sponsored-projects.html" class="block text-mora-secondary hover:text-mora-accent">Projects</a>
+                <a href="contact.html" class="block px-4 py-2 bg-mora-accent text-white rounded-full hover:bg-mora-dark">Contact</a>
+            </div>
+        </div>
+    </nav>
+    
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isHidden = mobileMenu.classList.contains('hidden');
+            mobileMenu.classList.toggle('hidden', !isHidden);
+            
+            // Change menu icon
+            mobileMenuButton.innerHTML = isHidden ? 
+                `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>` :
+                `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>`;
+        });
+    
+        // Close menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target)) {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.innerHTML = `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>`;
+            }
+        });
+    
+        // Handle mobile submenus
+        document.querySelectorAll('details').forEach(details => {
+            details.addEventListener('click', (e) => {
+                if (window.innerWidth < 768) { // Only on mobile
+                    e.preventDefault();
+                    document.querySelectorAll('details').forEach(other => {
+                        if (other !== details) other.removeAttribute('open');
+                    });
+                    details.toggleAttribute('open');
+                }
+            });
+        });
+    </script>
+
+    <!-- Publications Content -->
+    <main class="min-h-screen pt-32 pb-20 px-6">
+        <div class="container mx-auto max-w-6xl">
+            <!-- Page Header -->
+            <div class="text-center mb-20" data-aos="fade-up">
+                <h1 class="text-4xl md:text-5xl font-serif font-bold text-mora-dark mb-4">
+                    Referred Journal Publications
+                </h1>
+                <p class="text-xl text-mora-secondary max-w-2xl mx-auto">
+                    Peer-reviewed research contributions in international journals across multiple domains
+                </p>
+            </div>
+
+            <!-- Publications Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" data-aos="slide-up">
+                
+                <!-- Publication Card Template -->
+                <div class="publication-card">
+                    <div class="border-l-4 border-mora-accent pl-4">
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="text-sm text-mora-accent">2024</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-mora-dark mb-2">
+                            Dash, S., Ghugar, U., Godavarthi, D. Mohanty S.N et al.
+                        </h3>
+                        <p class="text-mora-secondary mb-2">
+                            HCSRL: hyperledger composer system for reducing logistics losses in the pharmaceutical product supply chain using a blockchain-based approach.
+                        </p>
+                        <p class="text-sm text-mora-accent mb-2">
+                            Scientific Reports, 14, 13528
+                        </p>
+                        <a href="https://doi.org/10.1038/s41598-024-61654-7" 
+                           target="_blank" 
+                           class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
+                            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                            </svg>
+                            View DOI
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Repeat for all publications -->
+                <!-- 2024 Publications -->
+                <div class="publication-card">
+                    <div class="border-l-4 border-mora-accent pl-4">
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="text-sm text-mora-accent">2024</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-mora-dark mb-2">
+                            Mohanty, Sachi Nandan, Satpathy S., Chopra R, Mahato S.
+                        </h3>
+                        <p class="text-mora-secondary mb-2">
+                            Investigating the impact of Maha Mantra chanting on anxiety and depression: An EEG Rhythm Analysis Approach
+                        </p>
+                        <p class="text-sm text-mora-accent mb-2">
+                            Advances in Integrative Medicine
+                        </p>
+                        <a href="https://doi.org/10.1016/j.aimed.2024.04.003" 
+                           target="_blank" 
+                           class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
+                            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                            </svg>
+                            View DOI
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Add all other publications following the same structure -->
+                <!-- Example for 2023 publications -->
+                <div class="publication-card">
+                    <div class="border-l-4 border-mora-accent pl-4">
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="text-sm text-mora-accent">2023</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-mora-dark mb-2">
+                            Singh, T., Kaur, A., Katyal, S.K. Mohanty, S. N. et al.
+                        </h3>
+                        <p class="text-mora-secondary mb-2">
+                            Exploring the relationship between air quality index and lung cancer mortality in India: predictive modeling and impact assessment
+                        </p>
+                        <p class="text-sm text-mora-accent mb-2">
+                            Scientific Reports, 13, 20256
+                        </p>
+                        <a href="https://doi.org/10.1038/s41598-023-47705-5" 
+                           target="_blank" 
+                           class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
+                            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                            </svg>
+                            View DOI
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Continue adding all publications following the same pattern -->
+
+            </div>
+
+            <!-- Publication Stats -->
+            <div class="grid md:grid-cols-3 gap-8 mt-20" data-aos="fade-up">
+                <div class="publication-card text-center">
+                    <div class="text-4xl font-serif font-bold text-mora-accent mb-2">150+</div>
+                    <div class="text-mora-secondary">Total Publications</div>
+                </div>
+                <div class="publication-card text-center">
+                    <div class="text-4xl font-serif font-bold text-mora-accent mb-2">5000+</div>
+                    <div class="text-mora-secondary">Citations</div>
+                </div>
+                <div class="publication-card text-center">
+                    <div class="text-4xl font-serif font-bold text-mora-accent mb-2">42</div>
+                    <div class="text-mora-secondary">H-Index</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            easing: 'ease-out-quad'
+        });
+    </script>
+</body>
+</html>

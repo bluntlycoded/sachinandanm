@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sponsored Projects - Prof. Sachi Nandan Mohanty</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'mora-primary': '#2A2A2A',
+                        'mora-secondary': '#6B6B6B',
+                        'mora-accent': '#E54B4B',
+                        'mora-light': '#F9F9F9',
+                        'mora-dark': '#1A1A1A'
+                    },
+                    fontFamily: {
+                        'sans': ['Poppins', 'sans-serif'],
+                        'serif': ['Libre Baskerville', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hover-scale {
+            @apply transition-transform duration-300 ease-in-out hover:scale-[1.02];
+        }
+        .section-title {
+            @apply font-serif text-4xl font-bold text-mora-dark mb-12 relative 
+                   before:absolute before:bottom-[-8px] before:left-0 before:w-12 
+                   before:h-1 before:bg-mora-accent;
+        }
+        .project-card {
+            @apply bg-white p-8 rounded-xl shadow-sm hover-scale;
+        }
+    </style>
+</head>
+<body class="bg-mora-light font-sans text-mora-secondary leading-relaxed">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-md z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-5">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <a href="index.html" class="text-2xl font-serif font-bold text-mora-dark">S.N.Mohanty</a>
+    
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Home</a>
+                    <a href="honors-awards.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Honors</a>
+                    <a href="membership.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Memberships</a>
+                    
+                    <!-- Publications Dropdown -->
+                    <div class="relative group">
+                        <button class="text-mora-secondary hover:text-mora-accent transition-colors">
+                            Publications ▾
+                        </button>
+                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 py-2 w-48">
+                            <a href="referred-journal.html" class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Referred Journals</a>
+                            <a href="conference-journal.html" class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Conference Papers</a>
+                        </div>
+                    </div>
+    
+                    <a href="books.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Books</a>
+                    <a href="sponsored-projects.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Projects</a>
+                    <a href="contact.html" class="px-4 py-2 bg-mora-accent text-white rounded-full hover:bg-mora-dark transition-colors">Contact</a>
+                </div>
+    
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-mora-dark">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden absolute w-full bg-white shadow-lg">
+            <div class="px-6 py-4 space-y-4">
+                <a href="index.html" class="block text-mora-secondary hover:text-mora-accent">Home</a>
+                <a href="honors-awards.html" class="block text-mora-secondary hover:text-mora-accent">Honors</a>
+                <a href="membership.html" class="block text-mora-secondary hover:text-mora-accent">Memberships</a>
+                
+                <!-- Publications Submenu -->
+                <div class="pl-4">
+                    <details>
+                        <summary class="text-mora-secondary hover:text-mora-accent cursor-pointer">Publications</summary>
+                        <div class="mt-2 space-y-2">
+                            <a href="referred-journal.html" class="block pl-4 text-mora-secondary hover:text-mora-accent">Referred Journals</a>
+                            <a href="conference-journal.html" class="block pl-4 text-mora-secondary hover:text-mora-accent">Conference Papers</a>
+                        </div>
+                    </details>
+                </div>
+    
+                <a href="books.html" class="block text-mora-secondary hover:text-mora-accent">Books</a>
+                <a href="sponsored-projects.html" class="block text-mora-secondary hover:text-mora-accent">Projects</a>
+                <a href="contact.html" class="block px-4 py-2 bg-mora-accent text-white rounded-full hover:bg-mora-dark">Contact</a>
+            </div>
+        </div>
+    </nav>
+    
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isHidden = mobileMenu.classList.contains('hidden');
+            mobileMenu.classList.toggle('hidden', !isHidden);
+            
+            // Change menu icon
+            mobileMenuButton.innerHTML = isHidden ? 
+                `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>` :
+                `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>`;
+        });
+    
+        // Close menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target)) {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.innerHTML = `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>`;
+            }
+        });
+    
+        // Handle mobile submenus
+        document.querySelectorAll('details').forEach(details => {
+            details.addEventListener('click', (e) => {
+                if (window.innerWidth < 768) { // Only on mobile
+                    e.preventDefault();
+                    document.querySelectorAll('details').forEach(other => {
+                        if (other !== details) other.removeAttribute('open');
+                    });
+                    details.toggleAttribute('open');
+                }
+            });
+        });
+    </script>
+
+    <!-- Projects Content -->
+    <main class="min-h-screen pt-32 pb-20 px-6">
+        <div class="container mx-auto max-w-6xl">
+            <!-- Page Header -->
+            <div class="text-center mb-20" data-aos="fade-up">
+                <h1 class="text-4xl md:text-5xl font-serif font-bold text-mora-dark mb-4">
+                    Sponsored Research Projects
+                </h1>
+                <p class="text-xl text-mora-secondary max-w-2xl mx-auto">
+                    Funded research initiatives contributing to technological advancement and education
+                </p>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="grid md:grid-cols-2 gap-8" data-aos="slide-up">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="border-l-4 border-mora-accent pl-4">
+                        <h3 class="text-xl font-semibold text-mora-dark mb-4">
+                            Digital Health Advisor for Depression Patients
+                        </h3>
+                        <div class="space-y-4">
+                            <div>
+                                <p class="text-sm font-medium text-mora-secondary">Principal Investigator</p>
+                                <p class="text-mora-accent">Dr. Sachi Nandan Mohanty</p>
+                            </div>
+                            <div>
+                                <p class="text-sm font-medium text-mora-secondary">Sponsoring Agency</p>
+                                <p class="text-mora-secondary">
+                                    Collaborative Research and Innovation Scheme (CSIR) TEQIP-III<br>
+                                    Biju Patnaik University of Technology<br>
+                                    Rourkela, Odisha, India
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="border-l-4 border-mora-accent pl-4">
+                        <h3 class="text-xl font-semibold text-mora-dark mb-4">
+                            Programming Education Content Development
+                        </h3>
+                        <div class="space-y-4">
+                            <div>
+                                <p class="text-sm font-medium text-mora-secondary">Principal Investigator</p>
+                                <p class="text-mora-accent">Dr. Sachi Nandan Mohanty</p>
+                            </div>
+                            <div>
+                                <p class="text-sm font-medium text-mora-secondary">Sponsoring Agency</p>
+                                <p class="text-mora-secondary">
+                                    Odisha Knowledge Corporation Ltd (OKCL)<br>
+                                    Department of Higher Education<br>
+                                    Govt. of Odisha, Bhubaneswar, India
+                                </p>
+                            </div>
+                            <div>
+                                <p class="text-sm font-medium text-mora-secondary">Project Scope</p>
+                                <p class="text-mora-secondary">
+                                    Content development on Programming in C Language<br>
+                                    Object Oriented Programming with Case Studies<br>
+                                    For Higher Secondary Education Students
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Section -->
+            <div class="grid md:grid-cols-3 gap-8 mt-20" data-aos="fade-up">
+                <div class="project-card text-center">
+                    <div class="text-4xl font-serif font-bold text-mora-accent mb-2">2+</div>
+                    <div class="text-mora-secondary">Active Projects</div>
+                </div>
+                <div class="project-card text-center">
+                    <div class="text-4xl font-serif font-bold text-mora-accent mb-2">₹50L+</div>
+                    <div class="text-mora-secondary">Total Funding</div>
+                </div>
+                <div class="project-card text-center">
+                    <div class="text-4xl font-serif font-bold text-mora-accent mb-2">10+</div>
+                    <div class="text-mora-secondary">Team Members</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            easing: 'ease-out-quad'
+        });
+    </script>
+</body>
+</html>
