@@ -59,13 +59,13 @@
             <div class="flex justify-between items-center">
                 <!-- Logo -->
                 <a href="index.html" class="text-2xl font-serif font-bold text-mora-dark">S.N.Mohanty</a>
-    
+
                 <!-- Desktop Menu -->
-                <div class="hidden md:flex space-x-8 items-center">
+                <div class="hidden md:flex space-x-6 items-center">
                     <a href="index.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Home</a>
                     <a href="honors-awards.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Honors</a>
                     <a href="membership.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Memberships</a>
-                    
+
                     <!-- Publications Dropdown -->
                     <div class="relative group">
                         <button class="text-mora-secondary hover:text-mora-accent transition-colors">
@@ -76,12 +76,26 @@
                             <a href="conference-journal.html" class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Conference Papers</a>
                         </div>
                     </div>
-    
+
+                    <a href="patents.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Patents</a>
+                    <a href="talks.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Talks</a>
+
+                    <!-- Professional Roles Dropdown -->
+                    <div class="relative group">
+                        <button class="text-mora-secondary hover:text-mora-accent transition-colors">
+                            Roles ▾
+                        </button>
+                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 py-2 w-48">
+                            <a href="editorship.html" class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Editorship</a>
+                            <a href="chairmanship.html" class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Chairmanship</a>
+                        </div>
+                    </div>
+
                     <a href="books.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Books</a>
                     <a href="sponsored-projects.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Projects</a>
                     <a href="contact.html" class="px-4 py-2 bg-mora-accent text-white rounded-full hover:bg-mora-dark transition-colors">Contact</a>
                 </div>
-    
+
                 <!-- Mobile Menu Button -->
                 <button id="mobile-menu-button" class="md:hidden text-mora-dark">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -90,14 +104,16 @@
                 </button>
             </div>
         </div>
-    
+
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden absolute w-full bg-white shadow-lg">
             <div class="px-6 py-4 space-y-4">
                 <a href="index.html" class="block text-mora-secondary hover:text-mora-accent">Home</a>
                 <a href="honors-awards.html" class="block text-mora-secondary hover:text-mora-accent">Honors</a>
                 <a href="membership.html" class="block text-mora-secondary hover:text-mora-accent">Memberships</a>
-                
+                <a href="patents.html" class="block text-mora-secondary hover:text-mora-accent">Patents</a>
+                <a href="talks.html" class="block text-mora-secondary hover:text-mora-accent">Talks</a>
+
                 <!-- Publications Submenu -->
                 <div class="pl-4">
                     <details>
@@ -108,7 +124,18 @@
                         </div>
                     </details>
                 </div>
-    
+
+                <!-- Professional Roles Submenu -->
+                <div class="pl-4">
+                    <details>
+                        <summary class="text-mora-secondary hover:text-mora-accent cursor-pointer">Professional Roles</summary>
+                        <div class="mt-2 space-y-2">
+                            <a href="editorship.html" class="block pl-4 text-mora-secondary hover:text-mora-accent">Editorship</a>
+                            <a href="chairmanship.html" class="block pl-4 text-mora-secondary hover:text-mora-accent">Chairmanship</a>
+                        </div>
+                    </details>
+                </div>
+
                 <a href="books.html" class="block text-mora-secondary hover:text-mora-accent">Books</a>
                 <a href="sponsored-projects.html" class="block text-mora-secondary hover:text-mora-accent">Projects</a>
                 <a href="contact.html" class="block px-4 py-2 bg-mora-accent text-white rounded-full hover:bg-mora-dark">Contact</a>
@@ -161,6 +188,7 @@
     </script>
 
     <!-- Honors & Awards Content -->
+    <!-- Honors & Awards Content -->
     <main class="min-h-screen pt-32 pb-20 px-6">
         <div class="container mx-auto max-w-6xl">
             <!-- Page Header -->
@@ -169,7 +197,7 @@
                     Honors & Awards
                 </h1>
                 <p class="text-xl text-mora-secondary max-w-2xl mx-auto">
-                    Academic recognition and professional achievements spanning two decades of research excellence
+                    Academic recognition and professional achievements spanning a distinguished career
                 </p>
             </div>
 
@@ -178,7 +206,7 @@
                 <div class="absolute left-1/2 w-1 h-full bg-mora-accent/20 transform -translate-x-1/2"></div>
 
                 <div class="space-y-20">
-                    <!-- 2023 Award -->
+                    <!-- 2020 Awards -->
                     <div class="relative flex md:contents">
                         <div class="hidden md:block w-1/2"></div>
                         <div class="z-10 flex items-center justify-center w-8 h-8 bg-mora-accent rounded-full absolute left-1/2 -translate-x-1/2">
@@ -190,28 +218,22 @@
                             <div class="bg-white p-8 rounded-xl shadow-sm">
                                 <div class="flex items-center mb-4">
                                     <div class="w-12 h-12 bg-mora-accent/10 rounded-lg flex items-center justify-center mr-4">
-                                        <span class="text-mora-accent font-serif font-bold">2023</span>
+                                        <span class="text-mora-accent font-serif font-bold">2020</span>
                                     </div>
                                     <div>
-                                        <h3 class="text-xl font-semibold text-mora-dark">Lifetime Achievement Award</h3>
-                                        <p class="text-mora-accent">Global AI Research Consortium</p>
+                                        <h3 class="text-xl font-semibold text-mora-dark">International Travel Grant</h3>
+                                        <p class="text-mora-accent">SERB, Govt. of India</p>
                                     </div>
                                 </div>
-                                <p class="text-mora-secondary mb-4">Recognized for sustained contributions to machine learning research and ethical AI development</p>
+                                <p class="text-mora-secondary mb-4">For presenting at 11th International Multiple-Conference on Complexity Informatics and Cybernetics (IMCIC-2020) in Florida, USA :cite[1]</p>
                                 <div class="flex items-center space-x-4">
-                                    <span class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">Prestige Award</span>
-                                    <a href="#" class="text-mora-accent hover:text-mora-dark flex items-center">
-                                        <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
-                                        </svg>
-                                        Certificate
-                                    </a>
+                                    <span class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">International</span>
+                                    <span class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">Research</span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- 2021 Award -->
                     <div class="relative flex md:contents flex-row-reverse">
                         <div class="hidden md:block w-1/2"></div>
                         <div class="z-10 flex items-center justify-center w-8 h-8 bg-mora-accent rounded-full absolute left-1/2 -translate-x-1/2">
@@ -223,44 +245,210 @@
                             <div class="bg-white p-8 rounded-xl shadow-sm">
                                 <div class="flex items-center mb-4">
                                     <div class="w-12 h-12 bg-mora-accent/10 rounded-lg flex items-center justify-center mr-4">
-                                        <span class="text-mora-accent font-serif font-bold">2021</span>
+                                        <span class="text-mora-accent font-serif font-bold">2020</span>
                                     </div>
                                     <div>
-                                        <h3 class="text-xl font-semibold text-mora-dark">Innovator of the Year</h3>
-                                        <p class="text-mora-accent">Tech Research Foundation</p>
+                                        <h3 class="text-xl font-semibold text-mora-dark">Paper Presenter Award</h3>
+                                        <p class="text-mora-accent">Computer Society of India</p>
                                     </div>
                                 </div>
-                                <p class="text-mora-secondary mb-4">Awarded for developing novel neural network architectures for medical diagnostics</p>
+                                <p class="text-mora-secondary mb-4">Awarded at 53rd National Convention by CSI at KIIT Deemed University :cite[1]</p>
                                 <div class="flex items-center space-x-4">
-                                    <span class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">Healthcare</span>
-                                    <a href="#" class="text-mora-accent hover:text-mora-dark flex items-center">
-                                        <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
-                                        </svg>
-                                        Press Release
-                                    </a>
+                                    <span class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">Academic</span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Add more awards following the same pattern -->
+                    <!-- 2019 Awards -->
+                    <div class="relative flex md:contents">
+                        <div class="hidden md:block w-1/2"></div>
+                        <div class="z-10 flex items-center justify-center w-8 h-8 bg-mora-accent rounded-full absolute left-1/2 -translate-x-1/2">
+                            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <div class="w-full md:w-1/2 p-4 group hover-scale">
+                            <div class="bg-white p-8 rounded-xl shadow-sm">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-12 h-12 bg-mora-accent/10 rounded-lg flex items-center justify-center mr-4">
+                                        <span class="text-mora-accent font-serif font-bold">2019</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-mora-dark">Best Researcher Award</h3>
+                                        <p class="text-mora-accent">Biju Pattnaik University of Technology</p>
+                                    </div>
+                                </div>
+                                <p class="text-mora-secondary mb-4">Awarded on University Foundation Day (TEQIP-III, BPUT sponsored) :cite[1]</p>
+                                <div class="flex items-center space-x-4">
+                                    <span class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">Research</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative flex md:contents flex-row-reverse">
+                        <div class="hidden md:block w-1/2"></div>
+                        <div class="z-10 flex items-center justify-center w-8 h-8 bg-mora-accent rounded-full absolute left-1/2 -translate-x-1/2">
+                            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <div class="w-full md:w-1/2 p-4 group hover-scale">
+                            <div class="bg-white p-8 rounded-xl shadow-sm">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-12 h-12 bg-mora-accent/10 rounded-lg flex items-center justify-center mr-4">
+                                        <span class="text-mora-accent font-serif font-bold">2019</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-mora-dark">Indian Education Icon Award</h3>
+                                        <p class="text-mora-accent">Techprolab Pvt Ltd (IIT Patna incubated)</p>
+                                    </div>
+                                </div>
+                                <p class="text-mora-secondary mb-4">For contributions to the education community :cite[1]</p>
+                                <div class="flex items-center space-x-4">
+                                    <span class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">Education</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2018 Awards -->
+                    <div class="relative flex md:contents">
+                        <div class="hidden md:block w-1/2"></div>
+                        <div class="z-10 flex items-center justify-center w-8 h-8 bg-mora-accent rounded-full absolute left-1/2 -translate-x-1/2">
+                            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <div class="w-full md:w-1/2 p-4 group hover-scale">
+                            <div class="bg-white p-8 rounded-xl shadow-sm">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-12 h-12 bg-mora-accent/10 rounded-lg flex items-center justify-center mr-4">
+                                        <span class="text-mora-accent font-serif font-bold">2018</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-mora-dark">Best Researcher Award</h3>
+                                        <p class="text-mora-accent">Govt. of Odisha</p>
+                                    </div>
+                                </div>
+                                <p class="text-mora-secondary mb-4">From Department of Higher Education, Govt. of Odisha :cite[1]</p>
+                                <div class="flex items-center space-x-4">
+                                    <span class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">Government</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative flex md:contents flex-row-reverse">
+                        <div class="hidden md:block w-1/2"></div>
+                        <div class="z-10 flex items-center justify-center w-8 h-8 bg-mora-accent rounded-full absolute left-1/2 -translate-x-1/2">
+                            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <div class="w-full md:w-1/2 p-4 group hover-scale">
+                            <div class="bg-white p-8 rounded-xl shadow-sm">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-12 h-12 bg-mora-accent/10 rounded-lg flex items-center justify-center mr-4">
+                                        <span class="text-mora-accent font-serif font-bold">2018</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-mora-dark">Outstanding Faculty Award</h3>
+                                        <p class="text-mora-accent">Venus International Foundation</p>
+                                    </div>
+                                </div>
+                                <p class="text-mora-secondary mb-4">For contributions in Computer Science & Engineering :cite[1]</p>
+                                <div class="flex items-center space-x-4">
+                                    <span class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">Teaching</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Earlier Awards -->
+                    <div class="relative flex md:contents">
+                        <div class="hidden md:block w-1/2"></div>
+                        <div class="z-10 flex items-center justify-center w-8 h-8 bg-mora-accent rounded-full absolute left-1/2 -translate-x-1/2">
+                            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <div class="w-full md:w-1/2 p-4 group hover-scale">
+                            <div class="bg-white p-8 rounded-xl shadow-sm">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-12 h-12 bg-mora-accent/10 rounded-lg flex items-center justify-center mr-4">
+                                        <span class="text-mora-accent font-serif font-bold">2015-2017</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-mora-dark">Key Academic Honors</h3>
+                                        <p class="text-mora-accent">Multiple Organizations</p>
+                                    </div>
+                                </div>
+                                <p class="text-mora-secondary mb-4">
+                                    • Best Ph.D. Thesis Award (CSI 2015) :cite[1]<br>
+                                    • Eminent Academician Award (ISTE 2014) :cite[1]<br>
+                                    • Best Paper Award (IIT Roorkee 2013) :cite[1]<br>
+                                    • MHRD Scholarship (2009-2013) :cite[1]
+                                </p>
+                                <div class="flex items-center space-x-4">
+                                    <span class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">Academic</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Keynote Speaking -->
+                    <div class="relative flex md:contents flex-row-reverse">
+                        <div class="hidden md:block w-1/2"></div>
+                        <div class="z-10 flex items-center justify-center w-8 h-8 bg-mora-accent rounded-full absolute left-1/2 -translate-x-1/2">
+                            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <div class="w-full md:w-1/2 p-4 group hover-scale">
+                            <div class="bg-white p-8 rounded-xl shadow-sm">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-12 h-12 bg-mora-accent/10 rounded-lg flex items-center justify-center mr-4">
+                                        <span class="text-mora-accent font-serif font-bold">2015-2019</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-mora-dark">Keynote Speaking Engagements</h3>
+                                        <p class="text-mora-accent">International Conferences</p>
+                                    </div>
+                                </div>
+                                <p class="text-mora-secondary mb-4">
+                                    • CIIR-2019 (Kolkata) :cite[1]<br>
+                                    • Big Data Conference (Paris 2017) :cite[1]<br>
+                                    • Business Intelligence Conference (2015) :cite[1]<br>
+                                    • Soft Computing Seminar (2015) :cite[1]
+                                </p>
+                                <div class="flex items-center space-x-4">
+                                    <span class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">Leadership</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <!-- Achievement Stats -->
-            <div class="grid md:grid-cols-3 gap-8 mt-20" data-aos="fade-up">
+            <div class="grid md:grid-cols-4 gap-8 mt-20" data-aos="fade-up">
                 <div class="bg-white p-8 rounded-xl shadow-sm text-center hover-scale">
-                    <div class="text-4xl font-serif font-bold text-mora-accent mb-2">27</div>
-                    <div class="text-mora-secondary">International Awards</div>
+                    <div class="text-4xl font-serif font-bold text-mora-accent mb-2">15+</div>
+                    <div class="text-mora-secondary">National & International Awards</div>
                 </div>
                 <div class="bg-white p-8 rounded-xl shadow-sm text-center hover-scale">
-                    <div class="text-4xl font-serif font-bold text-mora-accent mb-2">$5.2M</div>
-                    <div class="text-mora-secondary">Research Funding</div>
-                </div>
-                <div class="bg-white p-8 rounded-xl shadow-sm text-center hover-scale">
-                    <div class="text-4xl font-serif font-bold text-mora-accent mb-2">14</div>
+                    <div class="text-4xl font-serif font-bold text-mora-accent mb-2">10+</div>
                     <div class="text-mora-secondary">Keynote Speeches</div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-sm text-center hover-scale">
+                    <div class="text-4xl font-serif font-bold text-mora-accent mb-2">5+</div>
+                    <div class="text-mora-secondary">International Grants</div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-sm text-center hover-scale">
+                    <div class="text-4xl font-serif font-bold text-mora-accent mb-2">3</div>
+                    <div class="text-mora-secondary">Best Paper Awards</div>
                 </div>
             </div>
         </div>
