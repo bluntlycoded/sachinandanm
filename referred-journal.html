@@ -56,13 +56,17 @@
                     <a href="membership.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Memberships</a>
 
                     <!-- Publications Dropdown -->
-                    <div class="relative group">
-                        <button class="text-mora-secondary hover:text-mora-accent transition-colors">
+                    <div class="relative group" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="setTimeout(() => open = false, 200)">
+                        <button class="text-mora-secondary hover:text-mora-accent transition-colors" @click="open = !open">
                             Publications ▾
                         </button>
-                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 py-2 w-48">
-                            <a href="referred-journal.html" class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Referred Journals</a>
-                            <a href="conference-journal.html" class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Conference Papers</a>
+                        <div class="absolute transition-all duration-200 ease-in-out"
+                             :class="{'opacity-100 visible translate-y-0': open, 'opacity-0 invisible -translate-y-1': !open}"
+                             x-cloak>
+                            <div class="bg-white shadow-lg rounded-lg mt-2 py-2 w-48">
+                                <a href="referred-journal.html" class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Referred Journals</a>
+                                <a href="conference-journal.html" class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Conference Papers</a>
+                            </div>
                         </div>
                     </div>
 
@@ -70,13 +74,17 @@
                     <a href="talks.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Talks</a>
 
                     <!-- Professional Roles Dropdown -->
-                    <div class="relative group">
-                        <button class="text-mora-secondary hover:text-mora-accent transition-colors">
+                    <div class="relative group" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="setTimeout(() => open = false, 200)">
+                        <button class="text-mora-secondary hover:text-mora-accent transition-colors" @click="open = !open">
                             Roles ▾
                         </button>
-                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 py-2 w-48">
-                            <a href="editorship.html" class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Editorship</a>
-                            <a href="chairmanship.html" class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Chairmanship</a>
+                        <div class="absolute transition-all duration-200 ease-in-out"
+                             :class="{'opacity-100 visible translate-y-0': open, 'opacity-0 invisible -translate-y-1': !open}"
+                             x-cloak>
+                            <div class="bg-white shadow-lg rounded-lg mt-2 py-2 w-48">
+                                <a href="editorship.html" class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Editorship</a>
+                                <a href="chairmanship.html" class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Chairmanship</a>
+                            </div>
                         </div>
                     </div>
 
@@ -131,37 +139,40 @@
             </div>
         </div>
     </nav>
-    
+
+    <!-- Alpine.js for dropdown functionality -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
     <script>
         // Mobile menu toggle
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
-        
+
         mobileMenuButton.addEventListener('click', (e) => {
             e.stopPropagation();
             const isHidden = mobileMenu.classList.contains('hidden');
             mobileMenu.classList.toggle('hidden', !isHidden);
-            
+
             // Change menu icon
-            mobileMenuButton.innerHTML = isHidden ? 
+            mobileMenuButton.innerHTML = isHidden ?
                 `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                </svg>` :
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>` :
                 `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                </svg>`;
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>`;
         });
-    
+
         // Close menu when clicking outside
         document.addEventListener('click', (event) => {
             if (!mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target)) {
                 mobileMenu.classList.add('hidden');
                 mobileMenuButton.innerHTML = `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                </svg>`;
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>`;
             }
         });
-    
+
         // Handle mobile submenus
         document.querySelectorAll('details').forEach(details => {
             details.addEventListener('click', (e) => {
@@ -189,104 +200,146 @@
                 </p>
             </div>
 
-            <!-- Publications Grid -->
+            <!-- Publications Grid - Now with Perfect Alignment -->
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" data-aos="slide-up">
-                
-                <!-- Publication Card Template -->
-                <div class="publication-card">
-                    <div class="border-l-4 border-mora-accent pl-4">
+
+                <!-- Publication Card 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex">
+                    <!-- Full-height left border -->
+                    <div class="absolute left-0 top-0 bottom-0 w-1 bg-mora-accent rounded-l-lg"></div>
+
+                    <div class="pl-5 flex flex-col h-full w-full">
                         <div class="flex justify-between items-start mb-3">
-                            <span class="text-sm text-mora-accent">2024</span>
+                            <span class="text-sm text-mora-accent font-medium">2024</span>
                         </div>
-                        <h3 class="text-lg font-semibold text-mora-dark mb-2">
-                            Dash, S., Ghugar, U., Godavarthi, D. Mohanty S.N et al.
-                        </h3>
-                        <p class="text-mora-secondary mb-2">
-                            HCSRL: hyperledger composer system for reducing logistics losses in the pharmaceutical product supply chain using a blockchain-based approach.
-                        </p>
-                        <p class="text-sm text-mora-accent mb-2">
-                            Scientific Reports, 14, 13528
-                        </p>
-                        <a href="https://doi.org/10.1038/s41598-024-61654-7" 
-                           target="_blank" 
-                           class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
-                            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
-                            </svg>
-                            View DOI
-                        </a>
+
+                        <!-- Title Group with Fixed Height -->
+                        <div class="min-h-[72px] mb-2 flex items-start">
+                            <h3 class="text-lg font-semibold text-mora-dark leading-tight">
+                                Dash, S., Ghugar, U., Godavarthi, D. Mohanty S.N et al.
+                            </h3>
+                        </div>
+
+                        <!-- Description with Fixed Height -->
+                        <div class="min-h-[96px] mb-3 flex items-start">
+                            <p class="text-mora-secondary text-sm leading-relaxed">
+                                HCSRL: hyperledger composer system for reducing logistics losses in the pharmaceutical product supply chain using a blockchain-based approach.
+                            </p>
+                        </div>
+
+                        <!-- Journal Info with Fixed Height -->
+                        <div class="min-h-[24px] mb-4 flex items-center">
+                            <p class="text-sm text-mora-accent font-medium">
+                                Scientific Reports, 14, 13528
+                            </p>
+                        </div>
+
+                        <!-- DOI Link -->
+                        <div class="mt-auto">
+                            <a href="https://doi.org/10.1038/s41598-024-61654-7"
+                               target="_blank"
+                               class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
+                                <svg class="w-4 h-4 mr-2 shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                                </svg>
+                                View DOI
+                            </a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Repeat for all publications -->
-                <!-- 2024 Publications -->
-                <div class="publication-card">
-                    <div class="border-l-4 border-mora-accent pl-4">
+                <!-- Publication Card 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex">
+                    <div class="absolute left-0 top-0 bottom-0 w-1 bg-mora-accent rounded-l-lg"></div>
+
+                    <div class="pl-5 flex flex-col h-full w-full">
                         <div class="flex justify-between items-start mb-3">
-                            <span class="text-sm text-mora-accent">2024</span>
+                            <span class="text-sm text-mora-accent font-medium">2024</span>
                         </div>
-                        <h3 class="text-lg font-semibold text-mora-dark mb-2">
-                            Mohanty, Sachi Nandan, Satpathy S., Chopra R, Mahato S.
-                        </h3>
-                        <p class="text-mora-secondary mb-2">
-                            Investigating the impact of Maha Mantra chanting on anxiety and depression: An EEG Rhythm Analysis Approach
-                        </p>
-                        <p class="text-sm text-mora-accent mb-2">
-                            Advances in Integrative Medicine
-                        </p>
-                        <a href="https://doi.org/10.1016/j.aimed.2024.04.003" 
-                           target="_blank" 
-                           class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
-                            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
-                            </svg>
-                            View DOI
-                        </a>
+
+                        <div class="min-h-[72px] mb-2 flex items-start">
+                            <h3 class="text-lg font-semibold text-mora-dark leading-tight">
+                                Mohanty, Sachi Nandan, Satpathy S., Chopra R, Mahato S.
+                            </h3>
+                        </div>
+
+                        <div class="min-h-[96px] mb-3 flex items-start">
+                            <p class="text-mora-secondary text-sm leading-relaxed">
+                                Investigating the impact of Maha Mantra chanting on anxiety and depression: An EEG Rhythm Analysis Approach
+                            </p>
+                        </div>
+
+                        <div class="min-h-[24px] mb-4 flex items-center">
+                            <p class="text-sm text-mora-accent font-medium">
+                                Advances in Integrative Medicine
+                            </p>
+                        </div>
+
+                        <div class="mt-auto">
+                            <a href="https://doi.org/10.1016/j.aimed.2024.04.003"
+                               target="_blank"
+                               class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
+                                <svg class="w-4 h-4 mr-2 shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                                </svg>
+                                View DOI
+                            </a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Add all other publications following the same structure -->
-                <!-- Example for 2023 publications -->
-                <div class="publication-card">
-                    <div class="border-l-4 border-mora-accent pl-4">
+                <!-- Publication Card 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex">
+                    <div class="absolute left-0 top-0 bottom-0 w-1 bg-mora-accent rounded-l-lg"></div>
+
+                    <div class="pl-5 flex flex-col h-full w-full">
                         <div class="flex justify-between items-start mb-3">
-                            <span class="text-sm text-mora-accent">2023</span>
+                            <span class="text-sm text-mora-accent font-medium">2023</span>
                         </div>
-                        <h3 class="text-lg font-semibold text-mora-dark mb-2">
-                            Singh, T., Kaur, A., Katyal, S.K. Mohanty, S. N. et al.
-                        </h3>
-                        <p class="text-mora-secondary mb-2">
-                            Exploring the relationship between air quality index and lung cancer mortality in India: predictive modeling and impact assessment
-                        </p>
-                        <p class="text-sm text-mora-accent mb-2">
-                            Scientific Reports, 13, 20256
-                        </p>
-                        <a href="https://doi.org/10.1038/s41598-023-47705-5" 
-                           target="_blank" 
-                           class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
-                            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
-                            </svg>
-                            View DOI
-                        </a>
+
+                        <div class="min-h-[72px] mb-2 flex items-start">
+                            <h3 class="text-lg font-semibold text-mora-dark leading-tight">
+                                Singh, T., Kaur, A., Katyal, S.K. Mohanty, S. N. et al.
+                            </h3>
+                        </div>
+
+                        <div class="min-h-[96px] mb-3 flex items-start">
+                            <p class="text-mora-secondary text-sm leading-relaxed">
+                                Exploring the relationship between air quality index and lung cancer mortality in India: predictive modeling and impact assessment
+                            </p>
+                        </div>
+
+                        <div class="min-h-[24px] mb-4 flex items-center">
+                            <p class="text-sm text-mora-accent font-medium">
+                                Scientific Reports, 13, 20256
+                            </p>
+                        </div>
+
+                        <div class="mt-auto">
+                            <a href="https://doi.org/10.1038/s41598-023-47705-5"
+                               target="_blank"
+                               class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
+                                <svg class="w-4 h-4 mr-2 shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                                </svg>
+                                View DOI
+                            </a>
+                        </div>
                     </div>
                 </div>
-
-                <!-- Continue adding all publications following the same pattern -->
-
             </div>
 
             <!-- Publication Stats -->
             <div class="grid md:grid-cols-3 gap-8 mt-20" data-aos="fade-up">
-                <div class="publication-card text-center">
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center">
                     <div class="text-4xl font-serif font-bold text-mora-accent mb-2">150+</div>
                     <div class="text-mora-secondary">Total Publications</div>
                 </div>
-                <div class="publication-card text-center">
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center">
                     <div class="text-4xl font-serif font-bold text-mora-accent mb-2">5000+</div>
                     <div class="text-mora-secondary">Citations</div>
                 </div>
-                <div class="publication-card text-center">
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center">
                     <div class="text-4xl font-serif font-bold text-mora-accent mb-2">42</div>
                     <div class="text-mora-secondary">H-Index</div>
                 </div>

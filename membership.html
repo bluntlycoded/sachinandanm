@@ -53,13 +53,17 @@
                     <a href="membership.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Memberships</a>
 
                     <!-- Publications Dropdown -->
-                    <div class="relative group">
-                        <button class="text-mora-secondary hover:text-mora-accent transition-colors">
+                    <div class="relative group" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="setTimeout(() => open = false, 200)">
+                        <button class="text-mora-secondary hover:text-mora-accent transition-colors" @click="open = !open">
                             Publications ▾
                         </button>
-                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 py-2 w-48">
-                            <a href="referred-journal.html" class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Referred Journals</a>
-                            <a href="conference-journal.html" class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Conference Papers</a>
+                        <div class="absolute transition-all duration-200 ease-in-out"
+                             :class="{'opacity-100 visible translate-y-0': open, 'opacity-0 invisible -translate-y-1': !open}"
+                             x-cloak>
+                            <div class="bg-white shadow-lg rounded-lg mt-2 py-2 w-48">
+                                <a href="referred-journal.html" class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Referred Journals</a>
+                                <a href="conference-journal.html" class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Conference Papers</a>
+                            </div>
                         </div>
                     </div>
 
@@ -67,13 +71,17 @@
                     <a href="talks.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Talks</a>
 
                     <!-- Professional Roles Dropdown -->
-                    <div class="relative group">
-                        <button class="text-mora-secondary hover:text-mora-accent transition-colors">
+                    <div class="relative group" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="setTimeout(() => open = false, 200)">
+                        <button class="text-mora-secondary hover:text-mora-accent transition-colors" @click="open = !open">
                             Roles ▾
                         </button>
-                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 py-2 w-48">
-                            <a href="editorship.html" class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Editorship</a>
-                            <a href="chairmanship.html" class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Chairmanship</a>
+                        <div class="absolute transition-all duration-200 ease-in-out"
+                             :class="{'opacity-100 visible translate-y-0': open, 'opacity-0 invisible -translate-y-1': !open}"
+                             x-cloak>
+                            <div class="bg-white shadow-lg rounded-lg mt-2 py-2 w-48">
+                                <a href="editorship.html" class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Editorship</a>
+                                <a href="chairmanship.html" class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Chairmanship</a>
+                            </div>
                         </div>
                     </div>
 
@@ -128,36 +136,40 @@
             </div>
         </div>
     </nav>
+
+    <!-- Alpine.js for dropdown functionality -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
     <script>
         // Mobile menu toggle
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
-        
+
         mobileMenuButton.addEventListener('click', (e) => {
             e.stopPropagation();
             const isHidden = mobileMenu.classList.contains('hidden');
             mobileMenu.classList.toggle('hidden', !isHidden);
-            
+
             // Change menu icon
-            mobileMenuButton.innerHTML = isHidden ? 
+            mobileMenuButton.innerHTML = isHidden ?
                 `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                </svg>` :
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>` :
                 `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                </svg>`;
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>`;
         });
-    
+
         // Close menu when clicking outside
         document.addEventListener('click', (event) => {
             if (!mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target)) {
                 mobileMenu.classList.add('hidden');
                 mobileMenuButton.innerHTML = `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                </svg>`;
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>`;
             }
         });
-    
+
         // Handle mobile submenus
         document.querySelectorAll('details').forEach(details => {
             details.addEventListener('click', (e) => {
