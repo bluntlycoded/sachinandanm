@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
+    <style>[x-cloak] { display: none !important; }</style>
     <script>
         tailwind.config = {
             theme: {
@@ -312,110 +312,133 @@
         </div>
     </section>
 
-    <section id="about" class="py-20 px-6 bg-white">
-        <div class="container mx-auto max-w-4xl" data-aos="slide-up">
+    <section id="about" class="py-16 px-4 bg-mora-light w-full">
+        <div class="container mx-auto px-4 w-4/5">
             <!-- Header -->
-            <h2 class="text-3xl font-bold text-mora-dark text-center mb-12">About Me</h2>
+            <h2 class="text-3xl font-serif font-bold text-center mb-12 text-mora-dark">
+                About Me
+            </h2>
 
-            <!-- Content Grid -->
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Left Text Content - Centered -->
-                <div class="flex flex-col justify-center order-2 md:order-1 min-h-[300px] md:min-h-auto">
-                    <div class="text-mora-secondary space-y-6 text-center md:text-left">
-                        <p class="text-lg max-w-[500px] mx-auto">
-                            Dr. Sachi Nandan Mohanty is recognized among the Top 2% World Scientists by Stanford University and Elsevier (2022-2024). With a PostDoc from IIT Kanpur (2019) and PhD from IIT Kharagpur (2015), he has made significant contributions to Data Mining, Big Data Analysis, and Computational Intelligence.
+            <!-- Three Column Layout -->
+            <div class="flex flex-col md:flex-row gap-8 items-stretch">
+                <!-- Left Column - Photo -->
+                <div class="w-full md:w-1/4 flex items-center justify-center">
+                    <div class="bg-white p-6 rounded-xl shadow-sm h-full flex items-center justify-center">
+                        <img src="https://drsachinandan.com/assets/img/demo/avatar1.jpg"
+                             alt="Dr. Sachi Nandan Mohanty"
+                             class="w-64 h-64 rounded-full object-cover shadow-lg">
+                    </div>
+                </div>
+
+                <!-- Middle Column - Bio Content -->
+                <div class="w-full md:w-2/4 flex flex-col justify-center">
+                    <div class="text-lg text-mora-secondary space-y-3">
+                        <div class="flex flex-wrap justify-evenly gap-y-2 w-full">
+    <span class="flex items-center after:content-['|'] after:px-2 last:after:content-none">
+        MIEEE
+    </span>
+                            <span class="flex items-center after:content-['|'] after:px-2 last:after:content-none">
+        FIE
+    </span>
+                            <span class="flex items-center after:content-['|'] after:px-2 last:after:content-none">
+        MIETE
+    </span>
+                            <span class="flex items-center after:content-['|'] after:px-2 last:after:content-none">
+        MIET
+    </span>
+                            <span class="flex items-center after:content-['|'] after:px-2 last:after:content-none">
+        MINAE
+    </span>
+                            <span class="flex items-center after:content-['|'] after:px-2 last:after:content-none">
+        MACM
+    </span>
+                            <span class="flex items-center after:content-['|'] after:px-2 last:after:content-none">
+        FISTE
+    </span>
+                            <span class="flex items-center">
+        FCSI
+    </span>
+                        </div>
+
+                        <p class="font-medium">Professor</p>
+                        <p>Department of Computer Science and Engineering</p>
+                        <p>VIT AP University</p>
+                        <p>Amaravati - 522237, Andhra Pradesh, India</p>
+
+                        <div class="flex flex-wrap gap-x-4 pt-2">
+                            <span>Tel: </span>
+                            <span>Fax: </span>
+                            <span>Email: </span>
+                        </div>
+
+                        <p class="pt-4">
+                            <span class="font-semibold text-mora-accent">Stanford Top 2% Scientist</span> specializing in AI/Data Mining.
+                            Authored 52 books (Springer/IEEE-Wiley) and 120+ publications.
+                            Recipient of CSI Best Thesis Award and 4 Best Paper Awards.
+                            Editor-in-Chief of <em>Intelligent Systems</em> and international keynote speaker.
                         </p>
                     </div>
                 </div>
 
-                <!-- Right Slider -->
-                <div class="relative h-96 order-1 md:order-2">
-                    <!-- Slider code remains same as before -->
-                    <div class="slider-container relative overflow-hidden rounded-lg shadow-xl h-full">
+                <!-- Right Column - Slider -->
+                <div class="w-full md:w-1/4">
+                    <div class="relative overflow-hidden rounded-xl shadow-sm h-[280px]">
                         <div class="slider-track flex transition-transform duration-500 ease-in-out h-full">
                             <div class="slider-slide min-w-full">
-                                <img src="https://drsachinandan.com/assets/img/gallery/1.jpeg" alt="Academic" class="w-full h-full object-cover">
+                                <img src="https://drsachinandan.com/assets/img/gallery/1.jpeg"
+                                     alt="Academic Work"
+                                     class="w-full h-full object-cover">
                             </div>
                             <div class="slider-slide min-w-full">
-                                <img src="https://drsachinandan.com/assets/img/gallery/book/13.jpg" alt="Research" class="w-full h-full object-cover">
+                                <img src="https://drsachinandan.com/assets/img/gallery/book/13.jpg"
+                                     alt="Published Books"
+                                     class="w-full h-full object-cover">
                             </div>
                             <div class="slider-slide min-w-full">
-                                <img src="https://drsachinandan.com/assets/img/gallery/12.jpg" alt="Collaborations" class="w-full h-full object-cover">
-                            </div>
-                            <div class="slider-slide min-w-full">
-                                <img src="https://drsachinandan.com/assets/img/gallery/15.jpeg" alt="Collaborations" class="w-full h-full object-cover">
+                                <img src="https://drsachinandan.com/assets/img/gallery/12.jpg"
+                                     alt="Conference Presentation"
+                                     class="w-full h-full object-cover">
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- ... rest of the content remains same ... -->
-                <div class="col-span-full space-y-6 mt-12 order-3">
-                    <p class="text-mora-secondary text-lg text-center md:text-left">
-                        Author of 52 books published by leading academic presses including Springer and IEEE-Wiley, Dr. Mohanty has received numerous accolades including the Best Thesis Award from CSI (2015) and four Best Paper Awards. With 120+ international publications and supervision of 9 PhD scholars, he serves as Editor-in-Chief for the International Journal of Intelligent Systems and Machine Learning Applications.
-                    </p>
-                    <p class="text-mora-secondary text-lg text-center md:text-left">
-                        Fellow of IE(I) and Senior Member of IEEE, Dr. Mohanty has chaired international conferences and delivered keynote addresses worldwide. His research has been supported by SERB and DST, Government of India, facilitating global academic collaborations across USA, Europe, and Asia.
-                    </p>
-                </div>
-
-                <!-- Experience Container -->
-                <div class="col-span-full order-4 mt-12">
-                    <div class="bg-mora-accent/10 rounded-xl p-8 text-center">
-                        <div class="max-w-md mx-auto">
-                            <div class="w-20 h-20 rounded-full bg-mora-accent/20 flex items-center justify-center mx-auto mb-6">
-                                <svg class="w-10 h-10 text-mora-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-4xl font-bold text-mora-dark mb-2">15+ Years</h3>
-                            <p class="text-mora-secondary text-lg">Of Academic Excellence in Teaching & Research</p>
-                        </div>
+            <!-- External "15+ Years" Container -->
+            <div class="bg-mora-accent/10 rounded-xl p-8 text-center mt-12 w-full max-w-2xl mx-auto">
+                <div class="flex items-center justify-center space-x-6">
+                    <div class="w-16 h-16 rounded-full bg-mora-accent/20 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-mora-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-serif font-bold text-mora-dark">15+ Years</h3>
+                        <p class="text-mora-accent">Of Academic Excellence</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Slider JavaScript -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const track = document.querySelector('.slider-track');
             const slides = document.querySelectorAll('.slider-slide');
+
             let currentIndex = 0;
-            let slideInterval;
-            const slideDuration = 2000; // 2 seconds
+            const slideCount = slides.length;
 
             function updateSlider() {
                 track.style.transform = `translateX(-${currentIndex * 100}%)`;
-                track.style.transition = 'transform 500ms ease-in-out';
             }
 
-            function nextSlide() {
-                currentIndex = (currentIndex + 1) % slides.length;
+            // Auto-slide every 5 seconds
+            setInterval(() => {
+                currentIndex = (currentIndex + 1) % slideCount;
                 updateSlider();
-            }
-
-            function startAutoSlide() {
-                slideInterval = setInterval(nextSlide, slideDuration);
-            }
-
-            // Pause on hover
-            const sliderContainer = document.querySelector('.slider-container');
-            sliderContainer.addEventListener('mouseenter', () => {
-                clearInterval(slideInterval);
-            });
-
-            sliderContainer.addEventListener('mouseleave', () => {
-                startAutoSlide();
-            });
-
-            // Initialize slider
-            startAutoSlide();
-
-            // Cleanup on window unload
-            window.addEventListener('beforeunload', () => {
-                clearInterval(slideInterval);
-            });
+            }, 2000);
         });
     </script>
     <!-- Contact Section (unchanged) -->
