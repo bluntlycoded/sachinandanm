@@ -198,94 +198,273 @@
             </div>
 
             <!-- Memberships Grid -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" data-aos="slide-up" style="grid-auto-rows: 1fr;">
-                <!-- Institute of Electronics and Telecommunication Engineers -->
-                <div class="hover-scale bg-white p-6 rounded-xl shadow-sm flex flex-col">
-                    <div class="border-l-4 border-mora-accent pl-4 flex-1 flex flex-col">
-                        <h3 class="text-xl font-semibold text-mora-dark mb-2">Institute of Electronics and Telecommunication Engineers</h3>
-                        <p class="text-sm text-mora-accent mb-2">2019 - Present</p>
-                        <p class="text-sm text-mora-secondary mb-4 flex-1">Membership No: F-501536</p>
-                        <button class="mt-auto text-mora-accent hover:text-mora-dark flex items-center transition-colors">
-                            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
-                            </svg>
-                            View Credentials
-                        </button>
-                    </div>
-                </div>
+            <div class="relative" data-aos="slide-up" id="memberships">
+                <div class="absolute left-1/2 w-1 h-full bg-mora-accent/20 transform -translate-x-1/2"></div>
 
-                <!-- Association for Psychological Science -->
-                <div class="hover-scale bg-white p-6 rounded-xl shadow-sm flex flex-col">
-                    <div class="border-l-4 border-mora-accent pl-4 flex-1 flex flex-col">
-                        <h3 class="text-xl font-semibold text-mora-dark mb-2">Association for Psychological Science</h3>
-                        <p class="text-sm text-mora-accent mb-2">2010 - Present</p>
-                        <p class="text-sm text-mora-secondary mb-4 flex-1">Discipline: Cognitive Science</p>
-                        <button class="mt-auto text-mora-accent hover:text-mora-dark flex items-center transition-colors">
-                            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                <div class="space-y-20">
+                    <!-- IEEE -->
+                    <div class="relative flex md:contents flex-row-reverse">
+                        <div class="hidden md:block w-1/2"></div>
+                        <div class="z-10 flex items-center justify-center w-8 h-8 bg-mora-accent rounded-full absolute left-1/2 -translate-x-1/2">
+                            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            View Credentials
-                        </button>
+                        </div>
+                        <div class="w-full md:w-1/2 p-4 group hover-scale">
+                            <div class="bg-white p-8 rounded-xl shadow-sm">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-12 h-12 bg-mora-accent/10 rounded-lg flex items-center justify-center mr-4">
+                                        <span class="text-mora-accent font-serif font-bold">2008</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-mora-dark">IEEE Senior Membership</h3>
+                                        <p class="text-mora-accent">Member No: 91140887</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <span class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">Engineering</span>
+                                    <span class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">Senior Member</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Cognitive Science Society -->
-                <div class="hover-scale bg-white p-6 rounded-xl shadow-sm flex flex-col">
-                    <div class="border-l-4 border-mora-accent pl-4 flex-1 flex flex-col">
-                        <h3 class="text-xl font-semibold text-mora-dark mb-2">Cognitive Science Society</h3>
-                        <p class="text-sm text-mora-accent mb-2">2010 - Present</p>
-                        <p class="text-sm text-mora-secondary mb-4 flex-1">Interdisciplinary research community</p>
-                        <button class="mt-auto text-mora-accent hover:text-mora-dark flex items-center transition-colors">
-                            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                    <!-- Institution of Engineers -->
+                    <div class="relative flex md:contents">
+                        <div class="hidden md:block w-1/2"></div>
+                        <div class="z-10 flex items-center justify-center w-8 h-8 bg-mora-accent rounded-full absolute left-1/2 -translate-x-1/2">
+                            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            View Credentials
-                        </button>
+                        </div>
+                        <div class="w-full md:w-1/2 p-4 group hover-scale">
+                            <div class="bg-white p-8 rounded-xl shadow-sm">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-12 h-12 bg-mora-accent/10 rounded-lg flex items-center justify-center mr-4">
+                                        <span class="text-mora-accent font-serif font-bold">2009</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-mora-dark">Fellow, Institution of Engineers (INDIA)</h3>
+                                        <p class="text-mora-accent">Membership No: F-1275050</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <span class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">Fellowship</span>
+                                    <span class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">Chartered</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Indian Science Congress Association -->
-                <div class="hover-scale bg-white p-6 rounded-xl shadow-sm flex flex-col">
-                    <div class="border-l-4 border-mora-accent pl-4 flex-1 flex flex-col">
-                        <h3 class="text-xl font-semibold text-mora-dark mb-2">Indian Science Congress Association</h3>
-                        <p class="text-sm text-mora-accent mb-2">2016 - Present</p>
-                        <p class="text-sm text-mora-secondary mb-4 flex-1">Membership No: L29451</p>
-                        <button class="mt-auto text-mora-accent hover:text-mora-dark flex items-center transition-colors">
-                            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                    <!-- IACSIT -->
+                    <div class="relative flex md:contents flex-row-reverse">
+                        <div class="hidden md:block w-1/2"></div>
+                        <div class="z-10 flex items-center justify-center w-8 h-8 bg-mora-accent rounded-full absolute left-1/2 -translate-x-1/2">
+                            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            View Credentials
-                        </button>
+                        </div>
+                        <div class="w-full md:w-1/2 p-4 group hover-scale">
+                            <div class="bg-white p-8 rounded-xl shadow-sm">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-12 h-12 bg-mora-accent/10 rounded-lg flex items-center justify-center mr-4">
+                                        <span class="text-mora-accent font-serif font-bold">2008</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-mora-dark">IACSIT Membership</h3>
+                                        <p class="text-mora-accent">Member No: 80332278</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <span class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">Technology</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Computer Society of India -->
-                <div class="hover-scale bg-white p-6 rounded-xl shadow-sm flex flex-col">
-                    <div class="border-l-4 border-mora-accent pl-4 flex-1 flex flex-col">
-                        <h3 class="text-xl font-semibold text-mora-dark mb-2">Computer Society of India</h3>
-                        <p class="text-sm text-mora-accent mb-2">2015 - Present</p>
-                        <p class="text-sm text-mora-secondary mb-4 flex-1">Membership No: 01503184</p>
-                        <button class="mt-auto text-mora-accent hover:text-mora-dark flex items-center transition-colors">
-                            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                    <!-- AIENG -->
+                    <div class="relative flex md:contents">
+                        <div class="hidden md:block w-1/2"></div>
+                        <div class="z-10 flex items-center justify-center w-8 h-8 bg-mora-accent rounded-full absolute left-1/2 -translate-x-1/2">
+                            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            View Credentials
-                        </button>
+                        </div>
+                        <div class="w-full md:w-1/2 p-4 group hover-scale">
+                            <div class="bg-white p-8 rounded-xl shadow-sm">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-12 h-12 bg-mora-accent/10 rounded-lg flex items-center justify-center mr-4">
+                                        <span class="text-mora-accent font-serif font-bold">2014</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-mora-dark">AIENG International Association of Engineers</h3>
+                                        <p class="text-mora-accent">Member No: 148047</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <span class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">International</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <!-- International Association of Engineers -->
-                <div class="hover-scale bg-white p-6 rounded-xl shadow-sm flex flex-col">
-                    <div class="border-l-4 border-mora-accent pl-4 flex-1 flex flex-col">
-                        <h3 class="text-xl font-semibold text-mora-dark mb-2">International Association of Engineers</h3>
-                        <p class="text-sm text-mora-accent mb-2">2018 - Present</p>
-                        <p class="text-sm text-mora-secondary mb-4 flex-1">Membership No: 803418</p>
-                        <button class="mt-auto text-mora-accent hover:text-mora-dark flex items-center transition-colors">
-                            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                    <!-- ISTE & CSI -->
+                    <div class="relative flex md:contents flex-row-reverse">
+                        <div class="hidden md:block w-1/2"></div>
+                        <div class="z-10 flex items-center justify-center w-8 h-8 bg-mora-accent rounded-full absolute left-1/2 -translate-x-1/2">
+                            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            View Credentials
-                        </button>
+                        </div>
+                        <div class="w-full md:w-1/2 p-4 group hover-scale">
+                            <div class="bg-white p-8 rounded-xl shadow-sm">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-12 h-12 bg-mora-accent/10 rounded-lg flex items-center justify-center mr-4">
+                                        <span class="text-mora-accent font-serif font-bold">2015</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-mora-dark">ISTE & CSI Memberships</h3>
+                                        <p class="text-mora-accent">Membership Nos: LM105190 & I1503184</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <span class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">Education</span>
+                                    <span class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">Computing</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Science Congress -->
+                    <div class="relative flex md:contents">
+                        <div class="hidden md:block w-1/2"></div>
+                        <div class="z-10 flex items-center justify-center w-8 h-8 bg-mora-accent rounded-full absolute left-1/2 -translate-x-1/2">
+                            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <div class="w-full md:w-1/2 p-4 group hover-scale">
+                            <div class="bg-white p-8 rounded-xl shadow-sm">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-12 h-12 bg-mora-accent/10 rounded-lg flex items-center justify-center mr-4">
+                                        <span class="text-mora-accent font-serif font-bold">2016</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-mora-dark">Indian Science Congress Association</h3>
+                                        <p class="text-mora-accent">Member No: L29451</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <span class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">Science</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cognitive & Psychological -->
+                    <div class="relative flex md:contents flex-row-reverse">
+                        <div class="hidden md:block w-1/2"></div>
+                        <div class="z-10 flex items-center justify-center w-8 h-8 bg-mora-accent rounded-full absolute left-1/2 -translate-x-1/2">
+                            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <div class="w-full md:w-1/2 p-4 group hover-scale">
+                            <div class="bg-white p-8 rounded-xl shadow-sm">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-12 h-12 bg-mora-accent/10 rounded-lg flex items-center justify-center mr-4">
+                                        <span class="text-mora-accent font-serif font-bold">2010</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-mora-dark">Cognitive Science & Psychological Associations</h3>
+                                        <p class="text-mora-accent">International Memberships</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <span class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">Psychology</span>
+                                    <span class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">Research</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- IETE Fellowship -->
+                    <div class="relative flex md:contents">
+                        <div class="hidden md:block w-1/2"></div>
+                        <div class="z-10 flex items-center justify-center w-8 h-8 bg-mora-accent rounded-full absolute left-1/2 -translate-x-1/2">
+                            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <div class="w-full md:w-1/2 p-4 group hover-scale">
+                            <div class="bg-white p-8 rounded-xl shadow-sm">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-12 h-12 bg-mora-accent/10 rounded-lg flex items-center justify-center mr-4">
+                                        <span class="text-mora-accent font-serif font-bold">2019</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-mora-dark">Fellow, IETE</h3>
+                                        <p class="text-mora-accent">Membership No: F-501536</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <span class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">Telecommunications</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Memberships -->
+                    <div class="relative flex md:contents flex-row-reverse">
+                        <div class="hidden md:block w-1/2"></div>
+                        <div class="z-10 flex items-center justify-center w-8 h-8 bg-mora-accent rounded-full absolute left-1/2 -translate-x-1/2">
+                            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <div class="w-full md:w-1/2 p-4 group hover-scale">
+                            <div class="bg-white p-8 rounded-xl shadow-sm">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-12 h-12 bg-mora-accent/10 rounded-lg flex items-center justify-center mr-4">
+                                        <span class="text-mora-accent font-serif font-bold">2020</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-mora-dark">ACM & APA Memberships</h3>
+                                        <p class="text-mora-accent">Member Nos: 7721601 & 36895724</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <span class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">Computing</span>
+                                    <span class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">Psychology</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- IET 2024 -->
+                    <div class="relative flex md:contents">
+                        <div class="hidden md:block w-1/2"></div>
+                        <div class="z-10 flex items-center justify-center w-8 h-8 bg-mora-accent rounded-full absolute left-1/2 -translate-x-1/2">
+                            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <div class="w-full md:w-1/2 p-4 group hover-scale">
+                            <div class="bg-white p-8 rounded-xl shadow-sm">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-12 h-12 bg-mora-accent/10 rounded-lg flex items-center justify-center mr-4">
+                                        <span class="text-mora-accent font-serif font-bold">2024</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-mora-dark">IET Membership</h3>
+                                        <p class="text-mora-accent">Member No: 1101218888</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <span class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">Engineering</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
