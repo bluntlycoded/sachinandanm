@@ -57,11 +57,8 @@
     <nav class="fixed w-full bg-white/95 backdrop-blur-md z-50 shadow-sm">
         <div class="container mx-auto px-6 py-5">
             <div class="flex justify-between items-center">
-                <!-- Logo -->
-                <a href="index.html" class="text-2xl font-serif font-bold text-mora-dark">S.N.Mohanty</a>
-
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex space-x-6 items-center">
+                <!-- Desktop Menu (Centered) -->
+                <div class="hidden md:flex mx-auto space-x-6 items-center">
                     <a href="index.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Home</a>
                     <a href="honors-awards.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Honors</a>
                     <a href="membership.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Memberships</a>
@@ -84,7 +81,7 @@
                     <a href="patents.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Patents</a>
                     <a href="talks.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Talks</a>
 
-                    <!-- Professional Roles Dropdown -->
+                    <!-- Roles Dropdown -->
                     <div class="relative group" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="setTimeout(() => open = false, 200)">
                         <button class="text-mora-secondary hover:text-mora-accent transition-colors" @click="open = !open">
                             Roles ▾
@@ -104,16 +101,18 @@
                     <a href="contact.html" class="px-4 py-2 bg-mora-accent text-white rounded-full hover:bg-mora-dark transition-colors">Contact</a>
                 </div>
 
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-button" class="md:hidden text-mora-dark">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                    </svg>
-                </button>
+                <!-- Mobile Menu Button (Right Aligned) -->
+                <div class="md:hidden ml-auto">
+                    <button id="mobile-menu-button" class="text-mora-dark">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
             </div>
         </div>
 
-        <!-- Mobile Menu -->
+        <!-- Mobile Menu (unchanged) -->
         <div id="mobile-menu" class="hidden md:hidden absolute w-full bg-white shadow-lg">
             <div class="px-6 py-4 space-y-4">
                 <a href="index.html" class="block text-mora-secondary hover:text-mora-accent">Home</a>
@@ -121,8 +120,6 @@
                 <a href="membership.html" class="block text-mora-secondary hover:text-mora-accent">Memberships</a>
                 <a href="patents.html" class="block text-mora-secondary hover:text-mora-accent">Patents</a>
                 <a href="talks.html" class="block text-mora-secondary hover:text-mora-accent">Talks</a>
-
-                <!-- Publications Submenu -->
                 <div class="pl-4">
                     <details>
                         <summary class="text-mora-secondary hover:text-mora-accent cursor-pointer">Publications</summary>
@@ -132,8 +129,6 @@
                         </div>
                     </details>
                 </div>
-
-                <!-- Professional Roles Submenu -->
                 <div class="pl-4">
                     <details>
                         <summary class="text-mora-secondary hover:text-mora-accent cursor-pointer">Professional Roles</summary>
@@ -143,13 +138,13 @@
                         </div>
                     </details>
                 </div>
-
                 <a href="books.html" class="block text-mora-secondary hover:text-mora-accent">Books</a>
                 <a href="sponsored-projects.html" class="block text-mora-secondary hover:text-mora-accent">Projects</a>
                 <a href="contact.html" class="block px-4 py-2 bg-mora-accent text-white rounded-full hover:bg-mora-dark">Contact</a>
             </div>
         </div>
     </nav>
+
 
     <!-- Alpine.js for dropdown functionality -->
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
@@ -236,7 +231,7 @@
                                         <p class="text-mora-accent">SERB, Govt. of India</p>
                                     </div>
                                 </div>
-                                <p class="text-mora-secondary mb-4">For presenting at 11th International Multiple-Conference on Complexity Informatics and Cybernetics (IMCIC-2020) in Florida, USA :cite[1]</p>
+                                <p class="text-mora-secondary mb-4">For presenting at 11th International Multiple-Conference on Complexity Informatics and Cybernetics (IMCIC-2020) in Florida, USA </p>
                                 <div class="flex items-center space-x-4">
                                     <span class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">International</span>
                                     <span class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">Research</span>
@@ -263,7 +258,7 @@
                                         <p class="text-mora-accent">Computer Society of India</p>
                                     </div>
                                 </div>
-                                <p class="text-mora-secondary mb-4">Awarded at 53rd National Convention by CSI at KIIT Deemed University :cite[1]</p>
+                                <p class="text-mora-secondary mb-4">Awarded at 53rd National Convention by CSI at KIIT Deemed University </p>
                                 <div class="flex items-center space-x-4">
                                     <span class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">Academic</span>
                                 </div>
@@ -290,7 +285,7 @@
                                         <p class="text-mora-accent">Biju Pattnaik University of Technology</p>
                                     </div>
                                 </div>
-                                <p class="text-mora-secondary mb-4">Awarded on University Foundation Day (TEQIP-III, BPUT sponsored) :cite[1]</p>
+                                <p class="text-mora-secondary mb-4">Awarded on University Foundation Day (TEQIP-III, BPUT sponsored) </p>
                                 <div class="flex items-center space-x-4">
                                     <span class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">Research</span>
                                 </div>
@@ -316,7 +311,7 @@
                                         <p class="text-mora-accent">Techprolab Pvt Ltd (IIT Patna incubated)</p>
                                     </div>
                                 </div>
-                                <p class="text-mora-secondary mb-4">For contributions to the education community :cite[1]</p>
+                                <p class="text-mora-secondary mb-4">For contributions to the education community </p>
                                 <div class="flex items-center space-x-4">
                                     <span class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">Education</span>
                                 </div>
@@ -343,7 +338,7 @@
                                         <p class="text-mora-accent">Govt. of Odisha</p>
                                     </div>
                                 </div>
-                                <p class="text-mora-secondary mb-4">From Department of Higher Education, Govt. of Odisha :cite[1]</p>
+                                <p class="text-mora-secondary mb-4">From Department of Higher Education, Govt. of Odisha </p>
                                 <div class="flex items-center space-x-4">
                                     <span class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">Government</span>
                                 </div>
@@ -369,7 +364,7 @@
                                         <p class="text-mora-accent">Venus International Foundation</p>
                                     </div>
                                 </div>
-                                <p class="text-mora-secondary mb-4">For contributions in Computer Science & Engineering :cite[1]</p>
+                                <p class="text-mora-secondary mb-4">For contributions in Computer Science & Engineering </p>
                                 <div class="flex items-center space-x-4">
                                     <span class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">Teaching</span>
                                 </div>
@@ -397,10 +392,10 @@
                                     </div>
                                 </div>
                                 <p class="text-mora-secondary mb-4">
-                                    • Best Ph.D. Thesis Award (CSI 2015) :cite[1]<br>
-                                    • Eminent Academician Award (ISTE 2014) :cite[1]<br>
-                                    • Best Paper Award (IIT Roorkee 2013) :cite[1]<br>
-                                    • MHRD Scholarship (2009-2013) :cite[1]
+                                    • Best Ph.D. Thesis Award (CSI 2015) <br>
+                                    • Eminent Academician Award (ISTE 2014) <br>
+                                    • Best Paper Award (IIT Roorkee 2013) <br>
+                                    • MHRD Scholarship (2009-2013) 
                                 </p>
                                 <div class="flex items-center space-x-4">
                                     <span class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">Academic</span>
@@ -429,10 +424,10 @@
                                     </div>
                                 </div>
                                 <p class="text-mora-secondary mb-4">
-                                    • CIIR-2019 (Kolkata) :cite[1]<br>
-                                    • Big Data Conference (Paris 2017) :cite[1]<br>
-                                    • Business Intelligence Conference (2015) :cite[1]<br>
-                                    • Soft Computing Seminar (2015) :cite[1]
+                                    • CIIR-2019 (Kolkata) <br>
+                                    • Big Data Conference (Paris 2017) <br>
+                                    • Business Intelligence Conference (2015) <br>
+                                    • Soft Computing Seminar (2015) 
                                 </p>
                                 <div class="flex items-center space-x-4">
                                     <span class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">Leadership</span>
@@ -444,7 +439,7 @@
             </div>
 
             <!-- Achievement Stats -->
-            <div class="grid md:grid-cols-4 gap-8 mt-20" data-aos="fade-up">
+            <div class="grid md:grid-cols-3 gap-8 mt-20"  data-aos="fade-up">
                 <div class="bg-white p-8 rounded-xl shadow-sm text-center hover-scale">
                     <div class="text-4xl font-serif font-bold text-mora-accent mb-2">11+</div>
                     <div class="text-mora-secondary">National & International Awards</div>
