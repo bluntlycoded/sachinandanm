@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact -  Prof. S.N. Mohanty</title>
+    <title>Contact - Prof. S.N. Mohanty</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <style>[x-cloak] { display: none !important; }</style>
+    <style>
+        [x-cloak] {
+            display: none !important;
+        }
+    </style>
     <script>
         tailwind.config = {
             theme: {
@@ -45,16 +52,17 @@
         .hover-scale {
             @apply transition-transform duration-300 ease-in-out hover:scale-[1.02];
         }
+
         .section-title {
-            @apply font-serif text-4xl font-bold text-mora-dark mb-12 relative 
-                   before:absolute before:bottom-[-8px] before:left-0 before:w-12 
-                   before:h-1 before:bg-mora-accent;
+            @apply font-serif text-4xl font-bold text-mora-dark mb-12 relative before:absolute before:bottom-[-8px] before:left-0 before:w-12 before:h-1 before:bg-mora-accent;
         }
+
         .contact-card {
             @apply bg-white p-8 rounded-xl shadow-sm hover-scale;
         }
     </style>
 </head>
+
 <body class="bg-mora-light font-sans text-mora-secondary leading-relaxed">
     <!-- Navigation -->
     <nav class="fixed w-full bg-white/95 backdrop-blur-md z-50 shadow-sm">
@@ -63,52 +71,68 @@
                 <!-- Desktop Menu (Centered) -->
                 <div class="hidden md:flex mx-auto space-x-6 items-center">
                     <a href="index.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Home</a>
-                    <a href="honors-awards.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Honors</a>
-                    <a href="membership.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Memberships</a>
+                    <a href="honors-awards.html"
+                        class="text-mora-secondary hover:text-mora-accent transition-colors">Honors</a>
+                    <a href="membership.html"
+                        class="text-mora-secondary hover:text-mora-accent transition-colors">Memberships</a>
 
                     <!-- Publications Dropdown -->
-                    <div class="relative group" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="setTimeout(() => open = false, 200)">
-                        <button class="text-mora-secondary hover:text-mora-accent transition-colors" @click="open = !open">
+                    <div class="relative group" x-data="{ open: false }" @mouseenter="open = true"
+                        @mouseleave="setTimeout(() => open = false, 200)">
+                        <button class="text-mora-secondary hover:text-mora-accent transition-colors"
+                            @click="open = !open">
                             Publications ▾
                         </button>
                         <div class="absolute transition-all duration-200 ease-in-out"
-                             :class="{'opacity-100 visible translate-y-0': open, 'opacity-0 invisible -translate-y-1': !open}"
-                             x-cloak>
+                            :class="{'opacity-100 visible translate-y-0': open, 'opacity-0 invisible -translate-y-1': !open}"
+                            x-cloak>
                             <div class="bg-white shadow-lg rounded-lg mt-2 py-2 w-48">
-                                <a href="referred-journal.html" class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Referred Journals</a>
-                                <a href="conference-journal.html" class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Conference Papers</a>
+                                <a href="referred-journal.html"
+                                    class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Referred
+                                    Journals</a>
+                                <a href="conference-journal.html"
+                                    class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Conference
+                                    Papers</a>
                             </div>
                         </div>
                     </div>
 
-                    <a href="patents.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Patents</a>
+                    <a href="patents.html"
+                        class="text-mora-secondary hover:text-mora-accent transition-colors">Patents</a>
                     <a href="talks.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Talks</a>
 
                     <!-- Roles Dropdown -->
-                    <div class="relative group" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="setTimeout(() => open = false, 200)">
-                        <button class="text-mora-secondary hover:text-mora-accent transition-colors" @click="open = !open">
+                    <div class="relative group" x-data="{ open: false }" @mouseenter="open = true"
+                        @mouseleave="setTimeout(() => open = false, 200)">
+                        <button class="text-mora-secondary hover:text-mora-accent transition-colors"
+                            @click="open = !open">
                             Roles ▾
                         </button>
                         <div class="absolute transition-all duration-200 ease-in-out"
-                             :class="{'opacity-100 visible translate-y-0': open, 'opacity-0 invisible -translate-y-1': !open}"
-                             x-cloak>
+                            :class="{'opacity-100 visible translate-y-0': open, 'opacity-0 invisible -translate-y-1': !open}"
+                            x-cloak>
                             <div class="bg-white shadow-lg rounded-lg mt-2 py-2 w-48">
-                                <a href="editorship.html" class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Editorship</a>
-                                <a href="chairmanship.html" class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Chairmanship</a>
+                                <a href="editorship.html"
+                                    class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Editorship</a>
+                                <a href="chairmanship.html"
+                                    class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Chairmanship</a>
                             </div>
                         </div>
                     </div>
 
                     <a href="books.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Books</a>
-                    <a href="sponsored-projects.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Projects</a>
-                    <a href="contact.html" class="px-4 py-2 bg-mora-accent text-white rounded-full hover:bg-mora-dark transition-colors">Contact</a>
+                    <a href="sponsored-projects.html"
+                        class="text-mora-secondary hover:text-mora-accent transition-colors">Projects</a>
+                    <a href="contact.html"
+                        class="px-4 py-2 bg-mora-accent text-white rounded-full hover:bg-mora-dark transition-colors">Contact</a>
                 </div>
 
                 <!-- Mobile Menu Button (Right Aligned) -->
                 <div class="md:hidden ml-auto">
                     <button id="mobile-menu-button" class="text-mora-dark">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
                     </button>
                 </div>
@@ -125,25 +149,32 @@
                 <a href="talks.html" class="block text-mora-secondary hover:text-mora-accent">Talks</a>
                 <div class="pl-4">
                     <details>
-                        <summary class="text-mora-secondary hover:text-mora-accent cursor-pointer">Publications</summary>
+                        <summary class="text-mora-secondary hover:text-mora-accent cursor-pointer">Publications
+                        </summary>
                         <div class="mt-2 space-y-2">
-                            <a href="referred-journal.html" class="block pl-4 text-mora-secondary hover:text-mora-accent">Referred Journals</a>
-                            <a href="conference-journal.html" class="block pl-4 text-mora-secondary hover:text-mora-accent">Conference Papers</a>
+                            <a href="referred-journal.html"
+                                class="block pl-4 text-mora-secondary hover:text-mora-accent">Referred Journals</a>
+                            <a href="conference-journal.html"
+                                class="block pl-4 text-mora-secondary hover:text-mora-accent">Conference Papers</a>
                         </div>
                     </details>
                 </div>
                 <div class="pl-4">
                     <details>
-                        <summary class="text-mora-secondary hover:text-mora-accent cursor-pointer">Professional Roles</summary>
+                        <summary class="text-mora-secondary hover:text-mora-accent cursor-pointer">Professional Roles
+                        </summary>
                         <div class="mt-2 space-y-2">
-                            <a href="editorship.html" class="block pl-4 text-mora-secondary hover:text-mora-accent">Editorship</a>
-                            <a href="chairmanship.html" class="block pl-4 text-mora-secondary hover:text-mora-accent">Chairmanship</a>
+                            <a href="editorship.html"
+                                class="block pl-4 text-mora-secondary hover:text-mora-accent">Editorship</a>
+                            <a href="chairmanship.html"
+                                class="block pl-4 text-mora-secondary hover:text-mora-accent">Chairmanship</a>
                         </div>
                     </details>
                 </div>
                 <a href="books.html" class="block text-mora-secondary hover:text-mora-accent">Books</a>
                 <a href="sponsored-projects.html" class="block text-mora-secondary hover:text-mora-accent">Projects</a>
-                <a href="contact.html" class="block px-4 py-2 bg-mora-accent text-white rounded-full hover:bg-mora-dark">Contact</a>
+                <a href="contact.html"
+                    class="block px-4 py-2 bg-mora-accent text-white rounded-full hover:bg-mora-dark">Contact</a>
             </div>
         </div>
     </nav>
@@ -215,8 +246,10 @@
                     <div class="contact-card">
                         <div class="flex items-center mb-6">
                             <div class="w-12 h-12 rounded-full bg-mora-accent/10 flex items-center justify-center mr-4">
-                                <svg class="w-6 h-6 text-mora-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                <svg class="w-6 h-6 text-mora-accent" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                 </svg>
                             </div>
                             <div>
@@ -230,8 +263,10 @@
                     <div class="contact-card">
                         <div class="flex items-center mb-6">
                             <div class="w-12 h-12 rounded-full bg-mora-accent/10 flex items-center justify-center mr-4">
-                                <svg class="w-6 h-6 text-mora-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                <svg class="w-6 h-6 text-mora-accent" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                                 </svg>
                             </div>
                             <div>
@@ -246,23 +281,13 @@
                     <div class="contact-card">
                         <h3 class="text-xl font-semibold text-mora-dark mb-6">Connect Socially</h3>
                         <div class="flex space-x-6">
-                            <a
-                                    href="https://www.linkedin.com/in/dr-sachi-nandan-mohanty-61061815/"
-                                    target="_blank"
-                                    rel="noopener"
-                                    class="p-2 bg-red-600 rounded-full hover:bg-red-700 transition-colors"
-                            >
-                                <svg
-                                        role="img"
-                                        viewBox="0 0 24 24"
-                                        class="w-5 h-5 text-white"
-                                        fill="currentColor"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                >
+                            <a href="https://www.linkedin.com/in/dr-sachi-nandan-mohanty-61061815/" target="_blank"
+                                rel="noopener" class="p-2 bg-red-600 rounded-full hover:bg-red-700 transition-colors">
+                                <svg role="img" viewBox="0 0 24 24" class="w-5 h-5 text-white" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
                                     <title>LinkedIn</title>
                                     <path
-                                            d="M20.447 20.452h-3.554v-5.568c0-1.328-.027-3.036-1.852-3.036-1.853 0-2.136 1.447-2.136 2.939v5.665H9.354V9h3.414v1.561h.049c.476-.9 1.637-1.852 3.367-1.852 3.6 0 4.266 2.371 4.266 5.456v6.287zM5.337 7.433a2.065 2.065 0 112.064-2.065 2.066 2.066 0 01-2.064 2.065zM7.119 20.452H3.554V9h3.565z"
-                                    />
+                                        d="M20.447 20.452h-3.554v-5.568c0-1.328-.027-3.036-1.852-3.036-1.853 0-2.136 1.447-2.136 2.939v5.665H9.354V9h3.414v1.561h.049c.476-.9 1.637-1.852 3.367-1.852 3.6 0 4.266 2.371 4.266 5.456v6.287zM5.337 7.433a2.065 2.065 0 112.064-2.065 2.066 2.066 0 01-2.064 2.065zM7.119 20.452H3.554V9h3.565z" />
                                 </svg>
                             </a>
                             <!-- Add other social icons here -->
@@ -277,30 +302,35 @@
                     <form class="space-y-6">
                         <div>
                             <label class="block text-mora-dark mb-2">Full Name</label>
-                            <input type="text" class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-mora-accent focus:border-transparent">
+                            <input type="text"
+                                class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-mora-accent focus:border-transparent">
                         </div>
-                        
+
                         <div>
                             <label class="block text-mora-dark mb-2">Email Address</label>
-                            <input type="email" class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-mora-accent focus:border-transparent">
+                            <input type="email"
+                                class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-mora-accent focus:border-transparent">
                         </div>
-                        
+
                         <div>
                             <label class="block text-mora-dark mb-2">Subject</label>
-                            <select class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-mora-accent focus:border-transparent">
+                            <select
+                                class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-mora-accent focus:border-transparent">
                                 <option>Research Collaboration</option>
                                 <option>Student Inquiry</option>
                                 <option>Media Request</option>
                                 <option>Other</option>
                             </select>
                         </div>
-                        
+
                         <div>
                             <label class="block text-mora-dark mb-2">Message</label>
-                            <textarea rows="5" class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-mora-accent focus:border-transparent"></textarea>
+                            <textarea rows="5"
+                                class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-mora-accent focus:border-transparent"></textarea>
                         </div>
-                        
-                        <button type="submit" class="w-full px-6 py-3 bg-mora-accent text-white rounded-lg hover:bg-mora-dark transition-colors">
+
+                        <button type="submit"
+                            class="w-full px-6 py-3 bg-mora-accent text-white rounded-lg hover:bg-mora-dark transition-colors">
                             Send Message
                         </button>
                     </form>
@@ -313,13 +343,9 @@
                     <h3 class="text-xl font-semibold text-mora-dark mb-6">Office Location</h3>
                     <div class="aspect-w-16 aspect-h-9 bg-mora-light rounded-lg overflow-hidden">
                         <iframe
-                                src="https://maps.google.com/maps?q=VIT-AP%20University%2C%20Inavolu%2C%20Amaravati%2C%20Andhra%20Pradesh%20522237&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                                width="100%"
-                                height="100%"
-                                style="border:0;"
-                                allowfullscreen=""
-                                loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade">
+                            src="https://maps.google.com/maps?q=VIT-AP%20University%2C%20Inavolu%2C%20Amaravati%2C%20Andhra%20Pradesh%20522237&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
 
                     </div>
@@ -350,17 +376,17 @@
         <div class="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             <div class="flex items-center space-x-2">
                 <svg class="w-6 h-6 text-mora-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <span class="font-sans text-sm">Designed and developed by</span>
             </div>
-            <a href="https://www.mightymonkeymedia.com" 
-               target="_blank" 
-               rel="noopener noreferrer"
-               class="text-mora-accent hover:text-mora-light transition-colors font-semibold text-sm">
-                Mighty Monkey Media LLP
+            <a href="https://www.pixlightllp.com" target="_blank" rel="noopener noreferrer"
+                class="text-mora-accent hover:text-mora-light transition-colors font-semibold text-sm">
+                Pixlight LLP
             </a>
         </div>
     </div>
 </footer>
+
 </html>

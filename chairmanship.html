@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chairmanship - Prof. S.N. Mohanty</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <script>
     tailwind.config = {
@@ -27,273 +30,301 @@
     }
   </script>
   <style>
-    .hover-scale { @apply transition-transform duration-300 ease-in-out hover:scale-[1.02]; }
-    .section-title { @apply font-serif text-4xl font-bold text-mora-dark mb-12 relative;
-      before:absolute before:bottom-[-8px] before:left-0 before:w-12 before:h-1 before:bg-mora-accent; }
+    .hover-scale {
+      @apply transition-transform duration-300 ease-in-out hover:scale-[1.02];
+    }
+
+    .section-title {
+      @apply font-serif text-4xl font-bold text-mora-dark mb-12 relative;
+      before: absolute before:bottom-[-8px] before:left-0 before:w-12 before:h-1 before:bg-mora-accent;
+    }
   </style>
 </head>
+
 <body class="bg-mora-light font-sans text-mora-secondary leading-relaxed">
-<nav class="fixed w-full bg-white/95 backdrop-blur-md z-50 shadow-sm">
-  <div class="container mx-auto px-6 py-5">
-    <div class="flex justify-between items-center">
-      <!-- Desktop Menu (Centered) -->
-      <div class="hidden md:flex mx-auto space-x-6 items-center">
-        <a href="index.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Home</a>
-        <a href="honors-awards.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Honors</a>
-        <a href="membership.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Memberships</a>
+  <nav class="fixed w-full bg-white/95 backdrop-blur-md z-50 shadow-sm">
+    <div class="container mx-auto px-6 py-5">
+      <div class="flex justify-between items-center">
+        <!-- Desktop Menu (Centered) -->
+        <div class="hidden md:flex mx-auto space-x-6 items-center">
+          <a href="index.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Home</a>
+          <a href="honors-awards.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Honors</a>
+          <a href="membership.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Memberships</a>
 
-        <!-- Publications Dropdown -->
-        <div class="relative group" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="setTimeout(() => open = false, 200)">
-          <button class="text-mora-secondary hover:text-mora-accent transition-colors" @click="open = !open">
-            Publications ▾
-          </button>
-          <div class="absolute transition-all duration-200 ease-in-out"
-               :class="{'opacity-100 visible translate-y-0': open, 'opacity-0 invisible -translate-y-1': !open}"
-               x-cloak>
-            <div class="bg-white shadow-lg rounded-lg mt-2 py-2 w-48">
-              <a href="referred-journal.html" class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Referred Journals</a>
-              <a href="conference-journal.html" class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Conference Papers</a>
+          <!-- Publications Dropdown -->
+          <div class="relative group" x-data="{ open: false }" @mouseenter="open = true"
+            @mouseleave="setTimeout(() => open = false, 200)">
+            <button class="text-mora-secondary hover:text-mora-accent transition-colors" @click="open = !open">
+              Publications ▾
+            </button>
+            <div class="absolute transition-all duration-200 ease-in-out"
+              :class="{'opacity-100 visible translate-y-0': open, 'opacity-0 invisible -translate-y-1': !open}" x-cloak>
+              <div class="bg-white shadow-lg rounded-lg mt-2 py-2 w-48">
+                <a href="referred-journal.html" class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Referred
+                  Journals</a>
+                <a href="conference-journal.html"
+                  class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Conference Papers</a>
+              </div>
             </div>
           </div>
-        </div>
 
-        <a href="patents.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Patents</a>
-        <a href="talks.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Talks</a>
+          <a href="patents.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Patents</a>
+          <a href="talks.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Talks</a>
 
-        <!-- Roles Dropdown -->
-        <div class="relative group" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="setTimeout(() => open = false, 200)">
-          <button class="text-mora-secondary hover:text-mora-accent transition-colors" @click="open = !open">
-            Roles ▾
-          </button>
-          <div class="absolute transition-all duration-200 ease-in-out"
-               :class="{'opacity-100 visible translate-y-0': open, 'opacity-0 invisible -translate-y-1': !open}"
-               x-cloak>
-            <div class="bg-white shadow-lg rounded-lg mt-2 py-2 w-48">
-              <a href="editorship.html" class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Editorship</a>
-              <a href="chairmanship.html" class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Chairmanship</a>
+          <!-- Roles Dropdown -->
+          <div class="relative group" x-data="{ open: false }" @mouseenter="open = true"
+            @mouseleave="setTimeout(() => open = false, 200)">
+            <button class="text-mora-secondary hover:text-mora-accent transition-colors" @click="open = !open">
+              Roles ▾
+            </button>
+            <div class="absolute transition-all duration-200 ease-in-out"
+              :class="{'opacity-100 visible translate-y-0': open, 'opacity-0 invisible -translate-y-1': !open}" x-cloak>
+              <div class="bg-white shadow-lg rounded-lg mt-2 py-2 w-48">
+                <a href="editorship.html" class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Editorship</a>
+                <a href="chairmanship.html"
+                  class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Chairmanship</a>
+              </div>
             </div>
           </div>
+
+          <a href="books.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Books</a>
+          <a href="sponsored-projects.html"
+            class="text-mora-secondary hover:text-mora-accent transition-colors">Projects</a>
+          <a href="contact.html"
+            class="px-4 py-2 bg-mora-accent text-white rounded-full hover:bg-mora-dark transition-colors">Contact</a>
         </div>
 
-        <a href="books.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Books</a>
-        <a href="sponsored-projects.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Projects</a>
-        <a href="contact.html" class="px-4 py-2 bg-mora-accent text-white rounded-full hover:bg-mora-dark transition-colors">Contact</a>
+        <!-- Mobile Menu Button (Right Aligned) -->
+        <div class="md:hidden ml-auto">
+          <button id="mobile-menu-button" class="text-mora-dark">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu (unchanged) -->
+    <div id="mobile-menu" class="hidden md:hidden absolute w-full bg-white shadow-lg">
+      <div class="px-6 py-4 space-y-4">
+        <a href="index.html" class="block text-mora-secondary hover:text-mora-accent">Home</a>
+        <a href="honors-awards.html" class="block text-mora-secondary hover:text-mora-accent">Honors</a>
+        <a href="membership.html" class="block text-mora-secondary hover:text-mora-accent">Memberships</a>
+        <a href="patents.html" class="block text-mora-secondary hover:text-mora-accent">Patents</a>
+        <a href="talks.html" class="block text-mora-secondary hover:text-mora-accent">Talks</a>
+        <div class="pl-4">
+          <details>
+            <summary class="text-mora-secondary hover:text-mora-accent cursor-pointer">Publications</summary>
+            <div class="mt-2 space-y-2">
+              <a href="referred-journal.html" class="block pl-4 text-mora-secondary hover:text-mora-accent">Referred
+                Journals</a>
+              <a href="conference-journal.html" class="block pl-4 text-mora-secondary hover:text-mora-accent">Conference
+                Papers</a>
+            </div>
+          </details>
+        </div>
+        <div class="pl-4">
+          <details>
+            <summary class="text-mora-secondary hover:text-mora-accent cursor-pointer">Professional Roles</summary>
+            <div class="mt-2 space-y-2">
+              <a href="editorship.html" class="block pl-4 text-mora-secondary hover:text-mora-accent">Editorship</a>
+              <a href="chairmanship.html" class="block pl-4 text-mora-secondary hover:text-mora-accent">Chairmanship</a>
+            </div>
+          </details>
+        </div>
+        <a href="books.html" class="block text-mora-secondary hover:text-mora-accent">Books</a>
+        <a href="sponsored-projects.html" class="block text-mora-secondary hover:text-mora-accent">Projects</a>
+        <a href="contact.html"
+          class="block px-4 py-2 bg-mora-accent text-white rounded-full hover:bg-mora-dark">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="min-h-screen pt-32 pb-20 px-6">
+    <div class="container mx-auto max-w-6xl">
+      <div class="text-center mb-20" data-aos="fade-up">
+        <h1 class="text-4xl md:text-5xl font-serif font-bold text-mora-dark mb-4">Chairmanship & Leadership Roles</h1>
+        <p class="text-xl text-mora-secondary max-w-2xl mx-auto">Key positions chaired or led by Prof. S.N. Mohanty in
+          academic conferences</p>
       </div>
 
-      <!-- Mobile Menu Button (Right Aligned) -->
-      <div class="md:hidden ml-auto">
-        <button id="mobile-menu-button" class="text-mora-dark">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      <!-- Entry: Publicity Chair ICEC 2025 -->
+      <div class="max-w-3xl mx-auto mb-20" data-aos="slide-up">
+        <div class="hover-scale bg-white p-8 rounded-xl shadow-lg border-l-8 border-mora-accent">
+          <div class="flex items-center justify-between mb-6">
+            <h2 class="text-2xl font-serif font-semibold text-mora-dark">General Chair – ICISML 2025</h2>
+            <span class="bg-mora-accent/10 text-mora-accent px-4 py-1 rounded-full text-sm">2025</span>
+          </div>
+          <h3 class="text-xl font-semibold text-mora-dark mb-2">International Conference Intelligent Systems and Machine
+            Learning</h3>
+          <p class="text-lg text-mora-secondary mb-4">Led conference organization and execution for ICISML 2025.</p>
+          <div class="pt-4 border-t border-mora-light flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-mora-light rounded-full text-sm">General Chair</span>
+            <span class="px-3 py-1 bg-mora-light rounded-full text-sm">ICISML 2025</span>
+          </div>
+        </div>
+      </div>
+      <div class="max-w-3xl mx-auto mb-20" data-aos="slide-up">
+        <div class="hover-scale bg-white p-8 rounded-xl shadow-lg border-l-8 border-mora-accent">
+          <div class="flex items-center justify-between mb-6">
+            <h2 class="text-2xl font-serif font-semibold text-mora-dark">Publicity Chair – ICEC 2025</h2>
+            <span class="bg-mora-accent/10 text-mora-accent px-4 py-1 rounded-full text-sm">2025</span>
+          </div>
+          <h3 class="text-xl font-semibold text-mora-dark mb-2">International Conference on Emerging Computing</h3>
+          <p class="text-lg text-mora-secondary mb-4">Responsible for promotion and visibility of the ICEC 2025
+            conference hosted at VIT-AP University.</p>
+          <div class="pt-4 border-t border-mora-light flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-mora-light rounded-full text-sm">Publicity</span>
+            <span class="px-3 py-1 bg-mora-light rounded-full text-sm">ICEC 2025</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry: Technical Program Co-Chair ARIIA 2024 -->
+      <div class="max-w-3xl mx-auto mb-20" data-aos="slide-up">
+        <div class="hover-scale bg-white p-8 rounded-xl shadow-lg border-l-8 border-mora-accent">
+          <div class="flex items-center justify-between mb-6">
+            <h2 class="text-2xl font-serif font-semibold text-mora-dark">Technical Program Co-Chair – ARIIA 2024</h2>
+            <span class="bg-mora-accent/10 text-mora-accent px-4 py-1 rounded-full text-sm">2024</span>
+          </div>
+          <h3 class="text-xl font-semibold text-mora-dark mb-2">Artificial Intelligence and Its Applications Conference
+          </h3>
+          <p class="text-lg text-mora-secondary mb-4">Co-led the program committee, overseeing paper selection and
+            session planning at ARIIA 2024.</p>
+          <div class="pt-4 border-t border-mora-light flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-mora-light rounded-full text-sm">Program Committee</span>
+            <span class="px-3 py-1 bg-mora-light rounded-full text-sm">ARIIA 2024</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="max-w-3xl mx-auto mb-20" data-aos="slide-up">
+        <div class="hover-scale bg-white p-8 rounded-xl shadow-lg border-l-8 border-mora-accent">
+          <div class="flex items-center justify-between mb-6">
+            <h2 class="text-2xl font-serif font-semibold text-mora-dark">Technical Program Chair – ICISML 2024</h2>
+            <span class="bg-mora-accent/10 text-mora-accent px-4 py-1 rounded-full text-sm">2024</span>
+          </div>
+          <h3 class="text-xl font-semibold text-mora-dark mb-2">International Conference Intelligent Systems and Machine
+            Learning</h3>
+          <p class="text-lg text-mora-secondary mb-4">Co-led the program committee, overseeing paper selection and
+            session planning at ICISML 2024.</p>
+          <div class="pt-4 border-t border-mora-light flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-mora-light rounded-full text-sm">Program Committee</span>
+            <span class="px-3 py-1 bg-mora-light rounded-full text-sm">ICISML 2024</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="max-w-3xl mx-auto mb-20" data-aos="slide-up">
+        <div class="hover-scale bg-white p-8 rounded-xl shadow-lg border-l-8 border-mora-accent">
+          <div class="flex items-center justify-between mb-6">
+            <h2 class="text-2xl font-serif font-semibold text-mora-dark">General Program Chair – ICISML 2024</h2>
+            <span class="bg-mora-accent/10 text-mora-accent px-4 py-1 rounded-full text-sm">2024</span>
+          </div>
+          <h3 class="text-xl font-semibold text-mora-dark mb-2">International Conference Intelligent Systems and Machine
+            Learning</h3>
+          <p class="text-lg text-mora-secondary mb-4">Led conference organization and execution for ICISML 2024..</p>
+          <div class="pt-4 border-t border-mora-light flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-mora-light rounded-full text-sm">General Chair</span>
+            <span class="px-3 py-1 bg-mora-light rounded-full text-sm">ICISML 2024</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry: General Chair AIHC 2023 -->
+      <div class="max-w-3xl mx-auto mb-20" data-aos="slide-up">
+        <div class="hover-scale bg-white p-8 rounded-xl shadow-lg border-l-8 border-mora-accent">
+          <div class="flex items-center justify-between mb-6">
+            <h2 class="text-2xl font-serif font-semibold text-mora-dark">General Chair – AIHC 2023</h2>
+            <span class="bg-mora-accent/10 text-mora-accent px-4 py-1 rounded-full text-sm">2023</span>
+          </div>
+          <h3 class="text-xl font-semibold text-mora-dark mb-2">EAI International Conference on Artificial Intelligence
+            for Human-Centric Computing</h3>
+          <p class="text-lg text-mora-secondary mb-4">Led conference organization and execution at VIT-AP University for
+            AIHC 2023.</p>
+          <div class="pt-4 border-t border-mora-light flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-mora-light rounded-full text-sm">General Chair</span>
+            <span class="px-3 py-1 bg-mora-light rounded-full text-sm">AIHC 2023</span>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Entry: Publication Chair ICETEMS 2023 -->
+      <div class="max-w-3xl mx-auto mb-20" data-aos="slide-up">
+        <div class="hover-scale bg-white p-8 rounded-xl shadow-lg border-l-8 border-mora-accent">
+          <div class="flex items-center justify-between mb-6">
+            <h2 class="text-2xl font-serif font-semibold text-mora-dark">Publication Chair – ICETEMS 2023</h2>
+            <span class="bg-mora-accent/10 text-mora-accent px-4 py-1 rounded-full text-sm">2023</span>
+          </div>
+          <h3 class="text-xl font-semibold text-mora-dark mb-2">Emerging Technologies in Engineering & Management
+            Sciences</h3>
+          <p class="text-lg text-mora-secondary mb-4">Oversaw proceedings publication for ICETEMS 2023 at Singidunum
+            University, Serbia.</p>
+          <div class="pt-4 border-t border-mora-light flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-mora-light rounded-full text-sm">Publication</span>
+            <span class="px-3 py-1 bg-mora-light rounded-full text-sm">ICETEMS 2023</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry: Advisory Member AICMT 2023 -->
+      <div class="max-w-3xl mx-auto mb-20" data-aos="slide-up">
+        <div class="hover-scale bg-white p-8 rounded-xl shadow-lg border-l-8 border-mora-accent">
+          <div class="flex items-center justify-between mb-6">
+            <h2 class="text-2xl font-serif font-semibold text-mora-dark">Technical Advisory Member – AICMT 2023</h2>
+            <span class="bg-mora-accent/10 text-mora-accent px-4 py-1 rounded-full text-sm">2023</span>
+          </div>
+          <h3 class="text-xl font-semibold text-mora-dark mb-2">Advances in Computing & Management Technologies</h3>
+          <p class="text-lg text-mora-secondary mb-4">Provided advisory guidance on topics and paper selection for AICMT
+            2023 in Delhi.</p>
+          <div class="pt-4 border-t border-mora-light flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-mora-light rounded-full text-sm">Advisory Committee</span>
+            <span class="px-3 py-1 bg-mora-light rounded-full text-sm">AICMT 2023</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry: Publication Chair IHIC 2022 -->
+      <div class="max-w-3xl mx-auto" data-aos="slide-up">
+        <div class="hover-scale bg-white p-8 rounded-xl shadow-lg border-l-8 border-mora-accent">
+          <div class="flex items-center justify-between mb-6">
+            <h2 class="text-2xl font-serif font-semibold text-mora-dark">Publication Chair – IHIC 2022</h2>
+            <span class="bg-mora-accent/10 text-mora-accent px-4 py-1 rounded-full text-sm">2022</span>
+          </div>
+          <h3 class="text-xl font-semibold text-mora-dark mb-2">Human-Centric Intelligent Computing</h3>
+          <p class="text-lg text-mora-secondary mb-4">Managed proceedings publication at Vardhaman Engineering College's
+            IHIC 2022.</p>
+          <div class="pt-4 border-t border-mora-light flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-mora-light rounded-full text-sm">Publication</span>
+            <span class="px-3 py-1 bg-mora-light rounded-full text-sm">IHIC 2022</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+  <footer class="bg-mora-primary text-mora-light py-8">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+        <div class="flex items-center space-x-2">
+          <svg class="w-6 h-6 text-mora-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
-        </button>
+          <span class="font-sans text-sm">Designed and developed by</span>
+        </div>
+        <a href="https://www.pixlightllp.com" target="_blank" rel="noopener noreferrer"
+          class="text-mora-accent hover:text-mora-light transition-colors font-semibold text-sm">
+          Pixlight LLP
+        </a>
       </div>
     </div>
-  </div>
-
-  <!-- Mobile Menu (unchanged) -->
-  <div id="mobile-menu" class="hidden md:hidden absolute w-full bg-white shadow-lg">
-    <div class="px-6 py-4 space-y-4">
-      <a href="index.html" class="block text-mora-secondary hover:text-mora-accent">Home</a>
-      <a href="honors-awards.html" class="block text-mora-secondary hover:text-mora-accent">Honors</a>
-      <a href="membership.html" class="block text-mora-secondary hover:text-mora-accent">Memberships</a>
-      <a href="patents.html" class="block text-mora-secondary hover:text-mora-accent">Patents</a>
-      <a href="talks.html" class="block text-mora-secondary hover:text-mora-accent">Talks</a>
-      <div class="pl-4">
-        <details>
-          <summary class="text-mora-secondary hover:text-mora-accent cursor-pointer">Publications</summary>
-          <div class="mt-2 space-y-2">
-            <a href="referred-journal.html" class="block pl-4 text-mora-secondary hover:text-mora-accent">Referred Journals</a>
-            <a href="conference-journal.html" class="block pl-4 text-mora-secondary hover:text-mora-accent">Conference Papers</a>
-          </div>
-        </details>
-      </div>
-      <div class="pl-4">
-        <details>
-          <summary class="text-mora-secondary hover:text-mora-accent cursor-pointer">Professional Roles</summary>
-          <div class="mt-2 space-y-2">
-            <a href="editorship.html" class="block pl-4 text-mora-secondary hover:text-mora-accent">Editorship</a>
-            <a href="chairmanship.html" class="block pl-4 text-mora-secondary hover:text-mora-accent">Chairmanship</a>
-          </div>
-        </details>
-      </div>
-      <a href="books.html" class="block text-mora-secondary hover:text-mora-accent">Books</a>
-      <a href="sponsored-projects.html" class="block text-mora-secondary hover:text-mora-accent">Projects</a>
-      <a href="contact.html" class="block px-4 py-2 bg-mora-accent text-white rounded-full hover:bg-mora-dark">Contact</a>
-    </div>
-  </div>
-</nav>
-
-<main class="min-h-screen pt-32 pb-20 px-6">
-  <div class="container mx-auto max-w-6xl">
-    <div class="text-center mb-20" data-aos="fade-up">
-      <h1 class="text-4xl md:text-5xl font-serif font-bold text-mora-dark mb-4">Chairmanship & Leadership Roles</h1>
-      <p class="text-xl text-mora-secondary max-w-2xl mx-auto">Key positions chaired or led by Prof. S.N. Mohanty in academic conferences</p>
-    </div>
-
-    <!-- Entry: Publicity Chair ICEC 2025 -->
-    <div class="max-w-3xl mx-auto mb-20" data-aos="slide-up">
-      <div class="hover-scale bg-white p-8 rounded-xl shadow-lg border-l-8 border-mora-accent">
-        <div class="flex items-center justify-between mb-6">
-          <h2 class="text-2xl font-serif font-semibold text-mora-dark">General Chair – ICISML 2025</h2>
-          <span class="bg-mora-accent/10 text-mora-accent px-4 py-1 rounded-full text-sm">2025</span>
-        </div>
-        <h3 class="text-xl font-semibold text-mora-dark mb-2">International Conference Intelligent Systems and Machine Learning</h3>
-        <p class="text-lg text-mora-secondary mb-4">Led conference organization and execution for ICISML 2025.</p>
-        <div class="pt-4 border-t border-mora-light flex flex-wrap gap-2">
-          <span class="px-3 py-1 bg-mora-light rounded-full text-sm">General Chair</span>
-          <span class="px-3 py-1 bg-mora-light rounded-full text-sm">ICISML 2025</span>
-        </div>
-      </div>
-    </div>
-    <div class="max-w-3xl mx-auto mb-20" data-aos="slide-up">
-      <div class="hover-scale bg-white p-8 rounded-xl shadow-lg border-l-8 border-mora-accent">
-        <div class="flex items-center justify-between mb-6">
-          <h2 class="text-2xl font-serif font-semibold text-mora-dark">Publicity Chair – ICEC 2025</h2>
-          <span class="bg-mora-accent/10 text-mora-accent px-4 py-1 rounded-full text-sm">2025</span>
-        </div>
-        <h3 class="text-xl font-semibold text-mora-dark mb-2">International Conference on Emerging Computing</h3>
-        <p class="text-lg text-mora-secondary mb-4">Responsible for promotion and visibility of the ICEC 2025 conference hosted at VIT-AP University.</p>
-        <div class="pt-4 border-t border-mora-light flex flex-wrap gap-2">
-          <span class="px-3 py-1 bg-mora-light rounded-full text-sm">Publicity</span>
-          <span class="px-3 py-1 bg-mora-light rounded-full text-sm">ICEC 2025</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Entry: Technical Program Co-Chair ARIIA 2024 -->
-    <div class="max-w-3xl mx-auto mb-20" data-aos="slide-up">
-      <div class="hover-scale bg-white p-8 rounded-xl shadow-lg border-l-8 border-mora-accent">
-        <div class="flex items-center justify-between mb-6">
-          <h2 class="text-2xl font-serif font-semibold text-mora-dark">Technical Program Co-Chair – ARIIA 2024</h2>
-          <span class="bg-mora-accent/10 text-mora-accent px-4 py-1 rounded-full text-sm">2024</span>
-        </div>
-        <h3 class="text-xl font-semibold text-mora-dark mb-2">Artificial Intelligence and Its Applications Conference</h3>
-        <p class="text-lg text-mora-secondary mb-4">Co-led the program committee, overseeing paper selection and session planning at ARIIA 2024.</p>
-        <div class="pt-4 border-t border-mora-light flex flex-wrap gap-2">
-          <span class="px-3 py-1 bg-mora-light rounded-full text-sm">Program Committee</span>
-          <span class="px-3 py-1 bg-mora-light rounded-full text-sm">ARIIA 2024</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="max-w-3xl mx-auto mb-20" data-aos="slide-up">
-      <div class="hover-scale bg-white p-8 rounded-xl shadow-lg border-l-8 border-mora-accent">
-        <div class="flex items-center justify-between mb-6">
-          <h2 class="text-2xl font-serif font-semibold text-mora-dark">Technical Program Chair – ICISML 2024</h2>
-          <span class="bg-mora-accent/10 text-mora-accent px-4 py-1 rounded-full text-sm">2024</span>
-        </div>
-        <h3 class="text-xl font-semibold text-mora-dark mb-2">International Conference Intelligent Systems and Machine Learning</h3>
-        <p class="text-lg text-mora-secondary mb-4">Co-led the program committee, overseeing paper selection and session planning at ICISML 2024.</p>
-        <div class="pt-4 border-t border-mora-light flex flex-wrap gap-2">
-          <span class="px-3 py-1 bg-mora-light rounded-full text-sm">Program Committee</span>
-          <span class="px-3 py-1 bg-mora-light rounded-full text-sm">ICISML 2024</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="max-w-3xl mx-auto mb-20" data-aos="slide-up">
-      <div class="hover-scale bg-white p-8 rounded-xl shadow-lg border-l-8 border-mora-accent">
-        <div class="flex items-center justify-between mb-6">
-          <h2 class="text-2xl font-serif font-semibold text-mora-dark">General Program Chair – ICISML 2024</h2>
-          <span class="bg-mora-accent/10 text-mora-accent px-4 py-1 rounded-full text-sm">2024</span>
-        </div>
-        <h3 class="text-xl font-semibold text-mora-dark mb-2">International Conference Intelligent Systems and Machine Learning</h3>
-        <p class="text-lg text-mora-secondary mb-4">Led conference organization and execution for ICISML 2024..</p>
-        <div class="pt-4 border-t border-mora-light flex flex-wrap gap-2">
-          <span class="px-3 py-1 bg-mora-light rounded-full text-sm">General Chair</span>
-          <span class="px-3 py-1 bg-mora-light rounded-full text-sm">ICISML 2024</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Entry: General Chair AIHC 2023 -->
-    <div class="max-w-3xl mx-auto mb-20" data-aos="slide-up">
-      <div class="hover-scale bg-white p-8 rounded-xl shadow-lg border-l-8 border-mora-accent">
-        <div class="flex items-center justify-between mb-6">
-          <h2 class="text-2xl font-serif font-semibold text-mora-dark">General Chair – AIHC 2023</h2>
-          <span class="bg-mora-accent/10 text-mora-accent px-4 py-1 rounded-full text-sm">2023</span>
-        </div>
-        <h3 class="text-xl font-semibold text-mora-dark mb-2">EAI International Conference on Artificial Intelligence for Human-Centric Computing</h3>
-        <p class="text-lg text-mora-secondary mb-4">Led conference organization and execution at VIT-AP University for AIHC 2023.</p>
-        <div class="pt-4 border-t border-mora-light flex flex-wrap gap-2">
-          <span class="px-3 py-1 bg-mora-light rounded-full text-sm">General Chair</span>
-          <span class="px-3 py-1 bg-mora-light rounded-full text-sm">AIHC 2023</span>
-        </div>
-      </div>
-    </div>
-
-
-    <!-- Entry: Publication Chair ICETEMS 2023 -->
-    <div class="max-w-3xl mx-auto mb-20" data-aos="slide-up">
-      <div class="hover-scale bg-white p-8 rounded-xl shadow-lg border-l-8 border-mora-accent">
-        <div class="flex items-center justify-between mb-6">
-          <h2 class="text-2xl font-serif font-semibold text-mora-dark">Publication Chair – ICETEMS 2023</h2>
-          <span class="bg-mora-accent/10 text-mora-accent px-4 py-1 rounded-full text-sm">2023</span>
-        </div>
-        <h3 class="text-xl font-semibold text-mora-dark mb-2">Emerging Technologies in Engineering & Management Sciences</h3>
-        <p class="text-lg text-mora-secondary mb-4">Oversaw proceedings publication for ICETEMS 2023 at Singidunum University, Serbia.</p>
-        <div class="pt-4 border-t border-mora-light flex flex-wrap gap-2">
-          <span class="px-3 py-1 bg-mora-light rounded-full text-sm">Publication</span>
-          <span class="px-3 py-1 bg-mora-light rounded-full text-sm">ICETEMS 2023</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Entry: Advisory Member AICMT 2023 -->
-    <div class="max-w-3xl mx-auto mb-20" data-aos="slide-up">
-      <div class="hover-scale bg-white p-8 rounded-xl shadow-lg border-l-8 border-mora-accent">
-        <div class="flex items-center justify-between mb-6">
-          <h2 class="text-2xl font-serif font-semibold text-mora-dark">Technical Advisory Member – AICMT 2023</h2>
-          <span class="bg-mora-accent/10 text-mora-accent px-4 py-1 rounded-full text-sm">2023</span>
-        </div>
-        <h3 class="text-xl font-semibold text-mora-dark mb-2">Advances in Computing & Management Technologies</h3>
-        <p class="text-lg text-mora-secondary mb-4">Provided advisory guidance on topics and paper selection for AICMT 2023 in Delhi.</p>
-        <div class="pt-4 border-t border-mora-light flex flex-wrap gap-2">
-          <span class="px-3 py-1 bg-mora-light rounded-full text-sm">Advisory Committee</span>
-          <span class="px-3 py-1 bg-mora-light rounded-full text-sm">AICMT 2023</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Entry: Publication Chair IHIC 2022 -->
-    <div class="max-w-3xl mx-auto" data-aos="slide-up">
-      <div class="hover-scale bg-white p-8 rounded-xl shadow-lg border-l-8 border-mora-accent">
-        <div class="flex items-center justify-between mb-6">
-          <h2 class="text-2xl font-serif font-semibold text-mora-dark">Publication Chair – IHIC 2022</h2>
-          <span class="bg-mora-accent/10 text-mora-accent px-4 py-1 rounded-full text-sm">2022</span>
-        </div>
-        <h3 class="text-xl font-semibold text-mora-dark mb-2">Human-Centric Intelligent Computing</h3>
-        <p class="text-lg text-mora-secondary mb-4">Managed proceedings publication at Vardhaman Engineering College's IHIC 2022.</p>
-        <div class="pt-4 border-t border-mora-light flex flex-wrap gap-2">
-          <span class="px-3 py-1 bg-mora-light rounded-full text-sm">Publication</span>
-          <span class="px-3 py-1 bg-mora-light rounded-full text-sm">IHIC 2022</span>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</main>
-<footer class="bg-mora-primary text-mora-light py-8">
-  <div class="container mx-auto px-6">
-    <div class="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-      <div class="flex items-center space-x-2">
-        <svg class="w-6 h-6 text-mora-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-        </svg>
-        <span class="font-sans text-sm">Designed and developed by</span>
-      </div>
-      <a href="https://www.mightymonkeymedia.com"
-         target="_blank"
-         rel="noopener noreferrer"
-         class="text-mora-accent hover:text-mora-light transition-colors font-semibold text-sm">
-        Mighty Monkey Media LLP
-      </a>
-    </div>
-  </div>
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>AOS.init({duration:800,once:true,easing:'ease-out-quad'});</script>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>AOS.init({ duration: 800, once: true, easing: 'ease-out-quad' });</script>
 </body>
+
 </html>
