@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Honors & Awards -  Prof. S.N. Mohanty</title>
+    <title>Honors & Awards - Prof. S.N. Mohanty</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <style>[x-cloak] { display: none !important; }</style>
+    <style>
+        [x-cloak] {
+            display: none !important;
+        }
+    </style>
     <script>
         tailwind.config = {
             theme: {
@@ -45,13 +52,13 @@
         .hover-scale {
             @apply transition-transform duration-300 ease-in-out hover:scale-[1.02];
         }
+
         .section-title {
-            @apply font-serif text-4xl font-bold text-mora-dark mb-12 relative 
-                   before:absolute before:bottom-[-8px] before:left-0 before:w-12 
-                   before:h-1 before:bg-mora-accent;
+            @apply font-serif text-4xl font-bold text-mora-dark mb-12 relative before:absolute before:bottom-[-8px] before:left-0 before:w-12 before:h-1 before:bg-mora-accent;
         }
     </style>
 </head>
+
 <body class="bg-mora-light font-sans text-mora-secondary leading-relaxed">
     <!-- Navigation -->
     <nav class="fixed w-full bg-white/95 backdrop-blur-md z-50 shadow-sm">
@@ -60,52 +67,68 @@
                 <!-- Desktop Menu (Centered) -->
                 <div class="hidden md:flex mx-auto space-x-6 items-center">
                     <a href="index.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Home</a>
-                    <a href="honors-awards.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Honors</a>
-                    <a href="membership.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Memberships</a>
+                    <a href="honors-awards.html"
+                        class="text-mora-secondary hover:text-mora-accent transition-colors">Honors</a>
+                    <a href="membership.html"
+                        class="text-mora-secondary hover:text-mora-accent transition-colors">Memberships</a>
 
                     <!-- Publications Dropdown -->
-                    <div class="relative group" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="setTimeout(() => open = false, 200)">
-                        <button class="text-mora-secondary hover:text-mora-accent transition-colors" @click="open = !open">
+                    <div class="relative group" x-data="{ open: false }" @mouseenter="open = true"
+                        @mouseleave="setTimeout(() => open = false, 200)">
+                        <button class="text-mora-secondary hover:text-mora-accent transition-colors"
+                            @click="open = !open">
                             Publications ▾
                         </button>
                         <div class="absolute transition-all duration-200 ease-in-out"
-                             :class="{'opacity-100 visible translate-y-0': open, 'opacity-0 invisible -translate-y-1': !open}"
-                             x-cloak>
+                            :class="{'opacity-100 visible translate-y-0': open, 'opacity-0 invisible -translate-y-1': !open}"
+                            x-cloak>
                             <div class="bg-white shadow-lg rounded-lg mt-2 py-2 w-48">
-                                <a href="referred-journal.html" class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Referred Journals</a>
-                                <a href="conference-journal.html" class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Conference Papers</a>
+                                <a href="referred-journal.html"
+                                    class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Referred
+                                    Journals</a>
+                                <a href="conference-journal.html"
+                                    class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Conference
+                                    Papers</a>
                             </div>
                         </div>
                     </div>
 
-                    <a href="patents.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Patents</a>
+                    <a href="patents.html"
+                        class="text-mora-secondary hover:text-mora-accent transition-colors">Patents</a>
                     <a href="talks.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Talks</a>
 
                     <!-- Roles Dropdown -->
-                    <div class="relative group" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="setTimeout(() => open = false, 200)">
-                        <button class="text-mora-secondary hover:text-mora-accent transition-colors" @click="open = !open">
+                    <div class="relative group" x-data="{ open: false }" @mouseenter="open = true"
+                        @mouseleave="setTimeout(() => open = false, 200)">
+                        <button class="text-mora-secondary hover:text-mora-accent transition-colors"
+                            @click="open = !open">
                             Roles ▾
                         </button>
                         <div class="absolute transition-all duration-200 ease-in-out"
-                             :class="{'opacity-100 visible translate-y-0': open, 'opacity-0 invisible -translate-y-1': !open}"
-                             x-cloak>
+                            :class="{'opacity-100 visible translate-y-0': open, 'opacity-0 invisible -translate-y-1': !open}"
+                            x-cloak>
                             <div class="bg-white shadow-lg rounded-lg mt-2 py-2 w-48">
-                                <a href="editorship.html" class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Editorship</a>
-                                <a href="chairmanship.html" class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Chairmanship</a>
+                                <a href="editorship.html"
+                                    class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Editorship</a>
+                                <a href="chairmanship.html"
+                                    class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Chairmanship</a>
                             </div>
                         </div>
                     </div>
 
                     <a href="books.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Books</a>
-                    <a href="sponsored-projects.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Projects</a>
-                    <a href="contact.html" class="px-4 py-2 bg-mora-accent text-white rounded-full hover:bg-mora-dark transition-colors">Contact</a>
+                    <a href="sponsored-projects.html"
+                        class="text-mora-secondary hover:text-mora-accent transition-colors">Projects</a>
+                    <a href="contact.html"
+                        class="px-4 py-2 bg-mora-accent text-white rounded-full hover:bg-mora-dark transition-colors">Contact</a>
                 </div>
 
                 <!-- Mobile Menu Button (Right Aligned) -->
                 <div class="md:hidden ml-auto">
                     <button id="mobile-menu-button" class="text-mora-dark">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
                     </button>
                 </div>
@@ -122,25 +145,32 @@
                 <a href="talks.html" class="block text-mora-secondary hover:text-mora-accent">Talks</a>
                 <div class="pl-4">
                     <details>
-                        <summary class="text-mora-secondary hover:text-mora-accent cursor-pointer">Publications</summary>
+                        <summary class="text-mora-secondary hover:text-mora-accent cursor-pointer">Publications
+                        </summary>
                         <div class="mt-2 space-y-2">
-                            <a href="referred-journal.html" class="block pl-4 text-mora-secondary hover:text-mora-accent">Referred Journals</a>
-                            <a href="conference-journal.html" class="block pl-4 text-mora-secondary hover:text-mora-accent">Conference Papers</a>
+                            <a href="referred-journal.html"
+                                class="block pl-4 text-mora-secondary hover:text-mora-accent">Referred Journals</a>
+                            <a href="conference-journal.html"
+                                class="block pl-4 text-mora-secondary hover:text-mora-accent">Conference Papers</a>
                         </div>
                     </details>
                 </div>
                 <div class="pl-4">
                     <details>
-                        <summary class="text-mora-secondary hover:text-mora-accent cursor-pointer">Professional Roles</summary>
+                        <summary class="text-mora-secondary hover:text-mora-accent cursor-pointer">Professional Roles
+                        </summary>
                         <div class="mt-2 space-y-2">
-                            <a href="editorship.html" class="block pl-4 text-mora-secondary hover:text-mora-accent">Editorship</a>
-                            <a href="chairmanship.html" class="block pl-4 text-mora-secondary hover:text-mora-accent">Chairmanship</a>
+                            <a href="editorship.html"
+                                class="block pl-4 text-mora-secondary hover:text-mora-accent">Editorship</a>
+                            <a href="chairmanship.html"
+                                class="block pl-4 text-mora-secondary hover:text-mora-accent">Chairmanship</a>
                         </div>
                     </details>
                 </div>
                 <a href="books.html" class="block text-mora-secondary hover:text-mora-accent">Books</a>
                 <a href="sponsored-projects.html" class="block text-mora-secondary hover:text-mora-accent">Projects</a>
-                <a href="contact.html" class="block px-4 py-2 bg-mora-accent text-white rounded-full hover:bg-mora-dark">Contact</a>
+                <a href="contact.html"
+                    class="block px-4 py-2 bg-mora-accent text-white rounded-full hover:bg-mora-dark">Contact</a>
             </div>
         </div>
     </nav>
@@ -215,15 +245,18 @@
                     <!-- 2020 Awards -->
                     <div class="relative flex md:contents">
                         <div class="hidden md:block w-1/2"></div>
-                        <div class="z-10 flex items-center justify-center w-8 h-8 bg-mora-accent rounded-full absolute left-1/2 -translate-x-1/2">
+                        <div
+                            class="z-10 flex items-center justify-center w-8 h-8 bg-mora-accent rounded-full absolute left-1/2 -translate-x-1/2">
                             <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
                             </svg>
                         </div>
                         <div class="w-full md:w-1/2 p-4 group hover-scale">
                             <div class="bg-white p-8 rounded-xl shadow-sm">
                                 <div class="flex items-center mb-4">
-                                    <div class="w-12 h-12 bg-mora-accent/10 rounded-lg flex items-center justify-center mr-4">
+                                    <div
+                                        class="w-12 h-12 bg-mora-accent/10 rounded-lg flex items-center justify-center mr-4">
                                         <span class="text-mora-accent font-serif font-bold">2020</span>
                                     </div>
                                     <div>
@@ -231,10 +264,14 @@
                                         <p class="text-mora-accent">SERB, Govt. of India</p>
                                     </div>
                                 </div>
-                                <p class="text-mora-secondary mb-4">For presenting at 11th International Multiple-Conference on Complexity Informatics and Cybernetics (IMCIC-2020) in Florida, USA </p>
+                                <p class="text-mora-secondary mb-4">For presenting at 11th International
+                                    Multiple-Conference on Complexity Informatics and Cybernetics (IMCIC-2020) in
+                                    Florida, USA </p>
                                 <div class="flex items-center space-x-4">
-                                    <span class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">International</span>
-                                    <span class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">Research</span>
+                                    <span
+                                        class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">International</span>
+                                    <span
+                                        class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">Research</span>
                                 </div>
                             </div>
                         </div>
@@ -242,15 +279,18 @@
 
                     <div class="relative flex md:contents flex-row-reverse">
                         <div class="hidden md:block w-1/2"></div>
-                        <div class="z-10 flex items-center justify-center w-8 h-8 bg-mora-accent rounded-full absolute left-1/2 -translate-x-1/2">
+                        <div
+                            class="z-10 flex items-center justify-center w-8 h-8 bg-mora-accent rounded-full absolute left-1/2 -translate-x-1/2">
                             <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
                             </svg>
                         </div>
                         <div class="w-full md:w-1/2 p-4 group hover-scale">
                             <div class="bg-white p-8 rounded-xl shadow-sm">
                                 <div class="flex items-center mb-4">
-                                    <div class="w-12 h-12 bg-mora-accent/10 rounded-lg flex items-center justify-center mr-4">
+                                    <div
+                                        class="w-12 h-12 bg-mora-accent/10 rounded-lg flex items-center justify-center mr-4">
                                         <span class="text-mora-accent font-serif font-bold">2020</span>
                                     </div>
                                     <div>
@@ -258,9 +298,11 @@
                                         <p class="text-mora-accent">Computer Society of India</p>
                                     </div>
                                 </div>
-                                <p class="text-mora-secondary mb-4">Awarded at 53rd National Convention by CSI at KIIT Deemed University </p>
+                                <p class="text-mora-secondary mb-4">Awarded at 53rd National Convention by CSI at KIIT
+                                    Deemed University </p>
                                 <div class="flex items-center space-x-4">
-                                    <span class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">Academic</span>
+                                    <span
+                                        class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">Academic</span>
                                 </div>
                             </div>
                         </div>
@@ -269,15 +311,18 @@
                     <!-- 2019 Awards -->
                     <div class="relative flex md:contents">
                         <div class="hidden md:block w-1/2"></div>
-                        <div class="z-10 flex items-center justify-center w-8 h-8 bg-mora-accent rounded-full absolute left-1/2 -translate-x-1/2">
+                        <div
+                            class="z-10 flex items-center justify-center w-8 h-8 bg-mora-accent rounded-full absolute left-1/2 -translate-x-1/2">
                             <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
                             </svg>
                         </div>
                         <div class="w-full md:w-1/2 p-4 group hover-scale">
                             <div class="bg-white p-8 rounded-xl shadow-sm">
                                 <div class="flex items-center mb-4">
-                                    <div class="w-12 h-12 bg-mora-accent/10 rounded-lg flex items-center justify-center mr-4">
+                                    <div
+                                        class="w-12 h-12 bg-mora-accent/10 rounded-lg flex items-center justify-center mr-4">
                                         <span class="text-mora-accent font-serif font-bold">2019</span>
                                     </div>
                                     <div>
@@ -285,9 +330,11 @@
                                         <p class="text-mora-accent">Biju Pattnaik University of Technology</p>
                                     </div>
                                 </div>
-                                <p class="text-mora-secondary mb-4">Awarded on University Foundation Day (TEQIP-III, BPUT sponsored) </p>
+                                <p class="text-mora-secondary mb-4">Awarded on University Foundation Day (TEQIP-III,
+                                    BPUT sponsored) </p>
                                 <div class="flex items-center space-x-4">
-                                    <span class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">Research</span>
+                                    <span
+                                        class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">Research</span>
                                 </div>
                             </div>
                         </div>
@@ -295,25 +342,30 @@
 
                     <div class="relative flex md:contents flex-row-reverse">
                         <div class="hidden md:block w-1/2"></div>
-                        <div class="z-10 flex items-center justify-center w-8 h-8 bg-mora-accent rounded-full absolute left-1/2 -translate-x-1/2">
+                        <div
+                            class="z-10 flex items-center justify-center w-8 h-8 bg-mora-accent rounded-full absolute left-1/2 -translate-x-1/2">
                             <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
                             </svg>
                         </div>
                         <div class="w-full md:w-1/2 p-4 group hover-scale">
                             <div class="bg-white p-8 rounded-xl shadow-sm">
                                 <div class="flex items-center mb-4">
-                                    <div class="w-12 h-12 bg-mora-accent/10 rounded-lg flex items-center justify-center mr-4">
+                                    <div
+                                        class="w-12 h-12 bg-mora-accent/10 rounded-lg flex items-center justify-center mr-4">
                                         <span class="text-mora-accent font-serif font-bold">2019</span>
                                     </div>
                                     <div>
-                                        <h3 class="text-xl font-semibold text-mora-dark">Indian Education Icon Award</h3>
+                                        <h3 class="text-xl font-semibold text-mora-dark">Indian Education Icon Award
+                                        </h3>
                                         <p class="text-mora-accent">Techprolab Pvt Ltd (IIT Patna incubated)</p>
                                     </div>
                                 </div>
                                 <p class="text-mora-secondary mb-4">For contributions to the education community </p>
                                 <div class="flex items-center space-x-4">
-                                    <span class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">Education</span>
+                                    <span
+                                        class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">Education</span>
                                 </div>
                             </div>
                         </div>
@@ -322,15 +374,18 @@
                     <!-- 2018 Awards -->
                     <div class="relative flex md:contents">
                         <div class="hidden md:block w-1/2"></div>
-                        <div class="z-10 flex items-center justify-center w-8 h-8 bg-mora-accent rounded-full absolute left-1/2 -translate-x-1/2">
+                        <div
+                            class="z-10 flex items-center justify-center w-8 h-8 bg-mora-accent rounded-full absolute left-1/2 -translate-x-1/2">
                             <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
                             </svg>
                         </div>
                         <div class="w-full md:w-1/2 p-4 group hover-scale">
                             <div class="bg-white p-8 rounded-xl shadow-sm">
                                 <div class="flex items-center mb-4">
-                                    <div class="w-12 h-12 bg-mora-accent/10 rounded-lg flex items-center justify-center mr-4">
+                                    <div
+                                        class="w-12 h-12 bg-mora-accent/10 rounded-lg flex items-center justify-center mr-4">
                                         <span class="text-mora-accent font-serif font-bold">2018</span>
                                     </div>
                                     <div>
@@ -338,9 +393,11 @@
                                         <p class="text-mora-accent">Govt. of Odisha</p>
                                     </div>
                                 </div>
-                                <p class="text-mora-secondary mb-4">From Department of Higher Education, Govt. of Odisha </p>
+                                <p class="text-mora-secondary mb-4">From Department of Higher Education, Govt. of Odisha
+                                </p>
                                 <div class="flex items-center space-x-4">
-                                    <span class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">Government</span>
+                                    <span
+                                        class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">Government</span>
                                 </div>
                             </div>
                         </div>
@@ -348,15 +405,18 @@
 
                     <div class="relative flex md:contents flex-row-reverse">
                         <div class="hidden md:block w-1/2"></div>
-                        <div class="z-10 flex items-center justify-center w-8 h-8 bg-mora-accent rounded-full absolute left-1/2 -translate-x-1/2">
+                        <div
+                            class="z-10 flex items-center justify-center w-8 h-8 bg-mora-accent rounded-full absolute left-1/2 -translate-x-1/2">
                             <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
                             </svg>
                         </div>
                         <div class="w-full md:w-1/2 p-4 group hover-scale">
                             <div class="bg-white p-8 rounded-xl shadow-sm">
                                 <div class="flex items-center mb-4">
-                                    <div class="w-12 h-12 bg-mora-accent/10 rounded-lg flex items-center justify-center mr-4">
+                                    <div
+                                        class="w-12 h-12 bg-mora-accent/10 rounded-lg flex items-center justify-center mr-4">
                                         <span class="text-mora-accent font-serif font-bold">2018</span>
                                     </div>
                                     <div>
@@ -364,9 +424,11 @@
                                         <p class="text-mora-accent">Venus International Foundation</p>
                                     </div>
                                 </div>
-                                <p class="text-mora-secondary mb-4">For contributions in Computer Science & Engineering </p>
+                                <p class="text-mora-secondary mb-4">For contributions in Computer Science & Engineering
+                                </p>
                                 <div class="flex items-center space-x-4">
-                                    <span class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">Teaching</span>
+                                    <span
+                                        class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">Teaching</span>
                                 </div>
                             </div>
                         </div>
@@ -375,15 +437,18 @@
                     <!-- Earlier Awards -->
                     <div class="relative flex md:contents">
                         <div class="hidden md:block w-1/2"></div>
-                        <div class="z-10 flex items-center justify-center w-8 h-8 bg-mora-accent rounded-full absolute left-1/2 -translate-x-1/2">
+                        <div
+                            class="z-10 flex items-center justify-center w-8 h-8 bg-mora-accent rounded-full absolute left-1/2 -translate-x-1/2">
                             <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
                             </svg>
                         </div>
                         <div class="w-full md:w-1/2 p-4 group hover-scale">
                             <div class="bg-white p-8 rounded-xl shadow-sm">
                                 <div class="flex items-center mb-4">
-                                    <div class="w-12 h-12 bg-mora-accent/10 rounded-lg flex items-center justify-center mr-4">
+                                    <div
+                                        class="w-12 h-12 bg-mora-accent/10 rounded-lg flex items-center justify-center mr-4">
                                         <span class="text-mora-accent font-serif font-bold">2015-2017</span>
                                     </div>
                                     <div>
@@ -395,10 +460,11 @@
                                     • Best Ph.D. Thesis Award (CSI 2015) <br>
                                     • Eminent Academician Award (ISTE 2014) <br>
                                     • Best Paper Award (IIT Roorkee 2013) <br>
-                                    • MHRD Scholarship (2009-2013) 
+                                    • MHRD Scholarship (2009-2013)
                                 </p>
                                 <div class="flex items-center space-x-4">
-                                    <span class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">Academic</span>
+                                    <span
+                                        class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">Academic</span>
                                 </div>
                             </div>
                         </div>
@@ -407,19 +473,23 @@
                     <!-- Keynote Speaking -->
                     <div class="relative flex md:contents flex-row-reverse">
                         <div class="hidden md:block w-1/2"></div>
-                        <div class="z-10 flex items-center justify-center w-8 h-8 bg-mora-accent rounded-full absolute left-1/2 -translate-x-1/2">
+                        <div
+                            class="z-10 flex items-center justify-center w-8 h-8 bg-mora-accent rounded-full absolute left-1/2 -translate-x-1/2">
                             <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
                             </svg>
                         </div>
                         <div class="w-full md:w-1/2 p-4 group hover-scale">
                             <div class="bg-white p-8 rounded-xl shadow-sm">
                                 <div class="flex items-center mb-4">
-                                    <div class="w-12 h-12 bg-mora-accent/10 rounded-lg flex items-center justify-center mr-4">
+                                    <div
+                                        class="w-12 h-12 bg-mora-accent/10 rounded-lg flex items-center justify-center mr-4">
                                         <span class="text-mora-accent font-serif font-bold">2015-2019</span>
                                     </div>
                                     <div>
-                                        <h3 class="text-xl font-semibold text-mora-dark">Keynote Speaking Engagements</h3>
+                                        <h3 class="text-xl font-semibold text-mora-dark">Keynote Speaking Engagements
+                                        </h3>
                                         <p class="text-mora-accent">International Conferences</p>
                                     </div>
                                 </div>
@@ -427,10 +497,11 @@
                                     • CIIR-2019 (Kolkata) <br>
                                     • Big Data Conference (Paris 2017) <br>
                                     • Business Intelligence Conference (2015) <br>
-                                    • Soft Computing Seminar (2015) 
+                                    • Soft Computing Seminar (2015)
                                 </p>
                                 <div class="flex items-center space-x-4">
-                                    <span class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">Leadership</span>
+                                    <span
+                                        class="px-3 py-1 bg-mora-light text-mora-secondary rounded-full text-sm">Leadership</span>
                                 </div>
                             </div>
                         </div>
@@ -439,7 +510,7 @@
             </div>
 
             <!-- Achievement Stats -->
-            <div class="grid md:grid-cols-3 gap-8 mt-20"  data-aos="fade-up">
+            <div class="grid md:grid-cols-3 gap-8 mt-20" data-aos="fade-up">
                 <div class="bg-white p-8 rounded-xl shadow-sm text-center hover-scale">
                     <div class="text-4xl font-serif font-bold text-mora-accent mb-2">11+</div>
                     <div class="text-mora-secondary">National & International Awards</div>
@@ -472,17 +543,17 @@
         <div class="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             <div class="flex items-center space-x-2">
                 <svg class="w-6 h-6 text-mora-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <span class="font-sans text-sm">Designed and developed by</span>
             </div>
-            <a href="https://www.mightymonkeymedia.com" 
-               target="_blank" 
-               rel="noopener noreferrer"
-               class="text-mora-accent hover:text-mora-light transition-colors font-semibold text-sm">
-                Mighty Monkey Media LLP
+            <a href="https://www.pixlightllp.com" target="_blank" rel="noopener noreferrer"
+                class="text-mora-accent hover:text-mora-light transition-colors font-semibold text-sm">
+                Pixlight LLP
             </a>
         </div>
     </div>
 </footer>
+
 </html>

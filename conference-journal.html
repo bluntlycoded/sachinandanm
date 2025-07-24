@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conference Publications -  Prof. S.N. Mohanty</title>
+    <title>Conference Publications - Prof. S.N. Mohanty</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <style>[x-cloak] { display: none !important; }</style>
+    <style>
+        [x-cloak] {
+            display: none !important;
+        }
+    </style>
     <script>
         tailwind.config = {
             theme: {
@@ -31,16 +38,17 @@
         .hover-scale {
             @apply transition-transform duration-300 ease-in-out hover:scale-[1.02];
         }
+
         .section-title {
-            @apply font-serif text-4xl font-bold text-mora-dark mb-12 relative 
-                   before:absolute before:bottom-[-8px] before:left-0 before:w-12 
-                   before:h-1 before:bg-mora-accent;
+            @apply font-serif text-4xl font-bold text-mora-dark mb-12 relative before:absolute before:bottom-[-8px] before:left-0 before:w-12 before:h-1 before:bg-mora-accent;
         }
+
         .conference-card {
             @apply bg-white p-6 rounded-xl shadow-sm hover-scale;
         }
     </style>
 </head>
+
 <body class="bg-mora-light font-sans text-mora-secondary leading-relaxed">
     <!-- Navigation -->
     <nav class="fixed w-full bg-white/95 backdrop-blur-md z-50 shadow-sm">
@@ -49,52 +57,68 @@
                 <!-- Desktop Menu (Centered) -->
                 <div class="hidden md:flex mx-auto space-x-6 items-center">
                     <a href="index.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Home</a>
-                    <a href="honors-awards.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Honors</a>
-                    <a href="membership.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Memberships</a>
+                    <a href="honors-awards.html"
+                        class="text-mora-secondary hover:text-mora-accent transition-colors">Honors</a>
+                    <a href="membership.html"
+                        class="text-mora-secondary hover:text-mora-accent transition-colors">Memberships</a>
 
                     <!-- Publications Dropdown -->
-                    <div class="relative group" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="setTimeout(() => open = false, 200)">
-                        <button class="text-mora-secondary hover:text-mora-accent transition-colors" @click="open = !open">
+                    <div class="relative group" x-data="{ open: false }" @mouseenter="open = true"
+                        @mouseleave="setTimeout(() => open = false, 200)">
+                        <button class="text-mora-secondary hover:text-mora-accent transition-colors"
+                            @click="open = !open">
                             Publications ▾
                         </button>
                         <div class="absolute transition-all duration-200 ease-in-out"
-                             :class="{'opacity-100 visible translate-y-0': open, 'opacity-0 invisible -translate-y-1': !open}"
-                             x-cloak>
+                            :class="{'opacity-100 visible translate-y-0': open, 'opacity-0 invisible -translate-y-1': !open}"
+                            x-cloak>
                             <div class="bg-white shadow-lg rounded-lg mt-2 py-2 w-48">
-                                <a href="referred-journal.html" class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Referred Journals</a>
-                                <a href="conference-journal.html" class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Conference Papers</a>
+                                <a href="referred-journal.html"
+                                    class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Referred
+                                    Journals</a>
+                                <a href="conference-journal.html"
+                                    class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Conference
+                                    Papers</a>
                             </div>
                         </div>
                     </div>
 
-                    <a href="patents.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Patents</a>
+                    <a href="patents.html"
+                        class="text-mora-secondary hover:text-mora-accent transition-colors">Patents</a>
                     <a href="talks.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Talks</a>
 
                     <!-- Roles Dropdown -->
-                    <div class="relative group" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="setTimeout(() => open = false, 200)">
-                        <button class="text-mora-secondary hover:text-mora-accent transition-colors" @click="open = !open">
+                    <div class="relative group" x-data="{ open: false }" @mouseenter="open = true"
+                        @mouseleave="setTimeout(() => open = false, 200)">
+                        <button class="text-mora-secondary hover:text-mora-accent transition-colors"
+                            @click="open = !open">
                             Roles ▾
                         </button>
                         <div class="absolute transition-all duration-200 ease-in-out"
-                             :class="{'opacity-100 visible translate-y-0': open, 'opacity-0 invisible -translate-y-1': !open}"
-                             x-cloak>
+                            :class="{'opacity-100 visible translate-y-0': open, 'opacity-0 invisible -translate-y-1': !open}"
+                            x-cloak>
                             <div class="bg-white shadow-lg rounded-lg mt-2 py-2 w-48">
-                                <a href="editorship.html" class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Editorship</a>
-                                <a href="chairmanship.html" class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Chairmanship</a>
+                                <a href="editorship.html"
+                                    class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Editorship</a>
+                                <a href="chairmanship.html"
+                                    class="block px-4 py-2 text-mora-secondary hover:bg-mora-light">Chairmanship</a>
                             </div>
                         </div>
                     </div>
 
                     <a href="books.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Books</a>
-                    <a href="sponsored-projects.html" class="text-mora-secondary hover:text-mora-accent transition-colors">Projects</a>
-                    <a href="contact.html" class="px-4 py-2 bg-mora-accent text-white rounded-full hover:bg-mora-dark transition-colors">Contact</a>
+                    <a href="sponsored-projects.html"
+                        class="text-mora-secondary hover:text-mora-accent transition-colors">Projects</a>
+                    <a href="contact.html"
+                        class="px-4 py-2 bg-mora-accent text-white rounded-full hover:bg-mora-dark transition-colors">Contact</a>
                 </div>
 
                 <!-- Mobile Menu Button (Right Aligned) -->
                 <div class="md:hidden ml-auto">
                     <button id="mobile-menu-button" class="text-mora-dark">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
                     </button>
                 </div>
@@ -111,25 +135,32 @@
                 <a href="talks.html" class="block text-mora-secondary hover:text-mora-accent">Talks</a>
                 <div class="pl-4">
                     <details>
-                        <summary class="text-mora-secondary hover:text-mora-accent cursor-pointer">Publications</summary>
+                        <summary class="text-mora-secondary hover:text-mora-accent cursor-pointer">Publications
+                        </summary>
                         <div class="mt-2 space-y-2">
-                            <a href="referred-journal.html" class="block pl-4 text-mora-secondary hover:text-mora-accent">Referred Journals</a>
-                            <a href="conference-journal.html" class="block pl-4 text-mora-secondary hover:text-mora-accent">Conference Papers</a>
+                            <a href="referred-journal.html"
+                                class="block pl-4 text-mora-secondary hover:text-mora-accent">Referred Journals</a>
+                            <a href="conference-journal.html"
+                                class="block pl-4 text-mora-secondary hover:text-mora-accent">Conference Papers</a>
                         </div>
                     </details>
                 </div>
                 <div class="pl-4">
                     <details>
-                        <summary class="text-mora-secondary hover:text-mora-accent cursor-pointer">Professional Roles</summary>
+                        <summary class="text-mora-secondary hover:text-mora-accent cursor-pointer">Professional Roles
+                        </summary>
                         <div class="mt-2 space-y-2">
-                            <a href="editorship.html" class="block pl-4 text-mora-secondary hover:text-mora-accent">Editorship</a>
-                            <a href="chairmanship.html" class="block pl-4 text-mora-secondary hover:text-mora-accent">Chairmanship</a>
+                            <a href="editorship.html"
+                                class="block pl-4 text-mora-secondary hover:text-mora-accent">Editorship</a>
+                            <a href="chairmanship.html"
+                                class="block pl-4 text-mora-secondary hover:text-mora-accent">Chairmanship</a>
                         </div>
                     </details>
                 </div>
                 <a href="books.html" class="block text-mora-secondary hover:text-mora-accent">Books</a>
                 <a href="sponsored-projects.html" class="block text-mora-secondary hover:text-mora-accent">Projects</a>
-                <a href="contact.html" class="block px-4 py-2 bg-mora-accent text-white rounded-full hover:bg-mora-dark">Contact</a>
+                <a href="contact.html"
+                    class="block px-4 py-2 bg-mora-accent text-white rounded-full hover:bg-mora-dark">Contact</a>
             </div>
         </div>
     </nav>
@@ -198,25 +229,31 @@
             <div class="space-y-12" data-aos="fade-up">
                 <div class="space-y-6">
                     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" data-aos="fade-up">
-                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex" data-aos="fade-up">
+                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex"
+                            data-aos="fade-up">
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-mora-accent rounded-l-lg"></div>
                             <div class="pl-5 flex flex-col h-full w-full">
                                 <div class="flex justify-between items-start mb-3">
                                     <span class="text-sm text-mora-accent font-medium">2025</span>
                                 </div>
                                 <div class="min-h-[72px] mb-2 flex items-start">
-                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Gokapay, D.K., Mohanty, S.N.</h3>
+                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Gokapay, D.K.,
+                                        Mohanty, S.N.</h3>
                                 </div>
                                 <div class="min-h-[96px] mb-3 flex items-start">
-                                    <p class="text-mora-secondary text-sm leading-relaxed">Integrating Deep Learning and Imaging Techniques for High-Precision Brain Tumor Analysis</p>
+                                    <p class="text-mora-secondary text-sm leading-relaxed">Integrating Deep Learning and
+                                        Imaging Techniques for High-Precision Brain Tumor Analysis</p>
                                 </div>
                                 <div class="min-h-[24px] mb-4 flex items-center">
-                                    <p class="text-sm text-mora-accent font-medium">In: AI4S 2024, CCIS, vol 2243, Springer, Cham. 53–67 (2025)</p>
+                                    <p class="text-sm text-mora-accent font-medium">In: AI4S 2024, CCIS, vol 2243,
+                                        Springer, Cham. 53–67 (2025)</p>
                                 </div>
                                 <div class="mt-auto">
-                                    <a href="https://doi.org/10.1007/978-3-031-81369-6_5" target="_blank" class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
+                                    <a href="https://doi.org/10.1007/978-3-031-81369-6_5" target="_blank"
+                                        class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
                                         <svg class="w-4 h-4 mr-2 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                                            <path
+                                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
                                         </svg>
                                         View DOI
                                     </a>
@@ -225,50 +262,61 @@
                         </div>
 
                         <!-- Card 28: Depression Detection - Springer CCIS -->
-                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex" data-aos="fade-up">
+                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex"
+                            data-aos="fade-up">
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-mora-accent rounded-l-lg"></div>
                             <div class="pl-5 flex flex-col h-full w-full">
                                 <div class="flex justify-between items-start mb-3">
                                     <span class="text-sm text-mora-accent font-medium">2025</span>
                                 </div>
                                 <div class="min-h-[72px] mb-2 flex items-start">
-                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Raju, K.N., Mohanty, S.N.</h3>
+                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Raju, K.N., Mohanty,
+                                        S.N.</h3>
                                 </div>
                                 <div class="min-h-[96px] mb-3 flex items-start">
-                                    <p class="text-mora-secondary text-sm leading-relaxed">Machine Learning Detection of Depression Indicators in Online Communication</p>
+                                    <p class="text-mora-secondary text-sm leading-relaxed">Machine Learning Detection of
+                                        Depression Indicators in Online Communication</p>
                                 </div>
                                 <div class="min-h-[24px] mb-4 flex items-center">
-                                    <p class="text-sm text-mora-accent font-medium">In: AI4S 2024, CCIS, vol 2243, Springer, Cham. 208–224 (2025)</p>
+                                    <p class="text-sm text-mora-accent font-medium">In: AI4S 2024, CCIS, vol 2243,
+                                        Springer, Cham. 208–224 (2025)</p>
                                 </div>
                                 <div class="mt-auto">
-                                    <a href="https://doi.org/10.1007/978-3-031-81369-6_17" target="_blank" class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
+                                    <a href="https://doi.org/10.1007/978-3-031-81369-6_17" target="_blank"
+                                        class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
                                         <svg class="w-4 h-4 mr-2 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                                            <path
+                                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
                                         </svg>
                                         View DOI
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex" data-aos="fade-up">
+                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex"
+                            data-aos="fade-up">
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-mora-accent rounded-l-lg"></div>
                             <div class="pl-5 flex flex-col h-full w-full">
                                 <div class="flex justify-between items-start mb-3">
                                     <span class="text-sm text-mora-accent font-medium">2024</span>
                                 </div>
                                 <div class="min-h-[72px] mb-2 flex items-start">
-                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">D. Nayak, T. Kar, K. Ray, J. Ravindra, S. Nandan Mohanty</h3>
+                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">D. Nayak, T. Kar, K.
+                                        Ray, J. Ravindra, S. Nandan Mohanty</h3>
                                 </div>
                                 <div class="min-h-[96px] mb-3 flex items-start">
-                                    <p class="text-mora-secondary text-sm leading-relaxed">Hybrid Image Compression Using DCT and Autoencoder</p>
+                                    <p class="text-mora-secondary text-sm leading-relaxed">Hybrid Image Compression
+                                        Using DCT and Autoencoder</p>
                                 </div>
                                 <div class="min-h-[24px] mb-4 flex items-center">
                                     <p class="text-sm text-mora-accent font-medium">IEEE PuneCon, pp. 1–6 (2024)</p>
                                 </div>
                                 <div class="mt-auto">
-                                    <a href="https://doi.org/10.1109/PuneCon63413.2024.10895738" target="_blank" class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
+                                    <a href="https://doi.org/10.1109/PuneCon63413.2024.10895738" target="_blank"
+                                        class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
                                         <svg class="w-4 h-4 mr-2 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                                            <path
+                                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
                                         </svg>
                                         View DOI
                                     </a>
@@ -277,50 +325,62 @@
                         </div>
 
                         <!-- Card 30: Intrusion Identification - IEEE AVSS -->
-                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex" data-aos="fade-up">
+                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex"
+                            data-aos="fade-up">
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-mora-accent rounded-l-lg"></div>
                             <div class="pl-5 flex flex-col h-full w-full">
                                 <div class="flex justify-between items-start mb-3">
                                     <span class="text-sm text-mora-accent font-medium">2024</span>
                                 </div>
                                 <div class="min-h-[72px] mb-2 flex items-start">
-                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Y. Challagundla, S. D. Parvatham, S. N. Mohanty, J. Ravindra</h3>
+                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Y. Challagundla, S.
+                                        D. Parvatham, S. N. Mohanty, J. Ravindra</h3>
                                 </div>
                                 <div class="min-h-[96px] mb-3 flex items-start">
-                                    <p class="text-mora-secondary text-sm leading-relaxed">Deep Learning-Driven Surveillance for Intrusion Identification using Proactive Intelligent Video Recognition</p>
+                                    <p class="text-mora-secondary text-sm leading-relaxed">Deep Learning-Driven
+                                        Surveillance for Intrusion Identification using Proactive Intelligent Video
+                                        Recognition</p>
                                 </div>
                                 <div class="min-h-[24px] mb-4 flex items-center">
                                     <p class="text-sm text-mora-accent font-medium">IEEE AVSS, pp. 1–5 (2024)</p>
                                 </div>
                                 <div class="mt-auto">
-                                    <a href="https://doi.org/10.1109/AVSS61716.2024.10672580" target="_blank" class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
+                                    <a href="https://doi.org/10.1109/AVSS61716.2024.10672580" target="_blank"
+                                        class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
                                         <svg class="w-4 h-4 mr-2 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                                            <path
+                                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
                                         </svg>
                                         View DOI
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex" data-aos="fade-up">
+                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex"
+                            data-aos="fade-up">
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-mora-accent rounded-l-lg"></div>
                             <div class="pl-5 flex flex-col h-full w-full">
                                 <div class="flex justify-between items-start mb-3">
                                     <span class="text-sm text-mora-accent font-medium">2024</span>
                                 </div>
                                 <div class="min-h-[72px] mb-2 flex items-start">
-                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">S. Satpathy, P. K. Swain, S. N. Mohanty, S. S. Basa</h3>
+                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">S. Satpathy, P. K.
+                                        Swain, S. N. Mohanty, S. S. Basa</h3>
                                 </div>
                                 <div class="min-h-[96px] mb-3 flex items-start">
-                                    <p class="text-mora-secondary text-sm leading-relaxed">Enhancing Security: Federated Learning against Man-In-The-Middle Threats with Gradient Boosting Machines and LSTM</p>
+                                    <p class="text-mora-secondary text-sm leading-relaxed">Enhancing Security: Federated
+                                        Learning against Man-In-The-Middle Threats with Gradient Boosting Machines and
+                                        LSTM</p>
                                 </div>
                                 <div class="min-h-[24px] mb-4 flex items-center">
                                     <p class="text-sm text-mora-accent font-medium">IEEE AVSS, pp. 1–8 (2024)</p>
                                 </div>
                                 <div class="mt-auto">
-                                    <a href="https://doi.org/10.1109/AVSS61716.2024.10672589" target="_blank" class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
+                                    <a href="https://doi.org/10.1109/AVSS61716.2024.10672589" target="_blank"
+                                        class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
                                         <svg class="w-4 h-4 mr-2 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                                            <path
+                                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
                                         </svg>
                                         View DOI
                                     </a>
@@ -329,50 +389,61 @@
                         </div>
 
                         <!-- Card 32: Explainable AI - IEEE APCIT -->
-                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex" data-aos="fade-up">
+                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex"
+                            data-aos="fade-up">
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-mora-accent rounded-l-lg"></div>
                             <div class="pl-5 flex flex-col h-full w-full">
                                 <div class="flex justify-between items-start mb-3">
                                     <span class="text-sm text-mora-accent font-medium">2024</span>
                                 </div>
                                 <div class="min-h-[72px] mb-2 flex items-start">
-                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">R. Deokar, P. Nanjundan, S. N. Mohanty</h3>
+                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">R. Deokar, P.
+                                        Nanjundan, S. N. Mohanty</h3>
                                 </div>
                                 <div class="min-h-[96px] mb-3 flex items-start">
-                                    <p class="text-mora-secondary text-sm leading-relaxed">Transparency in Translation: A Deep Dive into Explainable AI Techniques for Bias Mitigation</p>
+                                    <p class="text-mora-secondary text-sm leading-relaxed">Transparency in Translation:
+                                        A Deep Dive into Explainable AI Techniques for Bias Mitigation</p>
                                 </div>
                                 <div class="min-h-[24px] mb-4 flex items-center">
                                     <p class="text-sm text-mora-accent font-medium">IEEE APCIT, pp. 1–6 (2024)</p>
                                 </div>
                                 <div class="mt-auto">
-                                    <a href="https://doi.org/10.1109/APCIT62007.2024.10673712" target="_blank" class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
+                                    <a href="https://doi.org/10.1109/APCIT62007.2024.10673712" target="_blank"
+                                        class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
                                         <svg class="w-4 h-4 mr-2 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                                            <path
+                                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
                                         </svg>
                                         View DOI
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex" data-aos="fade-up">
+                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex"
+                            data-aos="fade-up">
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-mora-accent rounded-l-lg"></div>
                             <div class="pl-5 flex flex-col h-full w-full">
                                 <div class="flex justify-between items-start mb-3">
                                     <span class="text-sm text-mora-accent font-medium">2024</span>
                                 </div>
                                 <div class="min-h-[72px] mb-2 flex items-start">
-                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Aditya, B.L.V.S., Mohanty, S.N., Salini, Y.</h3>
+                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Aditya, B.L.V.S.,
+                                        Mohanty, S.N., Salini, Y.</h3>
                                 </div>
                                 <div class="min-h-[96px] mb-3 flex items-start">
-                                    <p class="text-mora-secondary text-sm leading-relaxed">Temporal Sentiment Analysis (TSMFPMSM) Model for Multimodal Social Media Fake Profile Detection</p>
+                                    <p class="text-mora-secondary text-sm leading-relaxed">Temporal Sentiment Analysis
+                                        (TSMFPMSM) Model for Multimodal Social Media Fake Profile Detection</p>
                                 </div>
                                 <div class="min-h-[24px] mb-4 flex items-center">
-                                    <p class="text-sm text-mora-accent font-medium">PerSOM 2023, Lecture Notes of ICST, Vol. 517</p>
+                                    <p class="text-sm text-mora-accent font-medium">PerSOM 2023, Lecture Notes of ICST,
+                                        Vol. 517</p>
                                 </div>
                                 <div class="mt-auto">
-                                    <a href="https://doi.org/10.1007/978-3-031-66044-3_25" target="_blank" class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
+                                    <a href="https://doi.org/10.1007/978-3-031-66044-3_25" target="_blank"
+                                        class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
                                         <svg class="w-4 h-4 mr-2 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                                            <path
+                                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
                                         </svg>
                                         View DOI
                                     </a>
@@ -381,275 +452,340 @@
                         </div>
 
                         <!-- Card 34: VGMFSN Model - Springer LNCS -->
-                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex" data-aos="fade-up">
+                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex"
+                            data-aos="fade-up">
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-mora-accent rounded-l-lg"></div>
                             <div class="pl-5 flex flex-col h-full w-full">
                                 <div class="flex justify-between items-start mb-3">
                                     <span class="text-sm text-mora-accent font-medium">2024</span>
                                 </div>
                                 <div class="min-h-[72px] mb-2 flex items-start">
-                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Aditya, B.L.V.S., Mohanty, S.N.</h3>
+                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Aditya, B.L.V.S.,
+                                        Mohanty, S.N.</h3>
                                 </div>
                                 <div class="min-h-[96px] mb-3 flex items-start">
-                                    <p class="text-mora-secondary text-sm leading-relaxed">VGMFSN: Design of an Efficient Fused VARMA GRU Model for the Identification of Fake Profiles on Social Networks</p>
+                                    <p class="text-mora-secondary text-sm leading-relaxed">VGMFSN: Design of an
+                                        Efficient Fused VARMA GRU Model for the Identification of Fake Profiles on
+                                        Social Networks</p>
                                 </div>
                                 <div class="min-h-[24px] mb-4 flex items-center">
-                                    <p class="text-sm text-mora-accent font-medium">PerSOM 2023, Lecture Notes of ICST, Vol. 517</p>
+                                    <p class="text-sm text-mora-accent font-medium">PerSOM 2023, Lecture Notes of ICST,
+                                        Vol. 517</p>
                                 </div>
                                 <div class="mt-auto">
-                                    <a href="https://doi.org/10.1007/978-3-031-66044-3_27" target="_blank" class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
+                                    <a href="https://doi.org/10.1007/978-3-031-66044-3_27" target="_blank"
+                                        class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
                                         <svg class="w-4 h-4 mr-2 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                                            <path
+                                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
                                         </svg>
                                         View DOI
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex" data-aos="fade-up">
+                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex"
+                            data-aos="fade-up">
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-mora-accent rounded-l-lg"></div>
                             <div class="pl-5 flex flex-col h-full w-full">
                                 <div class="flex justify-between items-start mb-3">
                                     <span class="text-sm text-mora-accent font-medium">2024</span>
                                 </div>
                                 <div class="min-h-[72px] mb-2 flex items-start">
-                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Aditya, B.L.V.S., Mohanty, S.N.</h3>
+                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Aditya, B.L.V.S.,
+                                        Mohanty, S.N.</h3>
                                 </div>
                                 <div class="min-h-[96px] mb-3 flex items-start">
-                                    <p class="text-mora-secondary text-sm leading-relaxed">Unveiling the Underworld: Detecting Fake Profiles Through Network Analysis and Behavioral Modeling on Social Media</p>
+                                    <p class="text-mora-secondary text-sm leading-relaxed">Unveiling the Underworld:
+                                        Detecting Fake Profiles Through Network Analysis and Behavioral Modeling on
+                                        Social Media</p>
                                 </div>
                                 <div class="min-h-[24px] mb-4 flex items-center">
-                                    <p class="text-sm text-mora-accent font-medium">PerSOM 2023, Lecture Notes of ICST, Vol. 517</p>
+                                    <p class="text-sm text-mora-accent font-medium">PerSOM 2023, Lecture Notes of ICST,
+                                        Vol. 517</p>
                                 </div>
                                 <div class="mt-auto">
-                                    <a href="https://doi.org/10.1007/978-3-031-66044-3_26" target="_blank" class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
+                                    <a href="https://doi.org/10.1007/978-3-031-66044-3_26" target="_blank"
+                                        class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
                                         <svg class="w-4 h-4 mr-2 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                                            <path
+                                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
                                         </svg>
                                         View DOI
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex" data-aos="fade-up">
+                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex"
+                            data-aos="fade-up">
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-mora-accent rounded-l-lg"></div>
                             <div class="pl-5 flex flex-col h-full w-full">
                                 <div class="flex justify-between items-start mb-3">
                                     <span class="text-sm text-mora-accent font-medium">2023</span>
                                 </div>
                                 <div class="min-h-[72px] mb-2 flex items-start">
-                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">H. Ghosh, I. S. Rahat, R. M. Pattanayak, Mohanty, S.N.</h3>
+                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">H. Ghosh, I. S.
+                                        Rahat, R. M. Pattanayak, Mohanty, S.N.</h3>
                                 </div>
                                 <div class="min-h-[96px] mb-3 flex items-start">
-                                    <p class="text-mora-secondary text-sm leading-relaxed">Innovative Approaches in Tomato Leaf Disease Recognition using Deep Learning</p>
+                                    <p class="text-mora-secondary text-sm leading-relaxed">Innovative Approaches in
+                                        Tomato Leaf Disease Recognition using Deep Learning</p>
                                 </div>
                                 <div class="min-h-[24px] mb-4 flex items-center">
                                     <p class="text-sm text-mora-accent font-medium">ICRTAC 2023, pp. 86–96</p>
                                 </div>
                                 <div class="mt-auto">
-                                    <a href="https://doi.org/10.1109/ICRTAC59277.2023.10480762" target="_blank" class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
+                                    <a href="https://doi.org/10.1109/ICRTAC59277.2023.10480762" target="_blank"
+                                        class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
                                         <svg class="w-4 h-4 mr-2 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                                            <path
+                                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
                                         </svg>
                                         View DOI
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex" data-aos="fade-up">
+                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex"
+                            data-aos="fade-up">
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-mora-accent rounded-l-lg"></div>
                             <div class="pl-5 flex flex-col h-full w-full">
                                 <div class="flex justify-between items-start mb-3">
                                     <span class="text-sm text-mora-accent font-medium">2024</span>
                                 </div>
                                 <div class="min-h-[72px] mb-2 flex items-start">
-                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">T. K. Mishra, G. Sucharitha, N. Siddhartha, B. Raju, Mohanty, S.N.</h3>
+                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">T. K. Mishra, G.
+                                        Sucharitha, N. Siddhartha, B. Raju, Mohanty, S.N.</h3>
                                 </div>
                                 <div class="min-h-[96px] mb-3 flex items-start">
-                                    <p class="text-mora-secondary text-sm leading-relaxed">Prediction of Suicidal Behaviour among the users on Social Media using NLP and ML</p>
+                                    <p class="text-mora-secondary text-sm leading-relaxed">Prediction of Suicidal
+                                        Behaviour among the users on Social Media using NLP and ML</p>
                                 </div>
                                 <div class="min-h-[24px] mb-4 flex items-center">
                                     <p class="text-sm text-mora-accent font-medium">ESIC 2024, pp. 74–81</p>
                                 </div>
                                 <div class="mt-auto">
-                                    <a href="https://doi.org/10.1109/ESIC60604.2024.10481588" target="_blank" class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
+                                    <a href="https://doi.org/10.1109/ESIC60604.2024.10481588" target="_blank"
+                                        class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
                                         <svg class="w-4 h-4 mr-2 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                                            <path
+                                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
                                         </svg>
                                         View DOI
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex" data-aos="fade-up">
+                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex"
+                            data-aos="fade-up">
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-mora-accent rounded-l-lg"></div>
                             <div class="pl-5 flex flex-col h-full w-full">
                                 <div class="flex justify-between items-start mb-3">
                                     <span class="text-sm text-mora-accent font-medium">2024</span>
                                 </div>
                                 <div class="min-h-[72px] mb-2 flex items-start">
-                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">N. R. Kanchapogu, Mohanty, S.N.</h3>
+                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">N. R. Kanchapogu,
+                                        Mohanty, S.N.</h3>
                                 </div>
                                 <div class="min-h-[96px] mb-3 flex items-start">
-                                    <p class="text-mora-secondary text-sm leading-relaxed">Comparative Study of ML Methods for Predictive Analysis of Depression Onset</p>
+                                    <p class="text-mora-secondary text-sm leading-relaxed">Comparative Study of ML
+                                        Methods for Predictive Analysis of Depression Onset</p>
                                 </div>
                                 <div class="min-h-[24px] mb-4 flex items-center">
                                     <p class="text-sm text-mora-accent font-medium">ESIC 2024, pp. 193–198</p>
                                 </div>
                                 <div class="mt-auto">
-                                    <a href="https://doi.org/10.1109/ESIC60604.2024.10481595" target="_blank" class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
+                                    <a href="https://doi.org/10.1109/ESIC60604.2024.10481595" target="_blank"
+                                        class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
                                         <svg class="w-4 h-4 mr-2 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                                            <path
+                                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
                                         </svg>
                                         View DOI
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex" data-aos="fade-up">
+                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex"
+                            data-aos="fade-up">
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-mora-accent rounded-l-lg"></div>
                             <div class="pl-5 flex flex-col h-full w-full">
                                 <div class="flex justify-between items-start mb-3">
                                     <span class="text-sm text-mora-accent font-medium">2024</span>
                                 </div>
                                 <div class="min-h-[72px] mb-2 flex items-start">
-                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Ghosh, H., Rahat, I.S., Lenka, R., Mohanty, S.N., Chauhan, D.</h3>
+                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Ghosh, H., Rahat,
+                                        I.S., Lenka, R., Mohanty, S.N., Chauhan, D.</h3>
                                 </div>
                                 <div class="min-h-[96px] mb-3 flex items-start">
-                                    <p class="text-mora-secondary text-sm leading-relaxed">Benchmarking ML and DL Models for Mango Leaf Disease Detection: A Comparative Analysis</p>
+                                    <p class="text-mora-secondary text-sm leading-relaxed">Benchmarking ML and DL Models
+                                        for Mango Leaf Disease Detection: A Comparative Analysis</p>
                                 </div>
                                 <div class="min-h-[24px] mb-4 flex items-center">
-                                    <p class="text-sm text-mora-accent font-medium">Applied Machine Learning and Data Analytics, CCIS vol 2047</p>
+                                    <p class="text-sm text-mora-accent font-medium">Applied Machine Learning and Data
+                                        Analytics, CCIS vol 2047</p>
                                 </div>
                                 <div class="mt-auto">
-                                    <a href="https://doi.org/10.1007/978-3-031-55486-5_8" target="_blank" class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
+                                    <a href="https://doi.org/10.1007/978-3-031-55486-5_8" target="_blank"
+                                        class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
                                         <svg class="w-4 h-4 mr-2 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                                            <path
+                                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
                                         </svg>
                                         View DOI
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex" data-aos="fade-up">
+                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex"
+                            data-aos="fade-up">
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-mora-accent rounded-l-lg"></div>
                             <div class="pl-5 flex flex-col h-full w-full">
                                 <div class="flex justify-between items-start mb-3">
                                     <span class="text-sm text-mora-accent font-medium">2024</span>
                                 </div>
                                 <div class="min-h-[72px] mb-2 flex items-start">
-                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Vanami, N.V.J., Chintalapati, L.R., Challagundla, Y., Mohanty, S.N.</h3>
+                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Vanami, N.V.J.,
+                                        Chintalapati, L.R., Challagundla, Y., Mohanty, S.N.</h3>
                                 </div>
                                 <div class="min-h-[96px] mb-3 flex items-start">
-                                    <p class="text-mora-secondary text-sm leading-relaxed">Feature Selection Using Data Mining Techniques for Prognostication of Cardiovascular Diseases</p>
+                                    <p class="text-mora-secondary text-sm leading-relaxed">Feature Selection Using Data
+                                        Mining Techniques for Prognostication of Cardiovascular Diseases</p>
                                 </div>
                                 <div class="min-h-[24px] mb-4 flex items-center">
-                                    <p class="text-sm text-mora-accent font-medium">Multimedia Technology and Enhanced Learning, ICMTEL 2023, LNICST vol 532</p>
+                                    <p class="text-sm text-mora-accent font-medium">Multimedia Technology and Enhanced
+                                        Learning, ICMTEL 2023, LNICST vol 532</p>
                                 </div>
                                 <div class="mt-auto">
-                                    <a href="https://doi.org/10.1007/978-3-031-50571-3_24" target="_blank" class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
+                                    <a href="https://doi.org/10.1007/978-3-031-50571-3_24" target="_blank"
+                                        class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
                                         <svg class="w-4 h-4 mr-2 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                                            <path
+                                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
                                         </svg>
                                         View DOI
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex" data-aos="fade-up">
+                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex"
+                            data-aos="fade-up">
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-mora-accent rounded-l-lg"></div>
                             <div class="pl-5 flex flex-col h-full w-full">
                                 <div class="flex justify-between items-start mb-3">
                                     <span class="text-sm text-mora-accent font-medium">2023</span>
                                 </div>
                                 <div class="min-h-[72px] mb-2 flex items-start">
-                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Aditya, B.L.V.S., Rajaram, G., Hole, S.R., Mohanty, S.N.</h3>
+                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Aditya, B.L.V.S.,
+                                        Rajaram, G., Hole, S.R., Mohanty, S.N.</h3>
                                 </div>
                                 <div class="min-h-[96px] mb-3 flex items-start">
-                                    <p class="text-mora-secondary text-sm leading-relaxed">F2PMSMD: Design of a Fusion Model to Identify Fake Profiles from Multimodal Social Media Datasets</p>
+                                    <p class="text-mora-secondary text-sm leading-relaxed">F2PMSMD: Design of a Fusion
+                                        Model to Identify Fake Profiles from Multimodal Social Media Datasets</p>
                                 </div>
                                 <div class="min-h-[24px] mb-4 flex items-center">
-                                    <p class="text-sm text-mora-accent font-medium">Intelligent Systems and Machine Learning, ICISML 2022, LNICST vol 471</p>
+                                    <p class="text-sm text-mora-accent font-medium">Intelligent Systems and Machine
+                                        Learning, ICISML 2022, LNICST vol 471</p>
                                 </div>
                                 <div class="mt-auto">
-                                    <a href="https://doi.org/10.1007/978-3-031-35081-8_2" target="_blank" class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
+                                    <a href="https://doi.org/10.1007/978-3-031-35081-8_2" target="_blank"
+                                        class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
                                         <svg class="w-4 h-4 mr-2 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                                            <path
+                                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
                                         </svg>
                                         View DOI
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex" data-aos="fade-up">
+                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex"
+                            data-aos="fade-up">
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-mora-accent rounded-l-lg"></div>
                             <div class="pl-5 flex flex-col h-full w-full">
                                 <div class="flex justify-between items-start mb-3">
                                     <span class="text-sm text-mora-accent font-medium">2023</span>
                                 </div>
                                 <div class="min-h-[72px] mb-2 flex items-start">
-                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Ganachari, S., Nandigam, P., Daga, A., Mohanty, S.N., Sudha, S.V.</h3>
+                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Ganachari, S.,
+                                        Nandigam, P., Daga, A., Mohanty, S.N., Sudha, S.V.</h3>
                                 </div>
                                 <div class="min-h-[96px] mb-3 flex items-start">
-                                    <p class="text-mora-secondary text-sm leading-relaxed">Machine Learning Based Malware Analysis in Digital Forensic with IoT Devices</p>
+                                    <p class="text-mora-secondary text-sm leading-relaxed">Machine Learning Based
+                                        Malware Analysis in Digital Forensic with IoT Devices</p>
                                 </div>
                                 <div class="min-h-[24px] mb-4 flex items-center">
-                                    <p class="text-sm text-mora-accent font-medium">Intelligent Systems and Machine Learning, ICISML 2022, LNICST vol 470</p>
+                                    <p class="text-sm text-mora-accent font-medium">Intelligent Systems and Machine
+                                        Learning, ICISML 2022, LNICST vol 470</p>
                                 </div>
                                 <div class="mt-auto">
-                                    <a href="https://doi.org/10.1007/978-3-031-35078-8_15" target="_blank" class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
+                                    <a href="https://doi.org/10.1007/978-3-031-35078-8_15" target="_blank"
+                                        class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
                                         <svg class="w-4 h-4 mr-2 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                                            <path
+                                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
                                         </svg>
                                         View DOI
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex" data-aos="fade-up">
+                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex"
+                            data-aos="fade-up">
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-mora-accent rounded-l-lg"></div>
                             <div class="pl-5 flex flex-col h-full w-full">
                                 <div class="flex justify-between items-start mb-3">
                                     <span class="text-sm text-mora-accent font-medium">2023</span>
                                 </div>
                                 <div class="min-h-[72px] mb-2 flex items-start">
-                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Chintalapati, L.R., Tunuguntla, T.S.C., Challagundla, Y., Mohanty, S.N., Sudha, S.V.</h3>
+                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Chintalapati, L.R.,
+                                        Tunuguntla, T.S.C., Challagundla, Y., Mohanty, S.N., Sudha, S.V.</h3>
                                 </div>
                                 <div class="min-h-[96px] mb-3 flex items-start">
-                                    <p class="text-mora-secondary text-sm leading-relaxed">Measles Rash Disease Classification Based on Various CNN Classifiers</p>
+                                    <p class="text-mora-secondary text-sm leading-relaxed">Measles Rash Disease
+                                        Classification Based on Various CNN Classifiers</p>
                                 </div>
                                 <div class="min-h-[24px] mb-4 flex items-center">
-                                    <p class="text-sm text-mora-accent font-medium">Intelligent Systems and Machine Learning, ICISML 2022, LNICST vol 470</p>
+                                    <p class="text-sm text-mora-accent font-medium">Intelligent Systems and Machine
+                                        Learning, ICISML 2022, LNICST vol 470</p>
                                 </div>
                                 <div class="mt-auto">
-                                    <a href="https://doi.org/10.1007/978-3-031-35078-8_2" target="_blank" class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
+                                    <a href="https://doi.org/10.1007/978-3-031-35078-8_2" target="_blank"
+                                        class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
                                         <svg class="w-4 h-4 mr-2 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                                            <path
+                                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
                                         </svg>
                                         View DOI
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex" data-aos="fade-up">
+                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex"
+                            data-aos="fade-up">
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-mora-accent rounded-l-lg"></div>
                             <div class="pl-5 flex flex-col h-full w-full">
                                 <div class="flex justify-between items-start mb-3">
                                     <span class="text-sm text-mora-accent font-medium">2023</span>
                                 </div>
                                 <div class="min-h-[72px] mb-2 flex items-start">
-                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Sharma, H.K., Singh, B.K., Choudhury, T., Mohanty, S.N.</h3>
+                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Sharma, H.K., Singh,
+                                        B.K., Choudhury, T., Mohanty, S.N.</h3>
                                 </div>
                                 <div class="min-h-[96px] mb-3 flex items-start">
-                                    <p class="text-mora-secondary text-sm leading-relaxed">PCA-Based Machine Learning Approach for Exoplanet Detection</p>
+                                    <p class="text-mora-secondary text-sm leading-relaxed">PCA-Based Machine Learning
+                                        Approach for Exoplanet Detection</p>
                                 </div>
                                 <div class="min-h-[24px] mb-4 flex items-center">
-                                    <p class="text-sm text-mora-accent font-medium">Lecture Notes in Networks and Systems, vol 606</p>
+                                    <p class="text-sm text-mora-accent font-medium">Lecture Notes in Networks and
+                                        Systems, vol 606</p>
                                 </div>
                                 <div class="mt-auto">
-                                    <a href="https://doi.org/10.1007/978-981-19-8563-8_44" target="_blank" class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
+                                    <a href="https://doi.org/10.1007/978-981-19-8563-8_44" target="_blank"
+                                        class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
                                         <svg class="w-4 h-4 mr-2 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                                            <path
+                                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
                                         </svg>
                                         View DOI
                                     </a>
@@ -658,25 +794,31 @@
                         </div>
 
                         <!-- Card 45: Financial Fraud Detection - ICCCNT -->
-                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex" data-aos="fade-up">
+                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex"
+                            data-aos="fade-up">
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-mora-accent rounded-l-lg"></div>
                             <div class="pl-5 flex flex-col h-full w-full">
                                 <div class="flex justify-between items-start mb-3">
                                     <span class="text-sm text-mora-accent font-medium">2022</span>
                                 </div>
                                 <div class="min-h-[72px] mb-2 flex items-start">
-                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Reddy, T.S., Nookaraju, G., Vikas, K., Mohanty, S.N., Anagandula, J., Ahmed, M.S.</h3>
+                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Reddy, T.S.,
+                                        Nookaraju, G., Vikas, K., Mohanty, S.N., Anagandula, J., Ahmed, M.S.</h3>
                                 </div>
                                 <div class="min-h-[96px] mb-3 flex items-start">
-                                    <p class="text-mora-secondary text-sm leading-relaxed">An Analysis of Various Algorithmic Behaviors in Detecting a Financial Fraud</p>
+                                    <p class="text-mora-secondary text-sm leading-relaxed">An Analysis of Various
+                                        Algorithmic Behaviors in Detecting a Financial Fraud</p>
                                 </div>
                                 <div class="min-h-[24px] mb-4 flex items-center">
-                                    <p class="text-sm text-mora-accent font-medium">2022 13th International Conference on Computing Communication and Networking Technologies (ICCCNT)</p>
+                                    <p class="text-sm text-mora-accent font-medium">2022 13th International Conference
+                                        on Computing Communication and Networking Technologies (ICCCNT)</p>
                                 </div>
                                 <div class="mt-auto">
-                                    <a href="https://doi.org/10.1109/ICCCNT54827.2022.9984399" target="_blank" class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
+                                    <a href="https://doi.org/10.1109/ICCCNT54827.2022.9984399" target="_blank"
+                                        class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
                                         <svg class="w-4 h-4 mr-2 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                                            <path
+                                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
                                         </svg>
                                         View DOI
                                     </a>
@@ -685,50 +827,62 @@
                         </div>
 
                         <!-- Card 46: Agricultural Land Classification - ICCCNT -->
-                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex" data-aos="fade-up">
+                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex"
+                            data-aos="fade-up">
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-mora-accent rounded-l-lg"></div>
                             <div class="pl-5 flex flex-col h-full w-full">
                                 <div class="flex justify-between items-start mb-3">
                                     <span class="text-sm text-mora-accent font-medium">2022</span>
                                 </div>
                                 <div class="min-h-[72px] mb-2 flex items-start">
-                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Vikas, K., Goud, K.V., Ponaganti, S., Reddy, A.N., Nagasai, K., Mohanty, S.N.</h3>
+                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Vikas, K., Goud,
+                                        K.V., Ponaganti, S., Reddy, A.N., Nagasai, K., Mohanty, S.N.</h3>
                                 </div>
                                 <div class="min-h-[96px] mb-3 flex items-start">
-                                    <p class="text-mora-secondary text-sm leading-relaxed">Agricultural Land Classification Based on Machine Learning Algorithms</p>
+                                    <p class="text-mora-secondary text-sm leading-relaxed">Agricultural Land
+                                        Classification Based on Machine Learning Algorithms</p>
                                 </div>
                                 <div class="min-h-[24px] mb-4 flex items-center">
-                                    <p class="text-sm text-mora-accent font-medium">2022 13th International Conference on Computing Communication and Networking Technologies (ICCCNT)</p>
+                                    <p class="text-sm text-mora-accent font-medium">2022 13th International Conference
+                                        on Computing Communication and Networking Technologies (ICCCNT)</p>
                                 </div>
                                 <div class="mt-auto">
-                                    <a href="https://doi.org/10.1109/ICCCNT54827.2022.9984254" target="_blank" class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
+                                    <a href="https://doi.org/10.1109/ICCCNT54827.2022.9984254" target="_blank"
+                                        class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
                                         <svg class="w-4 h-4 mr-2 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                                            <path
+                                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
                                         </svg>
                                         View DOI
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex" data-aos="fade-up">
+                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex"
+                            data-aos="fade-up">
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-mora-accent rounded-l-lg"></div>
                             <div class="pl-5 flex flex-col h-full w-full">
                                 <div class="flex justify-between items-start mb-3">
                                     <span class="text-sm text-mora-accent font-medium">2022</span>
                                 </div>
                                 <div class="min-h-[72px] mb-2 flex items-start">
-                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Sharma, N., Mangla, M., Mohanty, S.N., Dutta, P.</h3>
+                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Sharma, N., Mangla,
+                                        M., Mohanty, S.N., Dutta, P.</h3>
                                 </div>
                                 <div class="min-h-[96px] mb-3 flex items-start">
-                                    <p class="text-mora-secondary text-sm leading-relaxed">Supervised Learning Techniques for Sentimental Analysis</p>
+                                    <p class="text-mora-secondary text-sm leading-relaxed">Supervised Learning
+                                        Techniques for Sentimental Analysis</p>
                                 </div>
                                 <div class="min-h-[24px] mb-4 flex items-center">
-                                    <p class="text-sm text-mora-accent font-medium">Lecture Notes in Networks and Systems, vol 490</p>
+                                    <p class="text-sm text-mora-accent font-medium">Lecture Notes in Networks and
+                                        Systems, vol 490</p>
                                 </div>
                                 <div class="mt-auto">
-                                    <a href="https://doi.org/10.1007/978-981-19-4052-1_43" target="_blank" class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
+                                    <a href="https://doi.org/10.1007/978-981-19-4052-1_43" target="_blank"
+                                        class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
                                         <svg class="w-4 h-4 mr-2 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                                            <path
+                                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
                                         </svg>
                                         View DOI
                                     </a>
@@ -737,25 +891,31 @@
                         </div>
 
                         <!-- Card 48: Brain Tumor Segmentation - LNEE 888 -->
-                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex" data-aos="fade-up">
+                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex"
+                            data-aos="fade-up">
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-mora-accent rounded-l-lg"></div>
                             <div class="pl-5 flex flex-col h-full w-full">
                                 <div class="flex justify-between items-start mb-3">
                                     <span class="text-sm text-mora-accent font-medium">2022</span>
                                 </div>
                                 <div class="min-h-[72px] mb-2 flex items-start">
-                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Revanth Kumar, P., Katti, A., Mohanty, S.N., Senapati, S.N.</h3>
+                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Revanth Kumar, P.,
+                                        Katti, A., Mohanty, S.N., Senapati, S.N.</h3>
                                 </div>
                                 <div class="min-h-[96px] mb-3 flex items-start">
-                                    <p class="text-mora-secondary text-sm leading-relaxed">A Deep Learning-Based Approach for an Automated Brain Tumor Segmentation in MR Images</p>
+                                    <p class="text-mora-secondary text-sm leading-relaxed">A Deep Learning-Based
+                                        Approach for an Automated Brain Tumor Segmentation in MR Images</p>
                                 </div>
                                 <div class="min-h-[24px] mb-4 flex items-center">
-                                    <p class="text-sm text-mora-accent font-medium">Lecture Notes in Electrical Engineering, vol 888</p>
+                                    <p class="text-sm text-mora-accent font-medium">Lecture Notes in Electrical
+                                        Engineering, vol 888</p>
                                 </div>
                                 <div class="mt-auto">
-                                    <a href="https://doi.org/10.1007/978-981-19-1520-8_7" target="_blank" class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
+                                    <a href="https://doi.org/10.1007/978-981-19-1520-8_7" target="_blank"
+                                        class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
                                         <svg class="w-4 h-4 mr-2 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                                            <path
+                                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
                                         </svg>
                                         View DOI
                                     </a>
@@ -764,75 +924,93 @@
                         </div>
 
                         <!-- Card 49: Cancer Diagnosis - LNEE 905 -->
-                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex" data-aos="fade-up">
+                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex"
+                            data-aos="fade-up">
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-mora-accent rounded-l-lg"></div>
                             <div class="pl-5 flex flex-col h-full w-full">
                                 <div class="flex justify-between items-start mb-3">
                                     <span class="text-sm text-mora-accent font-medium">2022</span>
                                 </div>
                                 <div class="min-h-[72px] mb-2 flex items-start">
-                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Panigrahi, A., Bhutia, S., Sahu, B., Galety, M.G., Mohanty, S.N.</h3>
+                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Panigrahi, A.,
+                                        Bhutia, S., Sahu, B., Galety, M.G., Mohanty, S.N.</h3>
                                 </div>
                                 <div class="min-h-[96px] mb-3 flex items-start">
-                                    <p class="text-mora-secondary text-sm leading-relaxed">BPSO-PSO-SVM: An Integrated Approach for Cancer Diagnosis</p>
+                                    <p class="text-mora-secondary text-sm leading-relaxed">BPSO-PSO-SVM: An Integrated
+                                        Approach for Cancer Diagnosis</p>
                                 </div>
                                 <div class="min-h-[24px] mb-4 flex items-center">
-                                    <p class="text-sm text-mora-accent font-medium">Lecture Notes in Electrical Engineering, vol 905</p>
+                                    <p class="text-sm text-mora-accent font-medium">Lecture Notes in Electrical
+                                        Engineering, vol 905</p>
                                 </div>
                                 <div class="mt-auto">
-                                    <a href="https://doi.org/10.1007/978-981-19-2177-3_53" target="_blank" class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
+                                    <a href="https://doi.org/10.1007/978-981-19-2177-3_53" target="_blank"
+                                        class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
                                         <svg class="w-4 h-4 mr-2 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                                            <path
+                                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
                                         </svg>
                                         View DOI
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex" data-aos="fade-up">
+                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex"
+                            data-aos="fade-up">
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-mora-accent rounded-l-lg"></div>
                             <div class="pl-5 flex flex-col h-full w-full">
                                 <div class="flex justify-between items-start mb-3">
                                     <span class="text-sm text-mora-accent font-medium">2022</span>
                                 </div>
                                 <div class="min-h-[72px] mb-2 flex items-start">
-                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Chowdhary, M.S., Paga, J.J.R., Gandhi, M., Choudhury, S.S., Mohanty, S.N.</h3>
+                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Chowdhary, M.S.,
+                                        Paga, J.J.R., Gandhi, M., Choudhury, S.S., Mohanty, S.N.</h3>
                                 </div>
                                 <div class="min-h-[96px] mb-3 flex items-start">
-                                    <p class="text-mora-secondary text-sm leading-relaxed">InteliCrop: An Ensemble Model to Predict Crop using Machine Learning Algorithms</p>
+                                    <p class="text-mora-secondary text-sm leading-relaxed">InteliCrop: An Ensemble Model
+                                        to Predict Crop using Machine Learning Algorithms</p>
                                 </div>
                                 <div class="min-h-[24px] mb-4 flex items-center">
-                                    <p class="text-sm text-mora-accent font-medium">2022 International Conference on ACCAI</p>
+                                    <p class="text-sm text-mora-accent font-medium">2022 International Conference on
+                                        ACCAI</p>
                                 </div>
                                 <div class="mt-auto">
-                                    <a href="https://ieeexplore.ieee.org/document/9752527" target="_blank" class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
+                                    <a href="https://ieeexplore.ieee.org/document/9752527" target="_blank"
+                                        class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
                                         <svg class="w-4 h-4 mr-2 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                                            <path
+                                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
                                         </svg>
                                         View DOI
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex" data-aos="fade-up">
+                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex"
+                            data-aos="fade-up">
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-mora-accent rounded-l-lg"></div>
                             <div class="pl-5 flex flex-col h-full w-full">
                                 <div class="flex justify-between items-start mb-3">
                                     <span class="text-sm text-mora-accent font-medium">2022</span>
                                 </div>
                                 <div class="min-h-[72px] mb-2 flex items-start">
-                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Chowdhary, M.S., Paga, J.J.R., Gandhi, M., Choudhury, S.S., Mohanty, S.N.</h3>
+                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Chowdhary, M.S.,
+                                        Paga, J.J.R., Gandhi, M., Choudhury, S.S., Mohanty, S.N.</h3>
                                 </div>
                                 <div class="min-h-[96px] mb-3 flex items-start">
-                                    <p class="text-mora-secondary text-sm leading-relaxed">InteliCrop: An Ensemble Model to Predict Crop using Machine Learning Algorithms</p>
+                                    <p class="text-mora-secondary text-sm leading-relaxed">InteliCrop: An Ensemble Model
+                                        to Predict Crop using Machine Learning Algorithms</p>
                                 </div>
                                 <div class="min-h-[24px] mb-4 flex items-center">
-                                    <p class="text-sm text-mora-accent font-medium">2022 International Conference on Advances in Computing, Communication and Applied Informatics (ACCAI)</p>
+                                    <p class="text-sm text-mora-accent font-medium">2022 International Conference on
+                                        Advances in Computing, Communication and Applied Informatics (ACCAI)</p>
                                 </div>
                                 <div class="mt-auto">
-                                    <a href="https://ieeexplore.ieee.org/document/9752527" target="_blank" class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
+                                    <a href="https://ieeexplore.ieee.org/document/9752527" target="_blank"
+                                        class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
                                         <svg class="w-4 h-4 mr-2 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                                            <path
+                                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
                                         </svg>
                                         View DOI
                                     </a>
@@ -841,25 +1019,31 @@
                         </div>
 
                         <!-- Card 51: Face Mask Detection - ICSCCC 2021 -->
-                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex" data-aos="fade-up">
+                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex"
+                            data-aos="fade-up">
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-mora-accent rounded-l-lg"></div>
                             <div class="pl-5 flex flex-col h-full w-full">
                                 <div class="flex justify-between items-start mb-3">
                                     <span class="text-sm text-mora-accent font-medium">2021</span>
                                 </div>
                                 <div class="min-h-[72px] mb-2 flex items-start">
-                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Mangla, M., Sayyad, A., Mohanty, S.N.</h3>
+                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Mangla, M., Sayyad,
+                                        A., Mohanty, S.N.</h3>
                                 </div>
                                 <div class="min-h-[96px] mb-3 flex items-start">
-                                    <p class="text-mora-secondary text-sm leading-relaxed">An AI and Computer Vision-based Face Mask Recognition and Detection System</p>
+                                    <p class="text-mora-secondary text-sm leading-relaxed">An AI and Computer
+                                        Vision-based Face Mask Recognition and Detection System</p>
                                 </div>
                                 <div class="min-h-[24px] mb-4 flex items-center">
-                                    <p class="text-sm text-mora-accent font-medium">2021 Second International Conference on Secure Cyber Computing and Communication (ICSCCC)</p>
+                                    <p class="text-sm text-mora-accent font-medium">2021 Second International Conference
+                                        on Secure Cyber Computing and Communication (ICSCCC)</p>
                                 </div>
                                 <div class="mt-auto">
-                                    <a href="https://ieeexplore.ieee.org/document/9478175" target="_blank" class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
+                                    <a href="https://ieeexplore.ieee.org/document/9478175" target="_blank"
+                                        class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
                                         <svg class="w-4 h-4 mr-2 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                                            <path
+                                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
                                         </svg>
                                         View DOI
                                     </a>
@@ -868,50 +1052,61 @@
                         </div>
 
                         <!-- Card 52: Cancer Prediction - ESCI 2021 -->
-                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex" data-aos="fade-up">
+                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex"
+                            data-aos="fade-up">
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-mora-accent rounded-l-lg"></div>
                             <div class="pl-5 flex flex-col h-full w-full">
                                 <div class="flex justify-between items-start mb-3">
                                     <span class="text-sm text-mora-accent font-medium">2021</span>
                                 </div>
                                 <div class="min-h-[72px] mb-2 flex items-start">
-                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Sharma, N., Mangla, M., Mohanty, S.N., Satpathy, S.</h3>
+                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Sharma, N., Mangla,
+                                        M., Mohanty, S.N., Satpathy, S.</h3>
                                 </div>
                                 <div class="min-h-[96px] mb-3 flex items-start">
-                                    <p class="text-mora-secondary text-sm leading-relaxed">A Stochastic Neighbor Embedding Approach for Cancer Prediction</p>
+                                    <p class="text-mora-secondary text-sm leading-relaxed">A Stochastic Neighbor
+                                        Embedding Approach for Cancer Prediction</p>
                                 </div>
                                 <div class="min-h-[24px] mb-4 flex items-center">
-                                    <p class="text-sm text-mora-accent font-medium">2021 International Conference on Emerging Smart and Informatics (ESCI)</p>
+                                    <p class="text-sm text-mora-accent font-medium">2021 International Conference on
+                                        Emerging Smart and Informatics (ESCI)</p>
                                 </div>
                                 <div class="mt-auto">
-                                    <a href="https://ieeexplore.ieee.org/document/9396902" target="_blank" class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
+                                    <a href="https://ieeexplore.ieee.org/document/9396902" target="_blank"
+                                        class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
                                         <svg class="w-4 h-4 mr-2 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                                            <path
+                                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
                                         </svg>
                                         View DOI
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex" data-aos="fade-up">
+                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex"
+                            data-aos="fade-up">
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-mora-accent rounded-l-lg"></div>
                             <div class="pl-5 flex flex-col h-full w-full">
                                 <div class="flex justify-between items-start mb-3">
                                     <span class="text-sm text-mora-accent font-medium">2021</span>
                                 </div>
                                 <div class="min-h-[72px] mb-2 flex items-start">
-                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Sahu, B., Palo, H.K., Mohanty, S.N.</h3>
+                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Sahu, B., Palo, H.K.,
+                                        Mohanty, S.N.</h3>
                                 </div>
                                 <div class="min-h-[96px] mb-3 flex items-start">
-                                    <p class="text-mora-secondary text-sm leading-relaxed">A Performance Evaluation of Machine Learning Algorithms for Emotion Recognition through Speech</p>
+                                    <p class="text-mora-secondary text-sm leading-relaxed">A Performance Evaluation of
+                                        Machine Learning Algorithms for Emotion Recognition through Speech</p>
                                 </div>
                                 <div class="min-h-[24px] mb-4 flex items-center">
                                     <p class="text-sm text-mora-accent font-medium">8th IEEE INDIACom Conference</p>
                                 </div>
                                 <div class="mt-auto">
-                                    <a href="https://ieeexplore.ieee.org/xpl/conhome/9441026/proceeding" target="_blank" class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
+                                    <a href="https://ieeexplore.ieee.org/xpl/conhome/9441026/proceeding" target="_blank"
+                                        class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
                                         <svg class="w-4 h-4 mr-2 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                                            <path
+                                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
                                         </svg>
                                         View DOI
                                     </a>
@@ -920,25 +1115,31 @@
                         </div>
 
                         <!-- Card 54: Facial Emotion Recognition - INDIACom 2021 -->
-                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex" data-aos="fade-up">
+                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex"
+                            data-aos="fade-up">
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-mora-accent rounded-l-lg"></div>
                             <div class="pl-5 flex flex-col h-full w-full">
                                 <div class="flex justify-between items-start mb-3">
                                     <span class="text-sm text-mora-accent font-medium">2021</span>
                                 </div>
                                 <div class="min-h-[72px] mb-2 flex items-start">
-                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Subudhiray, S., Das, N., Palo, H.K., Mohanty, S.N.</h3>
+                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Subudhiray, S., Das,
+                                        N., Palo, H.K., Mohanty, S.N.</h3>
                                 </div>
                                 <div class="min-h-[96px] mb-3 flex items-start">
-                                    <p class="text-mora-secondary text-sm leading-relaxed">Comparative Analysis of Histograms of Oriented Gradients and Local Binary Pattern Coefficients for Facial Emotion Recognition</p>
+                                    <p class="text-mora-secondary text-sm leading-relaxed">Comparative Analysis of
+                                        Histograms of Oriented Gradients and Local Binary Pattern Coefficients for
+                                        Facial Emotion Recognition</p>
                                 </div>
                                 <div class="min-h-[24px] mb-4 flex items-center">
                                     <p class="text-sm text-mora-accent font-medium">8th IEEE INDIACom Conference</p>
                                 </div>
                                 <div class="mt-auto">
-                                    <a href="https://ieeexplore.ieee.org/xpl/conhome/9441026/proceeding" target="_blank" class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
+                                    <a href="https://ieeexplore.ieee.org/xpl/conhome/9441026/proceeding" target="_blank"
+                                        class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
                                         <svg class="w-4 h-4 mr-2 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                                            <path
+                                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
                                         </svg>
                                         View DOI
                                     </a>
@@ -947,50 +1148,61 @@
                         </div>
 
                         <!-- Card 55: Gesture Control - INDIACom 2021 -->
-                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex" data-aos="fade-up">
+                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex"
+                            data-aos="fade-up">
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-mora-accent rounded-l-lg"></div>
                             <div class="pl-5 flex flex-col h-full w-full">
                                 <div class="flex justify-between items-start mb-3">
                                     <span class="text-sm text-mora-accent font-medium">2021</span>
                                 </div>
                                 <div class="min-h-[72px] mb-2 flex items-start">
-                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Sharma, N., Mangla, M., Mohanty, S.N., Satpathy, S.</h3>
+                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Sharma, N., Mangla,
+                                        M., Mohanty, S.N., Satpathy, S.</h3>
                                 </div>
                                 <div class="min-h-[96px] mb-3 flex items-start">
-                                    <p class="text-mora-secondary text-sm leading-relaxed">A Gesture Based Remote Control for Home Appliances</p>
+                                    <p class="text-mora-secondary text-sm leading-relaxed">A Gesture Based Remote
+                                        Control for Home Appliances</p>
                                 </div>
                                 <div class="min-h-[24px] mb-4 flex items-center">
                                     <p class="text-sm text-mora-accent font-medium">8th IEEE INDIACom Conference</p>
                                 </div>
                                 <div class="mt-auto">
-                                    <a href="https://ieeexplore.ieee.org/xpl/conhome/9441026/proceeding" target="_blank" class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
+                                    <a href="https://ieeexplore.ieee.org/xpl/conhome/9441026/proceeding" target="_blank"
+                                        class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
                                         <svg class="w-4 h-4 mr-2 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                                            <path
+                                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
                                         </svg>
                                         View DOI
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex" data-aos="fade-up">
+                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex"
+                            data-aos="fade-up">
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-mora-accent rounded-l-lg"></div>
                             <div class="pl-5 flex flex-col h-full w-full">
                                 <div class="flex justify-between items-start mb-3">
                                     <span class="text-sm text-mora-accent font-medium">2021</span>
                                 </div>
                                 <div class="min-h-[72px] mb-2 flex items-start">
-                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Barik, R.K., Patra, S.S., Patra, R., Mohanty, S.N.</h3>
+                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Barik, R.K., Patra,
+                                        S.S., Patra, R., Mohanty, S.N.</h3>
                                 </div>
                                 <div class="min-h-[96px] mb-3 flex items-start">
-                                    <p class="text-mora-secondary text-sm leading-relaxed">A New Energy Aware Task Consolidation Scheme for Geospatial Big Data Application in Mist Computing Environment</p>
+                                    <p class="text-mora-secondary text-sm leading-relaxed">A New Energy Aware Task
+                                        Consolidation Scheme for Geospatial Big Data Application in Mist Computing
+                                        Environment</p>
                                 </div>
                                 <div class="min-h-[24px] mb-4 flex items-center">
                                     <p class="text-sm text-mora-accent font-medium">8th IEEE INDIACom Conference</p>
                                 </div>
                                 <div class="mt-auto">
-                                    <a href="https://ieeexplore.ieee.org/xpl/conhome/9441026/proceeding" target="_blank" class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
+                                    <a href="https://ieeexplore.ieee.org/xpl/conhome/9441026/proceeding" target="_blank"
+                                        class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
                                         <svg class="w-4 h-4 mr-2 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                                            <path
+                                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
                                         </svg>
                                         View DOI
                                     </a>
@@ -999,25 +1211,30 @@
                         </div>
 
                         <!-- Card 57: SDN and Fog Bandwidth - INDIACom 2021 -->
-                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex" data-aos="fade-up">
+                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex"
+                            data-aos="fade-up">
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-mora-accent rounded-l-lg"></div>
                             <div class="pl-5 flex flex-col h-full w-full">
                                 <div class="flex justify-between items-start mb-3">
                                     <span class="text-sm text-mora-accent font-medium">2021</span>
                                 </div>
                                 <div class="min-h-[72px] mb-2 flex items-start">
-                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Barik, R.K., Patra, S.S., Patra, R., Mohanty, S.N.</h3>
+                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Barik, R.K., Patra,
+                                        S.S., Patra, R., Mohanty, S.N.</h3>
                                 </div>
                                 <div class="min-h-[96px] mb-3 flex items-start">
-                                    <p class="text-mora-secondary text-sm leading-relaxed">Priority Based VM Allocation and Bandwidth Management in SDN and Fog Environment</p>
+                                    <p class="text-mora-secondary text-sm leading-relaxed">Priority Based VM Allocation
+                                        and Bandwidth Management in SDN and Fog Environment</p>
                                 </div>
                                 <div class="min-h-[24px] mb-4 flex items-center">
                                     <p class="text-sm text-mora-accent font-medium">8th IEEE INDIACom Conference</p>
                                 </div>
                                 <div class="mt-auto">
-                                    <a href="https://ieeexplore.ieee.org/xpl/conhome/9441026/proceeding" target="_blank" class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
+                                    <a href="https://ieeexplore.ieee.org/xpl/conhome/9441026/proceeding" target="_blank"
+                                        class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
                                         <svg class="w-4 h-4 mr-2 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                                            <path
+                                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
                                         </svg>
                                         View DOI
                                     </a>
@@ -1026,25 +1243,30 @@
                         </div>
 
                         <!-- Card 58: Geospatial Deduplication - INDIACom 2021 -->
-                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex" data-aos="fade-up">
+                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex"
+                            data-aos="fade-up">
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-mora-accent rounded-l-lg"></div>
                             <div class="pl-5 flex flex-col h-full w-full">
                                 <div class="flex justify-between items-start mb-3">
                                     <span class="text-sm text-mora-accent font-medium">2021</span>
                                 </div>
                                 <div class="min-h-[72px] mb-2 flex items-start">
-                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Barik, R.K., Patra, S.S., Patra, R., Mohanty, S.N., Hamad, A.A.A.</h3>
+                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Barik, R.K., Patra,
+                                        S.S., Patra, R., Mohanty, S.N., Hamad, A.A.A.</h3>
                                 </div>
                                 <div class="min-h-[96px] mb-3 flex items-start">
-                                    <p class="text-mora-secondary text-sm leading-relaxed">GeoBD2: Geospatial Big Data Deduplication Scheme in Fog Assisted Cloud Computing Environment</p>
+                                    <p class="text-mora-secondary text-sm leading-relaxed">GeoBD2: Geospatial Big Data
+                                        Deduplication Scheme in Fog Assisted Cloud Computing Environment</p>
                                 </div>
                                 <div class="min-h-[24px] mb-4 flex items-center">
                                     <p class="text-sm text-mora-accent font-medium">8th IEEE INDIACom Conference</p>
                                 </div>
                                 <div class="mt-auto">
-                                    <a href="https://ieeexplore.ieee.org/xpl/conhome/9441026/proceeding" target="_blank" class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
+                                    <a href="https://ieeexplore.ieee.org/xpl/conhome/9441026/proceeding" target="_blank"
+                                        class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
                                         <svg class="w-4 h-4 mr-2 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                                            <path
+                                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
                                         </svg>
                                         View DOI
                                     </a>
@@ -1052,75 +1274,91 @@
                             </div>
                         </div>
 
-                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex" data-aos="fade-up">
+                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex"
+                            data-aos="fade-up">
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-mora-accent rounded-l-lg"></div>
                             <div class="pl-5 flex flex-col h-full w-full">
                                 <div class="flex justify-between items-start mb-3">
                                     <span class="text-sm text-mora-accent font-medium">2021</span>
                                 </div>
                                 <div class="min-h-[72px] mb-2 flex items-start">
-                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Nath, M.P., Mohanty, S.N., Priyadarshini, S.B.B.</h3>
+                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Nath, M.P., Mohanty,
+                                        S.N., Priyadarshini, S.B.B.</h3>
                                 </div>
                                 <div class="min-h-[96px] mb-3 flex items-start">
-                                    <p class="text-mora-secondary text-sm leading-relaxed">Application of Machine Learning in Wireless Sensor Network</p>
+                                    <p class="text-mora-secondary text-sm leading-relaxed">Application of Machine
+                                        Learning in Wireless Sensor Network</p>
                                 </div>
                                 <div class="min-h-[24px] mb-4 flex items-center">
                                     <p class="text-sm text-mora-accent font-medium">8th IEEE INDIACom Conference</p>
                                 </div>
                                 <div class="mt-auto">
-                                    <a href="https://ieeexplore.ieee.org/xpl/conhome/9441026/proceeding" target="_blank" class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
+                                    <a href="https://ieeexplore.ieee.org/xpl/conhome/9441026/proceeding" target="_blank"
+                                        class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
                                         <svg class="w-4 h-4 mr-2 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                                            <path
+                                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
                                         </svg>
                                         View DOI
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex" data-aos="fade-up">
+                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex"
+                            data-aos="fade-up">
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-mora-accent rounded-l-lg"></div>
                             <div class="pl-5 flex flex-col h-full w-full">
                                 <div class="flex justify-between items-start mb-3">
                                     <span class="text-sm text-mora-accent font-medium">2021</span>
                                 </div>
                                 <div class="min-h-[72px] mb-2 flex items-start">
-                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Mangla, M., Sayyad, A., Mohanty, S.N.</h3>
+                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Mangla, M., Sayyad,
+                                        A., Mohanty, S.N.</h3>
                                 </div>
                                 <div class="min-h-[96px] mb-3 flex items-start">
-                                    <p class="text-mora-secondary text-sm leading-relaxed">An AI and Computer Vision-based Face Mask Recognition and Detection System</p>
+                                    <p class="text-mora-secondary text-sm leading-relaxed">An AI and Computer
+                                        Vision-based Face Mask Recognition and Detection System</p>
                                 </div>
                                 <div class="min-h-[24px] mb-4 flex items-center">
                                     <p class="text-sm text-mora-accent font-medium">ICSCCC, NIT Jalandhar</p>
                                 </div>
                                 <div class="mt-auto">
-                                    <a href="https://ieeexplore.ieee.org/document/9478175" target="_blank" class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
+                                    <a href="https://ieeexplore.ieee.org/document/9478175" target="_blank"
+                                        class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
                                         <svg class="w-4 h-4 mr-2 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                                            <path
+                                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
                                         </svg>
                                         View DOI
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex" data-aos="fade-up">
+                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex"
+                            data-aos="fade-up">
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-mora-accent rounded-l-lg"></div>
                             <div class="pl-5 flex flex-col h-full w-full">
                                 <div class="flex justify-between items-start mb-3">
                                     <span class="text-sm text-mora-accent font-medium">2021</span>
                                 </div>
                                 <div class="min-h-[72px] mb-2 flex items-start">
-                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Sharma, N., Mangla, M., Mohanty, S.N., Satpathy, S.</h3>
+                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Sharma, N., Mangla,
+                                        M., Mohanty, S.N., Satpathy, S.</h3>
                                 </div>
                                 <div class="min-h-[96px] mb-3 flex items-start">
-                                    <p class="text-mora-secondary text-sm leading-relaxed">A Stochastic Neighbor Embedding Approach for Cancer Prediction</p>
+                                    <p class="text-mora-secondary text-sm leading-relaxed">A Stochastic Neighbor
+                                        Embedding Approach for Cancer Prediction</p>
                                 </div>
                                 <div class="min-h-[24px] mb-4 flex items-center">
-                                    <p class="text-sm text-mora-accent font-medium">ESNI 2021, AISSMS Institute of Technology</p>
+                                    <p class="text-sm text-mora-accent font-medium">ESNI 2021, AISSMS Institute of
+                                        Technology</p>
                                 </div>
                                 <div class="mt-auto">
-                                    <a href="https://ieeexplore.ieee.org/document/9396902" target="_blank" class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
+                                    <a href="https://ieeexplore.ieee.org/document/9396902" target="_blank"
+                                        class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
                                         <svg class="w-4 h-4 mr-2 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                                            <path
+                                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
                                         </svg>
                                         View DOI
                                     </a>
@@ -1129,25 +1367,30 @@
                         </div>
 
                         <!-- Card 63: Emotion Recognition via Speech - INDIACom 2021 -->
-                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex" data-aos="fade-up">
+                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex"
+                            data-aos="fade-up">
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-mora-accent rounded-l-lg"></div>
                             <div class="pl-5 flex flex-col h-full w-full">
                                 <div class="flex justify-between items-start mb-3">
                                     <span class="text-sm text-mora-accent font-medium">2021</span>
                                 </div>
                                 <div class="min-h-[72px] mb-2 flex items-start">
-                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Sahu, B., Palo, H.K., Mohanty, S.N.</h3>
+                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Sahu, B., Palo, H.K.,
+                                        Mohanty, S.N.</h3>
                                 </div>
                                 <div class="min-h-[96px] mb-3 flex items-start">
-                                    <p class="text-mora-secondary text-sm leading-relaxed">A Performance Evaluation of Machine Learning Algorithms for Emotion Recognition through Speech</p>
+                                    <p class="text-mora-secondary text-sm leading-relaxed">A Performance Evaluation of
+                                        Machine Learning Algorithms for Emotion Recognition through Speech</p>
                                 </div>
                                 <div class="min-h-[24px] mb-4 flex items-center">
                                     <p class="text-sm text-mora-accent font-medium">8th IEEE INDIACom Conference</p>
                                 </div>
                                 <div class="mt-auto">
-                                    <a href="https://ieeexplore.ieee.org/xpl/conhome/9441026/proceeding" target="_blank" class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
+                                    <a href="https://ieeexplore.ieee.org/xpl/conhome/9441026/proceeding" target="_blank"
+                                        class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
                                         <svg class="w-4 h-4 mr-2 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                                            <path
+                                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
                                         </svg>
                                         View DOI
                                     </a>
@@ -1156,50 +1399,61 @@
                         </div>
 
                         <!-- Card 64: HOG vs LBP Emotion Recognition - INDIACom 2021 -->
-                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex" data-aos="fade-up">
+                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex"
+                            data-aos="fade-up">
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-mora-accent rounded-l-lg"></div>
                             <div class="pl-5 flex flex-col h-full w-full">
                                 <div class="flex justify-between items-start mb-3">
                                     <span class="text-sm text-mora-accent font-medium">2021</span>
                                 </div>
                                 <div class="min-h-[72px] mb-2 flex items-start">
-                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Subudhiray, S., Das, N., Palo, H.K., Mohanty, S.N.</h3>
+                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Subudhiray, S., Das,
+                                        N., Palo, H.K., Mohanty, S.N.</h3>
                                 </div>
                                 <div class="min-h-[96px] mb-3 flex items-start">
-                                    <p class="text-mora-secondary text-sm leading-relaxed">Comparative Analysis of Histograms of Oriented Gradients and Local Binary Pattern Coefficients for Facial Emotion Recognition</p>
+                                    <p class="text-mora-secondary text-sm leading-relaxed">Comparative Analysis of
+                                        Histograms of Oriented Gradients and Local Binary Pattern Coefficients for
+                                        Facial Emotion Recognition</p>
                                 </div>
                                 <div class="min-h-[24px] mb-4 flex items-center">
                                     <p class="text-sm text-mora-accent font-medium">8th IEEE INDIACom Conference</p>
                                 </div>
                                 <div class="mt-auto">
-                                    <a href="https://ieeexplore.ieee.org/xpl/conhome/9441026/proceeding" target="_blank" class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
+                                    <a href="https://ieeexplore.ieee.org/xpl/conhome/9441026/proceeding" target="_blank"
+                                        class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
                                         <svg class="w-4 h-4 mr-2 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                                            <path
+                                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
                                         </svg>
                                         View DOI
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex" data-aos="fade-up">
+                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex"
+                            data-aos="fade-up">
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-mora-accent rounded-l-lg"></div>
                             <div class="pl-5 flex flex-col h-full w-full">
                                 <div class="flex justify-between items-start mb-3">
                                     <span class="text-sm text-mora-accent font-medium">2021</span>
                                 </div>
                                 <div class="min-h-[72px] mb-2 flex items-start">
-                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Sharma, N., Mangla, M., Mohanty, S.N., Satpathy, S.</h3>
+                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Sharma, N., Mangla,
+                                        M., Mohanty, S.N., Satpathy, S.</h3>
                                 </div>
                                 <div class="min-h-[96px] mb-3 flex items-start">
-                                    <p class="text-mora-secondary text-sm leading-relaxed">A Gesture Based Remote Control for Home Appliances</p>
+                                    <p class="text-mora-secondary text-sm leading-relaxed">A Gesture Based Remote
+                                        Control for Home Appliances</p>
                                 </div>
                                 <div class="min-h-[24px] mb-4 flex items-center">
                                     <p class="text-sm text-mora-accent font-medium">8th IEEE INDIACom Conference</p>
                                 </div>
                                 <div class="mt-auto">
-                                    <a href="https://ieeexplore.ieee.org/xpl/conhome/9441026/proceeding" target="_blank" class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
+                                    <a href="https://ieeexplore.ieee.org/xpl/conhome/9441026/proceeding" target="_blank"
+                                        class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
                                         <svg class="w-4 h-4 mr-2 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                                            <path
+                                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
                                         </svg>
                                         View DOI
                                     </a>
@@ -1208,25 +1462,31 @@
                         </div>
 
                         <!-- Card 66: Mist Computing Energy Scheme - INDIACom 2021 -->
-                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex" data-aos="fade-up">
+                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex"
+                            data-aos="fade-up">
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-mora-accent rounded-l-lg"></div>
                             <div class="pl-5 flex flex-col h-full w-full">
                                 <div class="flex justify-between items-start mb-3">
                                     <span class="text-sm text-mora-accent font-medium">2021</span>
                                 </div>
                                 <div class="min-h-[72px] mb-2 flex items-start">
-                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Barik, R.K., Patra, S.S., Patra, R., Mohanty, S.N.</h3>
+                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Barik, R.K., Patra,
+                                        S.S., Patra, R., Mohanty, S.N.</h3>
                                 </div>
                                 <div class="min-h-[96px] mb-3 flex items-start">
-                                    <p class="text-mora-secondary text-sm leading-relaxed">A New Energy Aware Task Consolidation Scheme for Geospatial Big Data Application in Mist Computing Environment</p>
+                                    <p class="text-mora-secondary text-sm leading-relaxed">A New Energy Aware Task
+                                        Consolidation Scheme for Geospatial Big Data Application in Mist Computing
+                                        Environment</p>
                                 </div>
                                 <div class="min-h-[24px] mb-4 flex items-center">
                                     <p class="text-sm text-mora-accent font-medium">8th IEEE INDIACom Conference</p>
                                 </div>
                                 <div class="mt-auto">
-                                    <a href="https://ieeexplore.ieee.org/xpl/conhome/9441026/proceeding" target="_blank" class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
+                                    <a href="https://ieeexplore.ieee.org/xpl/conhome/9441026/proceeding" target="_blank"
+                                        class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
                                         <svg class="w-4 h-4 mr-2 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                                            <path
+                                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
                                         </svg>
                                         View DOI
                                     </a>
@@ -1235,50 +1495,60 @@
                         </div>
 
                         <!-- Card 67: SDN Bandwidth Management - INDIACom 2021 -->
-                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex" data-aos="fade-up">
+                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex"
+                            data-aos="fade-up">
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-mora-accent rounded-l-lg"></div>
                             <div class="pl-5 flex flex-col h-full w-full">
                                 <div class="flex justify-between items-start mb-3">
                                     <span class="text-sm text-mora-accent font-medium">2021</span>
                                 </div>
                                 <div class="min-h-[72px] mb-2 flex items-start">
-                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Barik, R.K., Patra, S.S., Patra, R., Mohanty, S.N.</h3>
+                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Barik, R.K., Patra,
+                                        S.S., Patra, R., Mohanty, S.N.</h3>
                                 </div>
                                 <div class="min-h-[96px] mb-3 flex items-start">
-                                    <p class="text-mora-secondary text-sm leading-relaxed">Priority Based VM Allocation and Bandwidth Management in SDN and Fog Environment</p>
+                                    <p class="text-mora-secondary text-sm leading-relaxed">Priority Based VM Allocation
+                                        and Bandwidth Management in SDN and Fog Environment</p>
                                 </div>
                                 <div class="min-h-[24px] mb-4 flex items-center">
                                     <p class="text-sm text-mora-accent font-medium">8th IEEE INDIACom Conference</p>
                                 </div>
                                 <div class="mt-auto">
-                                    <a href="https://ieeexplore.ieee.org/xpl/conhome/9441026/proceeding" target="_blank" class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
+                                    <a href="https://ieeexplore.ieee.org/xpl/conhome/9441026/proceeding" target="_blank"
+                                        class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
                                         <svg class="w-4 h-4 mr-2 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                                            <path
+                                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
                                         </svg>
                                         View DOI
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex" data-aos="fade-up">
+                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex"
+                            data-aos="fade-up">
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-mora-accent rounded-l-lg"></div>
                             <div class="pl-5 flex flex-col h-full w-full">
                                 <div class="flex justify-between items-start mb-3">
                                     <span class="text-sm text-mora-accent font-medium">2021</span>
                                 </div>
                                 <div class="min-h-[72px] mb-2 flex items-start">
-                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Barik, R.K., Patra, S.S., Patra, R., Mohanty, S.N., Hamad, A.A.</h3>
+                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Barik, R.K., Patra,
+                                        S.S., Patra, R., Mohanty, S.N., Hamad, A.A.</h3>
                                 </div>
                                 <div class="min-h-[96px] mb-3 flex items-start">
-                                    <p class="text-mora-secondary text-sm leading-relaxed">GeoBD2: Geospatial Big Data Deduplication Scheme in Fog Assisted Cloud Computing Environment</p>
+                                    <p class="text-mora-secondary text-sm leading-relaxed">GeoBD2: Geospatial Big Data
+                                        Deduplication Scheme in Fog Assisted Cloud Computing Environment</p>
                                 </div>
                                 <div class="min-h-[24px] mb-4 flex items-center">
                                     <p class="text-sm text-mora-accent font-medium">8th IEEE INDIACom Conference</p>
                                 </div>
                                 <div class="mt-auto">
-                                    <a href="https://ieeexplore.ieee.org/xpl/conhome/9441026/proceeding" target="_blank" class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
+                                    <a href="https://ieeexplore.ieee.org/xpl/conhome/9441026/proceeding" target="_blank"
+                                        class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
                                         <svg class="w-4 h-4 mr-2 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                                            <path
+                                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
                                         </svg>
                                         View DOI
                                     </a>
@@ -1287,25 +1557,30 @@
                         </div>
 
                         <!-- Card 69: ML in WSN - INDIACom 2021 -->
-                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex" data-aos="fade-up">
+                        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full relative flex"
+                            data-aos="fade-up">
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-mora-accent rounded-l-lg"></div>
                             <div class="pl-5 flex flex-col h-full w-full">
                                 <div class="flex justify-between items-start mb-3">
                                     <span class="text-sm text-mora-accent font-medium">2021</span>
                                 </div>
                                 <div class="min-h-[72px] mb-2 flex items-start">
-                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Nath, M.P., Mohanty, S.N., Priyadarshini, S.B.B.</h3>
+                                    <h3 class="text-lg font-semibold text-mora-dark leading-tight">Nath, M.P., Mohanty,
+                                        S.N., Priyadarshini, S.B.B.</h3>
                                 </div>
                                 <div class="min-h-[96px] mb-3 flex items-start">
-                                    <p class="text-mora-secondary text-sm leading-relaxed">Application of Machine Learning in Wireless Sensor Network</p>
+                                    <p class="text-mora-secondary text-sm leading-relaxed">Application of Machine
+                                        Learning in Wireless Sensor Network</p>
                                 </div>
                                 <div class="min-h-[24px] mb-4 flex items-center">
                                     <p class="text-sm text-mora-accent font-medium">8th IEEE INDIACom Conference</p>
                                 </div>
                                 <div class="mt-auto">
-                                    <a href="https://ieeexplore.ieee.org/xpl/conhome/9441026/proceeding" target="_blank" class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
+                                    <a href="https://ieeexplore.ieee.org/xpl/conhome/9441026/proceeding" target="_blank"
+                                        class="text-mora-accent hover:text-mora-dark text-sm flex items-center">
                                         <svg class="w-4 h-4 mr-2 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+                                            <path
+                                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
                                         </svg>
                                         View DOI
                                     </a>
@@ -1314,18 +1589,22 @@
                         </div>
                     </div>
                     <div class="flex justify-center mt-8 space-x-6" data-aos="fade-up">
-                        <a href="https://orcid.org/0000-0002-4939-0797" target="_blank" class="bg-mora-accent text-white px-6 py-3 rounded-full hover:bg-mora-dark transition-colors">
+                        <a href="https://orcid.org/0000-0002-4939-0797" target="_blank"
+                            class="bg-mora-accent text-white px-6 py-3 rounded-full hover:bg-mora-dark transition-colors">
                             ORCID
                         </a>
-                        <a href="https://scholar.google.co.in/citations?user=166bepcAAAAJ&hl=en" target="_blank" class="bg-mora-accent text-white px-6 py-3 rounded-full hover:bg-mora-dark transition-colors">
+                        <a href="https://scholar.google.co.in/citations?user=166bepcAAAAJ&hl=en" target="_blank"
+                            class="bg-mora-accent text-white px-6 py-3 rounded-full hover:bg-mora-dark transition-colors">
                             Google Scholar
                         </a>
-                        <a href="https://ieeexplore.ieee.org/author/37088837530" target="_blank" class="bg-mora-accent text-white px-6 py-3 rounded-full hover:bg-mora-dark transition-colors">
+                        <a href="https://ieeexplore.ieee.org/author/37088837530" target="_blank"
+                            class="bg-mora-accent text-white px-6 py-3 rounded-full hover:bg-mora-dark transition-colors">
                             IEEE
                         </a>
 
 
-                        <a href="https://www.scopus.com/authid/detail.uri?authorId=36170793300" target="_blank" class="bg-mora-accent text-white px-6 py-3 rounded-full hover:bg-mora-dark transition-colors">
+                        <a href="https://www.scopus.com/authid/detail.uri?authorId=36170793300" target="_blank"
+                            class="bg-mora-accent text-white px-6 py-3 rounded-full hover:bg-mora-dark transition-colors">
                             SCOPUS
                         </a>
                     </div>
@@ -1349,17 +1628,17 @@
         <div class="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             <div class="flex items-center space-x-2">
                 <svg class="w-6 h-6 text-mora-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <span class="font-sans text-sm">Designed and developed by</span>
             </div>
-            <a href="https://www.mightymonkeymedia.com" 
-               target="_blank" 
-               rel="noopener noreferrer"
-               class="text-mora-accent hover:text-mora-light transition-colors font-semibold text-sm">
-                Mighty Monkey Media LLP
+            <a href="https://www.pixlightllp.com" target="_blank" rel="noopener noreferrer"
+                class="text-mora-accent hover:text-mora-light transition-colors font-semibold text-sm">
+                Pixlight LLP
             </a>
         </div>
     </div>
 </footer>
+
 </html>
